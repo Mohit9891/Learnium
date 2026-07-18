@@ -5,7 +5,16 @@ const cors = require('cors');
 const connectDB = require('./src/config/db.js');
 
 const app = express();
-app.use(cors());
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.FRONTEND_URL, // set this after you deploy the frontend
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+}));
+// app.use(cors());
 app.use(express.json());
 app.use('/api', require('./src/routes/catalogRoutes'));
 app.use('/api/auth', require('./src/routes/authRoutes'));
