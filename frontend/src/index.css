@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F3EEDD;
+  --color-forest: #163527;
+  --color-forest-light: #1F4A36;
+  --color-lime: #D6E619;
+  --color-sky: #2F93CE;
+  --color-sky-light: #BFE3F5;
+
+  --font-display: "Fredoka", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
