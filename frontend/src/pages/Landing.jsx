@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const FEATURE_SHAPES = [
   {
@@ -75,7 +76,6 @@ function FeatureSticker({ label, shape, bg, text, className, rotate }) {
     );
   }
 
-  // blob: rounded-full with asymmetric radii for an organic feel
   return (
     <div
       className={`${base} ${bg} ${text}`}
@@ -86,10 +86,58 @@ function FeatureSticker({ label, shape, bg, text, className, rotate }) {
   );
 }
 
+function AuthAwareNav() {
+  const { user, logout, loading } = useAuth();
+
+  // avoid flashing "Sign in" then swapping to "Dashboard" once the session check resolves
+  if (loading) {
+    return <div className="w-40 h-9" />;
+  }
+
+  if (user) {
+    return (
+      <div className="flex items-center gap-3">
+        <span className="text-sm text-forest/70 hidden sm:inline">Hi, {user.name.split(' ')[0]}</span>
+        {/* <Link
+          to="/dashboard"
+          className="px-4 py-2 rounded-full bg-forest text-white text-sm font-medium hover:bg-forest-light transition"
+        >
+          Dashboard
+        </Link> */}
+        <button
+          onClick={logout}
+          className="px-4 py-2 rounded-full bg-white text-forest text-sm font-medium shadow-sm hover:shadow transition"
+        >
+          Log out
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-3">
+      <Link
+        to="/login"
+        className="px-4 py-2 rounded-full bg-white text-forest text-sm font-medium shadow-sm hover:shadow transition"
+      >
+        Sign in
+      </Link>
+      <Link
+        to="/register"
+        className="px-4 py-2 rounded-full bg-forest text-white text-sm font-medium hover:bg-forest-light transition"
+      >
+        Get Started
+      </Link>
+    </div>
+  );
+}
+
 export default function Landing() {
+  const { user } = useAuth();
+  const primaryCtaTarget = user ? '/exams' : '/register';
+
   return (
     <div className="bg-cream min-h-screen">
-      {/* Nav */}
       <header className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-lime rounded-lg flex items-center justify-center">
@@ -104,23 +152,9 @@ export default function Landing() {
           <Link to="/mistakes">Mistake Notebook</Link>
         </nav>
 
-        <div className="flex items-center gap-3">
-          <Link
-            to="/login"
-            className="px-4 py-2 rounded-full bg-white text-forest text-sm font-medium shadow-sm hover:shadow transition"
-          >
-            Sign in
-          </Link>
-          <Link
-            to="/register"
-            className="px-4 py-2 rounded-full bg-forest text-white text-sm font-medium hover:bg-forest-light transition"
-          >
-            Get Started
-          </Link>
-        </div>
+        <AuthAwareNav />
       </header>
 
-      {/* Hero */}
       <section className="relative max-w-7xl mx-auto px-8 pt-12 pb-40 md:pb-56">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -140,19 +174,18 @@ export default function Landing() {
             </p>
 
             <Link
-              to="/register"
+              to={primaryCtaTarget}
               className="mt-8 inline-flex items-center gap-3 group"
             >
               <span className="w-10 h-10 rounded-full bg-forest flex items-center justify-center text-white group-hover:bg-forest-light transition">
                 →
               </span>
               <span className="font-display font-medium text-forest">
-                Start Practicing Free
+                {user ? 'Continue Practicing' : 'Start Practicing Free'}
               </span>
             </Link>
           </div>
 
-          {/* Sticker collage — desktop only, keeps mobile hero clean */}
           <div className="relative h-[420px] hidden md:block">
             <PlusShape className="absolute top-4 right-4 w-10 h-10 text-lime" />
             {FEATURE_SHAPES.map((shape) => (
@@ -162,7 +195,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Secondary section teaser */}
       <section className="bg-white px-8 py-16">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="bg-cream rounded-2xl p-6 shadow-sm">

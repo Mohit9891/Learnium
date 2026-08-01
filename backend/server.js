@@ -16,6 +16,8 @@ app.use(cors({
 }));
 // app.use(cors());
 app.use(express.json());
+app.use('/api/mistakes', require('./src/routes/mistakeRoutes'));
+app.use('/api/dashboard', require('./src/routes/dashboardRoutes'));
 app.use('/api', require('./src/routes/catalogRoutes'));
 app.use('/api/auth', require('./src/routes/authRoutes'));
 app.use('/api', require('./src/routes/questionRoutes'));
