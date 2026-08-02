@@ -1,0 +1,267 @@
+{
+ "exam": { "name": "Class 11", "slug": "class-11" },
+  "subject": { "name": "Physics", "slug": "physics" },
+  "chapter": { "name": "Physical World and Units", "slug": "physical-world-units", "orderIndex": 1 },
+"questions": [
+{
+"questionText": "Which branch of physics primarily deals with the study of motion and the forces causing it?",
+"options": [
+{ "id": "A", "text": "Optics" },
+{ "id": "B", "text": "Mechanics" },
+{ "id": "C", "text": "Thermodynamics" },
+{ "id": "D", "text": "Electromagnetism" }
+],
+"correctOption": "B",
+"explanation": "Mechanics is the branch of physics concerned with motion and the forces acting on bodies.",
+"difficulty": "easy",
+"tags": ["mechanics", "branches"]
+},
+{
+"questionText": "The SI base unit of electric current is:",
+"options": [
+{ "id": "A", "text": "Volt" },
+{ "id": "B", "text": "Coulomb" },
+{ "id": "C", "text": "Ampere" },
+{ "id": "D", "text": "Ohm" }
+],
+"correctOption": "C",
+"explanation": "Ampere (A) is the SI base unit of electric current.",
+"difficulty": "easy",
+"tags": ["si-units", "current"]
+},
+{
+"questionText": "How many SI base quantities are there?",
+"options": [
+{ "id": "A", "text": "5" },
+{ "id": "B", "text": "6" },
+{ "id": "C", "text": "7" },
+{ "id": "D", "text": "8" }
+],
+"correctOption": "C",
+"explanation": "The SI system is based on seven fundamental physical quantities.",
+"difficulty": "easy",
+"tags": ["si-system", "base-quantities"]
+},
+{
+"questionText": "The SI unit of thermodynamic temperature is:",
+"options": [
+{ "id": "A", "text": "Degree Celsius" },
+{ "id": "B", "text": "Kelvin" },
+{ "id": "C", "text": "Fahrenheit" },
+{ "id": "D", "text": "Joule" }
+],
+"correctOption": "B",
+"explanation": "Kelvin (K) is the SI base unit of thermodynamic temperature.",
+"difficulty": "easy",
+"tags": ["temperature", "si-units"]
+},
+{
+"questionText": "Which of the following is a derived SI unit?",
+"options": [
+{ "id": "A", "text": "Kilogram" },
+{ "id": "B", "text": "Second" },
+{ "id": "C", "text": "Newton" },
+{ "id": "D", "text": "Mole" }
+],
+"correctOption": "C",
+"explanation": "Newton is derived from kg·m/s² and is therefore a derived SI unit.",
+"difficulty": "easy",
+"tags": ["derived-units", "force"]
+},
+{
+"questionText": "The dimensional formula of force is:",
+"options": [
+{ "id": "A", "text": "[M L T^-2]" },
+{ "id": "B", "text": "[M L^2 T^-2]" },
+{ "id": "C", "text": "[M L^-1 T^-2]" },
+{ "id": "D", "text": "[M T^-2]" }
+],
+"correctOption": "A",
+"explanation": "Force = mass × acceleration = M × LT⁻² = MLT⁻².",
+"difficulty": "easy",
+"tags": ["dimensions", "force"]
+},
+{
+"questionText": "Which prefix represents a factor of 10⁻⁹?",
+"options": [
+{ "id": "A", "text": "Micro" },
+{ "id": "B", "text": "Nano" },
+{ "id": "C", "text": "Milli" },
+{ "id": "D", "text": "Pico" }
+],
+"correctOption": "B",
+"explanation": "Nano (n) denotes a factor of 10⁻⁹.",
+"difficulty": "easy",
+"tags": ["prefixes", "powers-of-ten"]
+},
+{
+"questionText": "Which instrument is commonly used to measure very small lengths such as the diameter of a wire?",
+"options": [
+{ "id": "A", "text": "Meter scale" },
+{ "id": "B", "text": "Vernier calipers" },
+{ "id": "C", "text": "Micrometer screw gauge" },
+{ "id": "D", "text": "Measuring tape" }
+],
+"correctOption": "C",
+"explanation": "A micrometer screw gauge measures very small dimensions with high precision.",
+"difficulty": "easy",
+"tags": ["measurement", "instruments"]
+},
+{
+"questionText": "The dimensional formula of velocity is:",
+"options": [
+{ "id": "A", "text": "[L T^-1]" },
+{ "id": "B", "text": "[L T^-2]" },
+{ "id": "C", "text": "[M L T^-1]" },
+{ "id": "D", "text": "[M T^-1]" }
+],
+"correctOption": "A",
+"explanation": "Velocity is displacement per unit time, so its dimensions are LT⁻¹.",
+"difficulty": "medium",
+"tags": ["velocity", "dimensions"]
+},
+{
+"questionText": "If the percentage error in measuring length and breadth of a rectangle are 2% and 3% respectively, the maximum percentage error in its area is:",
+"options": [
+{ "id": "A", "text": "1%" },
+{ "id": "B", "text": "5%" },
+{ "id": "C", "text": "6%" },
+{ "id": "D", "text": "2.5%" }
+],
+"correctOption": "B",
+"explanation": "For multiplication, percentage errors are added. Therefore, 2% + 3% = 5%.",
+"difficulty": "medium",
+"tags": ["error-analysis", "percentage-error"]
+},
+{
+"questionText": "The dimensional formula of the universal gravitational constant (G) is:",
+"options": [
+{ "id": "A", "text": "[M^-1 L^3 T^-2]" },
+{ "id": "B", "text": "[M L^3 T^-2]" },
+{ "id": "C", "text": "[M^-1 L^2 T^-2]" },
+{ "id": "D", "text": "[M L^2 T^-1]" }
+],
+"correctOption": "A",
+"explanation": "From Newton's law of gravitation, G = Fr²/(m₁m₂), giving the dimensions M⁻¹L³T⁻².",
+"difficulty": "medium",
+"tags": ["dimensions", "gravitation"]
+},{
+"questionText": "A quantity has dimensions [M^0L^0T^0]. Which of the following can have these dimensions?",
+"options": [
+{ "id": "A", "text": "Strain" },
+{ "id": "B", "text": "Force" },
+{ "id": "C", "text": "Momentum" },
+{ "id": "D", "text": "Pressure" }
+],
+"correctOption": "A",
+"explanation": "Strain is the ratio of two lengths, making it dimensionless.",
+"difficulty": "medium",
+"tags": ["dimensionless", "strain"]
+},
+{
+"questionText": "The number of significant figures in 0.005620 is:",
+"options": [
+{ "id": "A", "text": "3" },
+{ "id": "B", "text": "4" },
+{ "id": "C", "text": "5" },
+{ "id": "D", "text": "6" }
+],
+"correctOption": "B",
+"explanation": "Leading zeros are not significant, while the trailing zero after the decimal is significant. Thus there are 4 significant figures.",
+"difficulty": "medium",
+"tags": ["significant-figures", "measurement"]
+},
+{
+"questionText": "The least count of a Vernier calipers is obtained by:",
+"options": [
+{ "id": "A", "text": "Main scale division × Vernier scale division" },
+{ "id": "B", "text": "Main scale division ÷ Number of Vernier divisions" },
+{ "id": "C", "text": "Vernier scale division ÷ Main scale division" },
+{ "id": "D", "text": "Difference of two main scale divisions" }
+],
+"correctOption": "B",
+"explanation": "Least count = Value of one main scale division divided by the number of Vernier divisions (for a standard Vernier).",
+"difficulty": "medium",
+"tags": ["vernier", "least-count"]
+},
+{
+"questionText": "The dimensional formula of pressure is:",
+"options": [
+{ "id": "A", "text": "[M L^-1 T^-2]" },
+{ "id": "B", "text": "[M L T^-2]" },
+{ "id": "C", "text": "[M L^2 T^-2]" },
+{ "id": "D", "text": "[M T^-2]" }
+],
+"correctOption": "A",
+"explanation": "Pressure = Force/Area = (MLT⁻²)/L² = ML⁻¹T⁻².",
+"difficulty": "medium",
+"tags": ["pressure", "dimensions"]
+},
+{
+"questionText": "If the radius of a sphere is measured with a percentage error of 2%, the maximum percentage error in its volume is:",
+"options": [
+{ "id": "A", "text": "2%" },
+{ "id": "B", "text": "4%" },
+{ "id": "C", "text": "6%" },
+{ "id": "D", "text": "8%" }
+],
+"correctOption": "C",
+"explanation": "Volume of a sphere is proportional to r³, so the percentage error is 3 × 2% = 6%.",
+"difficulty": "medium",
+"tags": ["error-analysis", "sphere"]
+},
+{
+"questionText": "Which pair of physical quantities has the same dimensions?",
+"options": [
+{ "id": "A", "text": "Work and Torque" },
+{ "id": "B", "text": "Pressure and Stress" },
+{ "id": "C", "text": "Impulse and Momentum" },
+{ "id": "D", "text": "All of the above pairs" }
+],
+"correctOption": "D",
+"explanation": "Work and torque have dimensions ML²T⁻², pressure and stress have ML⁻¹T⁻², and impulse and momentum have MLT⁻¹.",
+"difficulty": "hard",
+"tags": ["dimensions", "comparison"]
+},
+{
+"questionText": "The equation v = u + at is dimensionally:",
+"options": [
+{ "id": "A", "text": "Incorrect because u and at have different dimensions" },
+{ "id": "B", "text": "Correct because all terms have dimensions of velocity" },
+{ "id": "C", "text": "Incorrect because v has dimensions of acceleration" },
+{ "id": "D", "text": "Cannot be checked using dimensional analysis" }
+],
+"correctOption": "B",
+"explanation": "Both u and at have dimensions LT⁻¹, which matches the dimensions of v.",
+"difficulty": "hard",
+"tags": ["dimensional-analysis", "kinematics"]
+},
+{
+"questionText": "Dimensional analysis cannot be used to:",
+"options": [
+{ "id": "A", "text": "Check dimensional consistency of an equation" },
+{ "id": "B", "text": "Derive relations up to dimensionless constants" },
+{ "id": "C", "text": "Determine numerical constants like 1/2 or 2π" },
+{ "id": "D", "text": "Find dimensions of derived quantities" }
+],
+"correctOption": "C",
+"explanation": "Dimensional analysis cannot determine pure numerical constants such as 1/2, 2, or π.",
+"difficulty": "hard",
+"tags": ["dimensional-analysis", "limitations"]
+},
+{
+"questionText": "A student measures a length as 12.40 cm using an instrument. Which statement is correct?",
+"options": [
+{ "id": "A", "text": "The measurement has 2 significant figures." },
+{ "id": "B", "text": "The measurement has 3 significant figures." },
+{ "id": "C", "text": "The measurement has 4 significant figures." },
+{ "id": "D", "text": "The trailing zero is not significant." }
+],
+"correctOption": "C",
+"explanation": "All non-zero digits and the trailing zero after the decimal are significant, giving four significant figures.",
+"difficulty": "hard",
+"tags": ["significant-figures", "measurement"]
+}
+
+]
+}

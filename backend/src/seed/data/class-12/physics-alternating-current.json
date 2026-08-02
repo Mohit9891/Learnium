@@ -1,0 +1,277 @@
+{
+  "exam": {
+    "name": "Class 12",
+    "slug": ""
+  },
+  "subject": {
+    "name": "Physics",
+    "slug": ""
+  },
+  "chapter": {
+    "name": "Alternating Current",
+    "slug": "",
+    "orderIndex": 7
+  },
+  "questions": [
+    {
+      "questionText": "The root mean square (rms) value of an alternating current I = I₀ sin(ωt) is related to its peak value I₀ by:",
+      "options": [
+        { "id": "A", "text": "I_rms = I₀ / 2" },
+        { "id": "B", "text": "I_rms = I₀ / √2" },
+        { "id": "C", "text": "I_rms = √2 I₀" },
+        { "id": "D", "text": "I_rms = 2 I₀ / π" }
+      ],
+      "correctOption": "B",
+      "explanation": "The rms value of a sinusoidal alternating current is given by I_rms = I₀ / √2 ≈ 0.707 I₀.",
+      "difficulty": "easy",
+      "tags": ["rms-value", "ac-basics"]
+    },
+    {
+      "questionText": "In a purely inductive AC circuit, the phase difference between current and voltage is:",
+      "options": [
+        { "id": "A", "text": "Current leads voltage by π/2" },
+        { "id": "B", "text": "Voltage leads current by π/2" },
+        { "id": "C", "text": "Current and voltage are in phase" },
+        { "id": "D", "text": "Voltage leads current by π" }
+      ],
+      "correctOption": "B",
+      "explanation": "In a purely inductive circuit, voltage leads current by a phase angle of π/2 radians (or 90°).",
+      "difficulty": "easy",
+      "tags": ["inductive-circuit", "phase-difference"]
+    },
+    {
+      "questionText": "The inductive reactance X_L of an inductor of self-inductance L connected to an AC source of frequency f is:",
+      "options": [
+        { "id": "A", "text": "X_L = 2π f L" },
+        { "id": "B", "text": "X_L = 1 / (2π f L)" },
+        { "id": "C", "text": "X_L = 2π f / L" },
+        { "id": "D", "text": "X_L = L / (2π f)" }
+      ],
+      "correctOption": "A",
+      "explanation": "Inductive reactance is directly proportional to frequency and inductance, given by X_L = ωL = 2π f L.",
+      "difficulty": "easy",
+      "tags": ["inductive-reactance", "formula"]
+    },
+    {
+      "questionText": "The capacitive reactance X_C of a capacitor of capacitance C in an AC circuit operating at frequency f varies with frequency as:",
+      "options": [
+        { "id": "A", "text": "X_C ∝ f" },
+        { "id": "B", "text": "X_C ∝ f²" },
+        { "id": "C", "text": "X_C ∝ 1 / f" },
+        { "id": "D", "text": "X_C is independent of f" }
+      ],
+      "correctOption": "C",
+      "explanation": "Capacitive reactance X_C = 1 / (2π f C), which means X_C is inversely proportional to frequency f.",
+      "difficulty": "easy",
+      "tags": ["capacitive-reactance", "frequency-dependence"]
+    },
+    {
+      "questionText": "The power factor of a purely resistive AC circuit is:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "0.5" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "Infinity" }
+      ],
+      "correctOption": "C",
+      "explanation": "In a purely resistive circuit, phase angle ϕ = 0°. Thus, the power factor cos ϕ = cos 0° = 1.",
+      "difficulty": "easy",
+      "tags": ["power-factor", "resistive-circuit"]
+    },
+    {
+      "questionText": "At series resonance in an LCR circuit, the impedance Z of the circuit is:",
+      "options": [
+        { "id": "A", "text": "Maximum and equal to √(R² + X_L²)" },
+        { "id": "B", "text": "Minimum and equal to R" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Infinite" }
+      ],
+      "correctOption": "B",
+      "explanation": "At resonance, X_L = X_C, so the net reactance is zero. The impedance becomes minimum and purely resistive: Z = R.",
+      "difficulty": "easy",
+      "tags": ["resonance", "lcr-circuit"]
+    },
+    {
+      "questionText": "The principle of operation of a transformer is based on:",
+      "options": [
+        { "id": "A", "text": "Self-inductance" },
+        { "id": "B", "text": "Mutual induction" },
+        { "id": "C", "text": "Seebeck effect" },
+        { "id": "D", "text": "Joule heating" }
+      ],
+      "correctOption": "B",
+      "explanation": "A transformer transfers electrical energy between circuits through electromagnetic mutual induction.",
+      "difficulty": "easy",
+      "tags": ["transformer", "principle"]
+    },
+    {
+      "questionText": "In a step-up transformer, the primary to secondary turns ratio N_p / N_s is:",
+      "options": [
+        { "id": "A", "text": "Greater than 1" },
+        { "id": "B", "text": "Less than 1" },
+        { "id": "C", "text": "Equal to 1" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correctOption": "B",
+      "explanation": "A step-up transformer increases voltage, meaning N_s > N_p, so the turns ratio N_p / N_s < 1.",
+      "difficulty": "easy",
+      "tags": ["step-up-transformer", "turns-ratio"]
+    },
+    {
+      "questionText": "An AC voltage source V = 220 √2 sin(100 π t) is connected across a 100 Ω resistor. The rms current in the circuit is:",
+      "options": [
+        { "id": "A", "text": "1.1 A" },
+        { "id": "B", "text": "2.2 A" },
+        { "id": "C", "text": "3.1 A" },
+        { "id": "D", "text": "4.4 A" }
+      ],
+      "correctOption": "B",
+      "explanation": "Peak voltage V₀ = 220 √2 V, so V_rms = 220 V. The rms current I_rms = V_rms / R = 220 / 100 = 2.2 A.",
+      "difficulty": "medium",
+      "tags": ["rms-current", "numerical"]
+    },
+    {
+      "questionText": "A 100 Ω resistor and a 0.5 H inductor are connected in series to a 200 V, 50 Hz AC supply. The inductive reactance X_L of the circuit is closest to:",
+      "options": [
+        { "id": "A", "text": "78.5 Ω" },
+        { "id": "B", "text": "157 Ω" },
+        { "id": "C", "text": "314 Ω" },
+        { "id": "D", "text": "628 Ω" }
+      ],
+      "correctOption": "B",
+      "explanation": "X_L = 2π f L = 2 × π × 50 × 0.5 = 50 π ≈ 157 Ω.",
+      "difficulty": "medium",
+      "tags": ["inductive-reactance", "numerical"]
+    },
+    {
+      "questionText": "A series LCR circuit has R = 30 Ω, X_L = 80 Ω, and X_C = 40 Ω connected across an AC source. The total impedance Z of the circuit is:",
+      "options": [
+        { "id": "A", "text": "30 Ω" },
+        { "id": "B", "text": "50 Ω" },
+        { "id": "C", "text": "70 Ω" },
+        { "id": "D", "text": "110 Ω" }
+      ],
+      "correctOption": "B",
+      "explanation": "Z = √[R² + (X_L - X_C)²] = √[30² + (80 - 40)²] = √[30² + 40²] = 50 Ω.",
+      "difficulty": "medium",
+      "tags": ["lcr-impedance", "numerical"]
+    },
+    {
+      "questionText": "The resonant frequency f_r of a series LCR circuit containing L = 20 mH and C = 5 μF is:",
+      "options": [
+        { "id": "A", "text": "159 Hz" },
+        { "id": "B", "text": "318 Hz" },
+        { "id": "C", "text": "503 Hz" },
+        { "id": "D", "text": "1000 Hz" }
+      ],
+      "correctOption": "C",
+      "explanation": "f_r = 1 / (2π √(L C)) = 1 / (2π √(20 × 10⁻³ × 5 × 10⁻⁶)) = 1 / (2π √(10⁻⁷)) = 1 / (2π × 10⁻⁴) ≈ 503 Hz.",
+      "difficulty": "medium",
+      "tags": ["resonant-frequency", "numerical"]
+    },
+    {
+      "questionText": "In a series LCR circuit, the average power dissipated over a complete cycle is given by:",
+      "options": [
+        { "id": "A", "text": "P_avg = V_rms I_rms" },
+        { "id": "B", "text": "P_avg = V_rms I_rms cos ϕ" },
+        { "id": "C", "text": "P_avg = V_rms I_rms sin ϕ" },
+        { "id": "D", "text": "P_avg = I_rms² (X_L - X_C)" }
+      ],
+      "correctOption": "B",
+      "explanation": "Average AC power is P_avg = V_rms I_rms cos ϕ, where cos ϕ is the power factor of the circuit.",
+      "difficulty": "medium",
+      "tags": ["average-power", "power-factor"]
+    },
+    {
+      "questionText": "A capacitor allows AC to pass through easily but blocks DC because:",
+      "options": [
+        { "id": "A", "text": "For DC, frequency f = 0, so capacitive reactance X_C → ∞" },
+        { "id": "B", "text": "For DC, frequency f = 0, so capacitive reactance X_C = 0" },
+        { "id": "C", "text": "Capacitors conduct charge physically through their dielectric" },
+        { "id": "D", "text": "DC current decays exponentially in a capacitor" }
+      ],
+      "correctOption": "A",
+      "explanation": "Since X_C = 1 / (2π f C), for direct current (f = 0), X_C becomes infinitely large, blocking DC.",
+      "difficulty": "medium",
+      "tags": ["capacitor-dc-block", "conceptual"]
+    },
+    {
+      "questionText": "The Quality factor (Q-factor) of a series resonant LCR circuit is given by:",
+      "options": [
+        { "id": "A", "text": "Q = (1 / R) √(L / C)" },
+        { "id": "B", "text": "Q = R √(C / L)" },
+        { "id": "C", "text": "Q = (1 / L) √(R / C)" },
+        { "id": "D", "text": "Q = (1 / C) √(L / R)" }
+      ],
+      "correctOption": "A",
+      "explanation": "Q-factor Q = ω_r L / R = (1 / √(LC)) × (L / R) = (1 / R) √(L / C).",
+      "difficulty": "medium",
+      "tags": ["q-factor", "sharpness-of-resonance"]
+    },
+    {
+      "questionText": "An ideal transformer steps down 220 V to 22 V. If the primary current is 0.5 A, the secondary current is:",
+      "options": [
+        { "id": "A", "text": "0.05 A" },
+        { "id": "B", "text": "0.5 A" },
+        { "id": "C", "text": "5.0 A" },
+        { "id": "D", "text": "50 A" }
+      ],
+      "correctOption": "C",
+      "explanation": "For an ideal transformer, V_p I_p = V_s I_s ⇒ 220 × 0.5 = 22 × I_s ⇒ I_s = 5 A.",
+      "difficulty": "medium",
+      "tags": ["transformer", "numerical"]
+    },
+    {
+      "questionText": "In an AC circuit containing R and C in series, the voltage across the resistor is 12 V and the voltage across the capacitor is 16 V. The total supply voltage is:",
+      "options": [
+        { "id": "A", "text": "28 V" },
+        { "id": "B", "text": "20 V" },
+        { "id": "C", "text": "4 V" },
+        { "id": "D", "text": "14 V" }
+      ],
+      "correctOption": "B",
+      "explanation": "In an RC circuit, voltages are 90° out of phase. Total voltage V = √(V_R² + V_C²) = √(12² + 16²) = √(144 + 256) = √400 = 20 V.",
+      "difficulty": "hard",
+      "tags": ["phasor-addition", "rc-circuit"]
+    },
+    {
+      "questionText": "An AC voltage V = V₀ sin(ωt) is applied across an LCR series circuit. At a frequency ω = 1 / √(2LC), the nature of the circuit is:",
+      "options": [
+        { "id": "A", "text": "Purely resistive" },
+        { "id": "B", "text": "Inductive" },
+        { "id": "C", "text": "Capacitive" },
+        { "id": "D", "text": "Resonant" }
+      ],
+      "correctOption": "C",
+      "explanation": "Resonant frequency is ω₀ = 1/√(LC). When ω = 1/√(2LC) = ω₀ / √2 < ω₀, X_C = 1/(ωC) = √2/(ω₀C) and X_L = ωL = ω₀L / √2. Since X_C > X_L, the circuit is capacitive.",
+      "difficulty": "hard",
+      "tags": ["lcr-circuit", "frequency-response"]
+    },
+    {
+      "questionText": "A wattless current flows in an AC circuit when the circuit contains:",
+      "options": [
+        { "id": "A", "text": "Only resistance R" },
+        { "id": "B", "text": "Pure inductance L or pure capacitance C" },
+        { "id": "C", "text": "Resistance R and inductance L with phase angle 45°" },
+        { "id": "D", "text": "A step-up transformer operating under load" }
+      ],
+      "correctOption": "B",
+      "explanation": "In a purely inductive or purely capacitive circuit, phase angle ϕ = 90°, so power factor cos ϕ = 0. The average power consumed is zero, and the current is called wattless current.",
+      "difficulty": "hard",
+      "tags": ["wattless-current", "power-factor"]
+    },
+    {
+      "questionText": "A series LCR circuit has R = 10 Ω, L = 2 mH, and C = 2 μF. The bandwidth of the resonance circuit is:",
+      "options": [
+        { "id": "A", "text": "500 rad s⁻¹" },
+        { "id": "B", "text": "2500 rad s⁻¹" },
+        { "id": "C", "text": "5000 rad s⁻¹" },
+        { "id": "D", "text": "10000 rad s⁻¹" }
+      ],
+      "correctOption": "C",
+      "explanation": "Bandwidth Δω in rad s⁻¹ is given by Δω = R / L = 10 / (2 × 10⁻³) = 5000 rad s⁻¹.",
+      "difficulty": "hard",
+      "tags": ["bandwidth", "lcr-resonance"]
+    }
+  ]
+}

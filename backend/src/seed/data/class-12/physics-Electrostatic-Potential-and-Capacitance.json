@@ -1,0 +1,277 @@
+{
+  "exam": {
+    "name": "Class 12",
+    "slug": "class-12"
+  },
+  "subject": {
+    "name": "Physics",
+    "slug": "physics"
+  },
+  "chapter": {
+    "name": "Electrostatic Potential and Capacitance",
+    "slug": "electrostatic-potential-and-capacitance",
+    "orderIndex": 2
+  },
+  "questions": [
+    {
+      "questionText": "Electric potential at a point is defined as:",
+      "options": [
+        { "id": "A", "text": "Force per unit charge" },
+        { "id": "B", "text": "Work done per unit positive test charge in bringing it from infinity to that point" },
+        { "id": "C", "text": "Charge per unit area" },
+        { "id": "D", "text": "Energy per unit mass" }
+      ],
+      "correctOption": "B",
+      "explanation": "Electric potential is the work done by an external agent in bringing a unit positive test charge from infinity to the given point without changing its kinetic energy.",
+      "difficulty": "easy",
+      "tags": ["electric-potential", "definition"]
+    },
+    {
+      "questionText": "The SI unit of electric potential is:",
+      "options": [
+        { "id": "A", "text": "Joule" },
+        { "id": "B", "text": "Volt" },
+        { "id": "C", "text": "Farad" },
+        { "id": "D", "text": "Coulomb" }
+      ],
+      "correctOption": "B",
+      "explanation": "One volt equals one joule of work done per coulomb of charge.",
+      "difficulty": "easy",
+      "tags": ["si-unit", "electric-potential"]
+    },
+    {
+      "questionText": "The electric potential at infinity due to an isolated point charge is taken as:",
+      "options": [
+        { "id": "A", "text": "1 V" },
+        { "id": "B", "text": "Infinite" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "-1 V" }
+      ],
+      "correctOption": "C",
+      "explanation": "By convention, the electric potential at infinity is chosen to be zero.",
+      "difficulty": "easy",
+      "tags": ["electric-potential", "reference"]
+    },
+    {
+      "questionText": "The electric potential due to a point charge is given by:",
+      "options": [
+        { "id": "A", "text": "V = kq/r²" },
+        { "id": "B", "text": "V = kq/r" },
+        { "id": "C", "text": "V = qr/k" },
+        { "id": "D", "text": "V = kr/q" }
+      ],
+      "correctOption": "B",
+      "explanation": "The electric potential at a distance r from a point charge q is V = kq/r.",
+      "difficulty": "easy",
+      "tags": ["point-charge", "formula"]
+    },
+    {
+      "questionText": "The SI unit of capacitance is:",
+      "options": [
+        { "id": "A", "text": "Henry" },
+        { "id": "B", "text": "Farad" },
+        { "id": "C", "text": "Tesla" },
+        { "id": "D", "text": "Weber" }
+      ],
+      "correctOption": "B",
+      "explanation": "Capacitance is measured in farad (F), where 1 F = 1 C/V.",
+      "difficulty": "easy",
+      "tags": ["capacitance", "si-unit"]
+    },
+    {
+      "questionText": "Capacitance is defined as:",
+      "options": [
+        { "id": "A", "text": "Q × V" },
+        { "id": "B", "text": "V/Q" },
+        { "id": "C", "text": "Q/V" },
+        { "id": "D", "text": "QV²" }
+      ],
+      "correctOption": "C",
+      "explanation": "Capacitance is the ratio of charge stored to the potential difference across the conductor.",
+      "difficulty": "easy",
+      "tags": ["capacitance", "definition"]
+    },
+    {
+      "questionText": "The dielectric constant of vacuum is:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "0.5" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "2" }
+      ],
+      "correctOption": "C",
+      "explanation": "Vacuum is taken as the reference medium and has a dielectric constant equal to 1.",
+      "difficulty": "easy",
+      "tags": ["dielectric", "vacuum"]
+    },
+    {
+      "questionText": "Which device is used to store electric charge?",
+      "options": [
+        { "id": "A", "text": "Resistor" },
+        { "id": "B", "text": "Inductor" },
+        { "id": "C", "text": "Capacitor" },
+        { "id": "D", "text": "Transformer" }
+      ],
+      "correctOption": "C",
+      "explanation": "A capacitor stores electric charge and electrical energy in an electric field.",
+      "difficulty": "easy",
+      "tags": ["capacitor", "charge-storage"]
+    },
+    {
+      "questionText": "A point charge of +4 μC is placed in vacuum. The electric potential at a point 2 m away is:",
+      "options": [
+        { "id": "A", "text": "9 kV" },
+        { "id": "B", "text": "18 kV" },
+        { "id": "C", "text": "36 kV" },
+        { "id": "D", "text": "72 kV" }
+      ],
+      "correctOption": "B",
+      "explanation": "V = kq/r = (9×10⁹ × 4×10⁻⁶)/2 = 18×10³ V = 18 kV.",
+      "difficulty": "medium",
+      "tags": ["electric-potential", "numerical"]
+    },
+    {
+      "questionText": "A capacitor has a capacitance of 5 μF and stores a charge of 20 μC. The potential difference across it is:",
+      "options": [
+        { "id": "A", "text": "2 V" },
+        { "id": "B", "text": "4 V" },
+        { "id": "C", "text": "5 V" },
+        { "id": "D", "text": "10 V" }
+      ],
+      "correctOption": "B",
+      "explanation": "Using V = Q/C = (20 μC)/(5 μF) = 4 V.",
+      "difficulty": "medium",
+      "tags": ["capacitance", "numerical"]
+    },
+    {
+      "questionText": "The relation between electric field (E) and electric potential (V) is:",
+      "options": [
+        { "id": "A", "text": "E = V/r" },
+        { "id": "B", "text": "E = -dV/dr" },
+        { "id": "C", "text": "E = V × r" },
+        { "id": "D", "text": "E = dV × dr" }
+      ],
+      "correctOption": "B",
+      "explanation": "The electric field is equal to the negative potential gradient, indicating that the field points in the direction of decreasing potential.",
+      "difficulty": "medium",
+      "tags": ["electric-field", "potential-gradient"]
+    },
+    {
+      "questionText": "Two capacitors of capacitances 3 μF and 6 μF are connected in series. Their equivalent capacitance is:",
+      "options": [
+        { "id": "A", "text": "2 μF" },
+        { "id": "B", "text": "3 μF" },
+        { "id": "C", "text": "4 μF" },
+        { "id": "D", "text": "9 μF" }
+      ],
+      "correctOption": "A",
+      "explanation": "For series combination, 1/C = 1/3 + 1/6 = 1/2. Hence, C = 2 μF.",
+      "difficulty": "medium",
+      "tags": ["capacitors", "series"]
+    },
+    {
+      "questionText": "Two capacitors of capacitances 4 μF and 8 μF are connected in parallel. The equivalent capacitance is:",
+      "options": [
+        { "id": "A", "text": "2 μF" },
+        { "id": "B", "text": "6 μF" },
+        { "id": "C", "text": "12 μF" },
+        { "id": "D", "text": "32 μF" }
+      ],
+      "correctOption": "C",
+      "explanation": "For capacitors in parallel, capacitances add directly: 4 + 8 = 12 μF.",
+      "difficulty": "medium",
+      "tags": ["capacitors", "parallel"]
+    },
+    {
+      "questionText": "The energy stored in a capacitor is given by:",
+      "options": [
+        { "id": "A", "text": "U = QV" },
+        { "id": "B", "text": "U = ½CV²" },
+        { "id": "C", "text": "U = CV²" },
+        { "id": "D", "text": "U = V²/C" }
+      ],
+      "correctOption": "B",
+      "explanation": "The energy stored in a charged capacitor is U = ½CV². Equivalent forms are U = ½QV and U = Q²/(2C).",
+      "difficulty": "medium",
+      "tags": ["energy", "capacitor"]
+    },
+    {
+      "questionText": "When a dielectric slab completely fills the space between the plates of a capacitor, its capacitance:",
+      "options": [
+        { "id": "A", "text": "Decreases" },
+        { "id": "B", "text": "Remains unchanged" },
+        { "id": "C", "text": "Becomes zero" },
+        { "id": "D", "text": "Increases" }
+      ],
+      "correctOption": "D",
+      "explanation": "A dielectric increases the capacitance by a factor equal to its dielectric constant.",
+      "difficulty": "medium",
+      "tags": ["dielectric", "capacitance"]
+    },
+    {
+      "questionText": "A parallel plate capacitor has plate area 0.02 m² and separation 2 mm. The capacitance in air is closest to:",
+      "options": [
+        { "id": "A", "text": "8.85 pF" },
+        { "id": "B", "text": "44.3 pF" },
+        { "id": "C", "text": "88.5 pF" },
+        { "id": "D", "text": "177 pF" }
+      ],
+      "correctOption": "C",
+      "explanation": "Using C = ε₀A/d = (8.85×10⁻¹² × 0.02)/(2×10⁻³) = 88.5 pF.",
+      "difficulty": "hard",
+      "tags": ["parallel-plate", "numerical"]
+    },
+    {
+      "questionText": "If the distance between the plates of an isolated parallel plate capacitor is doubled, its capacitance becomes:",
+      "options": [
+        { "id": "A", "text": "Double" },
+        { "id": "B", "text": "Half" },
+        { "id": "C", "text": "Four times" },
+        { "id": "D", "text": "Unchanged" }
+      ],
+      "correctOption": "B",
+      "explanation": "Since C = ε₀A/d, doubling the plate separation halves the capacitance.",
+      "difficulty": "hard",
+      "tags": ["parallel-plate", "application"]
+    },
+    {
+      "questionText": "A capacitor of 10 μF is charged to 20 V. The energy stored in it is:",
+      "options": [
+        { "id": "A", "text": "0.002 J" },
+        { "id": "B", "text": "0.02 J" },
+        { "id": "C", "text": "0.2 J" },
+        { "id": "D", "text": "2 J" }
+      ],
+      "correctOption": "A",
+      "explanation": "U = ½CV² = ½ × 10×10⁻⁶ × 20² = 0.002 J.",
+      "difficulty": "hard",
+      "tags": ["energy", "numerical"]
+    },
+    {
+      "questionText": "An equipotential surface and the electric field at every point on it are:",
+      "options": [
+        { "id": "A", "text": "Parallel to each other" },
+        { "id": "B", "text": "Perpendicular to each other" },
+        { "id": "C", "text": "At 45° to each other" },
+        { "id": "D", "text": "In opposite directions" }
+      ],
+      "correctOption": "B",
+      "explanation": "No work is done along an equipotential surface, so the electric field is always normal to it.",
+      "difficulty": "hard",
+      "tags": ["equipotential", "electric-field"]
+    },
+    {
+      "questionText": "A positive charge moves from a point of higher potential to a point of lower potential. The work done by the electric field is:",
+      "options": [
+        { "id": "A", "text": "Positive" },
+        { "id": "B", "text": "Negative" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Cannot be determined" }
+      ],
+      "correctOption": "A",
+      "explanation": "A positive charge naturally moves from higher to lower potential, so the electric field does positive work.",
+      "difficulty": "hard",
+      "tags": ["work-done", "electric-potential"]
+    }
+  ]
+}

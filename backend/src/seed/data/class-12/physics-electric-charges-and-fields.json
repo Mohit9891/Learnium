@@ -1,0 +1,277 @@
+{
+"exam": {
+"name": "Class 12",
+"slug": ""
+},
+"subject": {
+"name": "Physics",
+"slug": ""
+},
+"chapter": {
+"name": "Electric Charges and Fields",
+"slug": "",
+"orderIndex": 1
+},
+"questions": [
+{
+"questionText": "The SI unit of electric charge is:",
+"options": [
+{ "id": "A", "text": "Ampere" },
+{ "id": "B", "text": "Volt" },
+{ "id": "C", "text": "Coulomb" },
+{ "id": "D", "text": "Farad" }
+],
+"correctOption": "C",
+"explanation": "Electric charge is measured in coulomb (C), which is the SI unit of charge.",
+"difficulty": "easy",
+"tags": ["electric-charge", "si-unit"]
+},
+{
+"questionText": "According to Coulomb's law, the electrostatic force between two point charges is directly proportional to:",
+"options": [
+{ "id": "A", "text": "Distance between the charges" },
+{ "id": "B", "text": "Product of the charges" },
+{ "id": "C", "text": "Square of the distance" },
+{ "id": "D", "text": "Sum of the charges" }
+],
+"correctOption": "B",
+"explanation": "Coulomb's law states that F ∝ q₁q₂/r².",
+"difficulty": "easy",
+"tags": ["coulombs-law", "electrostatics"]
+},
+{
+"questionText": "The value of Coulomb's constant (k = 1/4πε₀) in vacuum is approximately:",
+"options": [
+{ "id": "A", "text": "9 × 10⁹ N·m²/C²" },
+{ "id": "B", "text": "8.85 × 10⁻¹² N·m²/C²" },
+{ "id": "C", "text": "6.67 × 10⁻¹¹ N·m²/C²" },
+{ "id": "D", "text": "3 × 10⁸ N·m²/C²" }
+],
+"correctOption": "A",
+"explanation": "The electrostatic constant k in vacuum is approximately 9 × 10⁹ N·m²/C².",
+"difficulty": "easy",
+"tags": ["coulombs-law", "constant"]
+},
+{
+"questionText": "Like charges always:",
+"options": [
+{ "id": "A", "text": "Attract each other" },
+{ "id": "B", "text": "Repel each other" },
+{ "id": "C", "text": "Neutralize each other" },
+{ "id": "D", "text": "Produce no force" }
+],
+"correctOption": "B",
+"explanation": "Charges of the same sign repel each other, while unlike charges attract.",
+"difficulty": "easy",
+"tags": ["charges", "electrostatics"]
+},
+{
+"questionText": "Electric field at a point is defined as:",
+"options": [
+{ "id": "A", "text": "Force per unit area" },
+{ "id": "B", "text": "Potential per unit charge" },
+{ "id": "C", "text": "Force experienced by a unit positive test charge" },
+{ "id": "D", "text": "Charge per unit volume" }
+],
+"correctOption": "C",
+"explanation": "Electric field strength is the force acting on a unit positive test charge placed at that point.",
+"difficulty": "easy",
+"tags": ["electric-field", "definition"]
+},
+{
+"questionText": "The SI unit of electric field is:",
+"options": [
+{ "id": "A", "text": "N/C" },
+{ "id": "B", "text": "C/N" },
+{ "id": "C", "text": "V/C" },
+{ "id": "D", "text": "J/C²" }
+],
+"correctOption": "A",
+"explanation": "Electric field is force per unit charge, so its SI unit is N/C.",
+"difficulty": "easy",
+"tags": ["electric-field", "si-unit"]
+},
+{
+"questionText": "Electric field lines originate from:",
+"options": [
+{ "id": "A", "text": "Negative charges" },
+{ "id": "B", "text": "Positive charges" },
+{ "id": "C", "text": "Neutral bodies" },
+{ "id": "D", "text": "Ground" }
+],
+"correctOption": "B",
+"explanation": "Electric field lines start from positive charges and terminate on negative charges.",
+"difficulty": "easy",
+"tags": ["field-lines", "electric-field"]
+},
+{
+"questionText": "The electric field inside a conductor in electrostatic equilibrium is:",
+"options": [
+{ "id": "A", "text": "Maximum" },
+{ "id": "B", "text": "Equal to the external field" },
+{ "id": "C", "text": "Zero" },
+{ "id": "D", "text": "Infinite" }
+],
+"correctOption": "C",
+"explanation": "Free charges redistribute themselves until the electric field inside the conductor becomes zero.",
+"difficulty": "easy",
+"tags": ["conductors", "electrostatics"]
+},
+{
+"questionText": "Two point charges +2 μC and +3 μC are separated by 2 m in vacuum. The electrostatic force between them is:",
+"options": [
+{ "id": "A", "text": "0.0135 N" },
+{ "id": "B", "text": "0.027 N" },
+{ "id": "C", "text": "0.54 N" },
+{ "id": "D", "text": "0.135 N" }
+],
+"correctOption": "A",
+"explanation": "Using F = kq₁q₂/r² = (9×10⁹)(2×10⁻⁶)(3×10⁻⁶)/2² = 0.0135 N.",
+"difficulty": "medium",
+"tags": ["coulombs-law", "numerical"]
+},
+{
+"questionText": "If the distance between two point charges is doubled while keeping the charges unchanged, the electrostatic force becomes:",
+"options": [
+{ "id": "A", "text": "Double" },
+{ "id": "B", "text": "Half" },
+{ "id": "C", "text": "One-fourth" },
+{ "id": "D", "text": "Four times" }
+],
+"correctOption": "C",
+"explanation": "Since F ∝ 1/r², doubling the distance reduces the force to one-fourth.",
+"difficulty": "medium",
+"tags": ["inverse-square", "coulombs-law"]
+},
+{
+"questionText": "A point charge of +5 μC produces an electric field at a point 3 m away. The magnitude of the electric field is:",
+"options": [
+{ "id": "A", "text": "5 × 10³ N/C" },
+{ "id": "B", "text": "2 × 10³ N/C" },
+{ "id": "C", "text": "1 × 10⁴ N/C" },
+{ "id": "D", "text": "8 × 10³ N/C" }
+],
+"correctOption": "A",
+"explanation": "Using E = kq/r² = (9×10⁹)(5×10⁻⁶)/9 = 5 × 10³ N/C.",
+"difficulty": "medium",
+"tags": ["electric-field", "numerical"]
+},
+{
+"questionText": "The electric field due to a negative point charge is directed:",
+"options": [
+{ "id": "A", "text": "Away from the charge" },
+{ "id": "B", "text": "Towards the charge" },
+{ "id": "C", "text": "Perpendicular to the charge" },
+{ "id": "D", "text": "Circular around the charge" }
+],
+"correctOption": "B",
+"explanation": "Electric field lines terminate on negative charges, so the field points towards the charge.",
+"difficulty": "medium",
+"tags": ["electric-field", "field-lines"]
+},
+{
+"questionText": "According to the principle of superposition, the resultant electric force on a charge is:",
+"options": [
+{ "id": "A", "text": "The product of all individual forces" },
+{ "id": "B", "text": "The scalar sum of magnitudes only" },
+{ "id": "C", "text": "The vector sum of individual forces" },
+{ "id": "D", "text": "Always equal to zero" }
+],
+"correctOption": "C",
+"explanation": "Electric forces obey the principle of superposition, so they add vectorially.",
+"difficulty": "medium",
+"tags": ["superposition", "electric-force"]
+},
+{
+"questionText": "The electric flux through a closed surface depends on:",
+"options": [
+{ "id": "A", "text": "The total charge enclosed by the surface" },
+{ "id": "B", "text": "The shape of the surface only" },
+{ "id": "C", "text": "The area of the surface only" },
+{ "id": "D", "text": "The electric field outside the surface only" }
+],
+"correctOption": "A",
+"explanation": "Gauss's law states that net electric flux through a closed surface depends only on the enclosed charge.",
+"difficulty": "medium",
+"tags": ["gauss-law", "electric-flux"]
+},
+{
+"questionText": "The SI unit of electric flux is:",
+"options": [
+{ "id": "A", "text": "N/C" },
+{ "id": "B", "text": "N·m²/C" },
+{ "id": "C", "text": "C/N" },
+{ "id": "D", "text": "V/m" }
+],
+"correctOption": "B",
+"explanation": "Electric flux = Electric field × Area, so its SI unit is N·m²/C.",
+"difficulty": "medium",
+"tags": ["electric-flux", "si-unit"]
+},
+{
+"questionText": "A charge of +8 μC is enclosed inside a closed surface. The net electric flux through the surface is closest to:",
+"options": [
+{ "id": "A", "text": "9.0 × 10⁵ N·m²/C" },
+{ "id": "B", "text": "4.5 × 10⁵ N·m²/C" },
+{ "id": "C", "text": "7.2 × 10⁴ N·m²/C" },
+{ "id": "D", "text": "Zero" }
+],
+"correctOption": "A",
+"explanation": "Using Φ = q/ε₀ = (8×10⁻⁶)/(8.85×10⁻¹²) ≈ 9.0 × 10⁵ N·m²/C.",
+"difficulty": "hard",
+"tags": ["gauss-law", "numerical"]
+},
+{
+"questionText": "A Gaussian surface encloses equal positive and negative charges. The net electric flux through the surface is:",
+"options": [
+{ "id": "A", "text": "Positive" },
+{ "id": "B", "text": "Negative" },
+{ "id": "C", "text": "Zero" },
+{ "id": "D", "text": "Cannot be determined" }
+],
+"correctOption": "C",
+"explanation": "Equal positive and negative enclosed charges give zero net enclosed charge, so the net flux is zero.",
+"difficulty": "hard",
+"tags": ["gauss-law", "electric-flux"]
+},
+{
+"questionText": "Which of the following statements about electric field lines is incorrect?",
+"options": [
+{ "id": "A", "text": "They never intersect each other." },
+{ "id": "B", "text": "Their density indicates field strength." },
+{ "id": "C", "text": "They form closed loops." },
+{ "id": "D", "text": "They originate on positive charges." }
+],
+"correctOption": "C",
+"explanation": "Electrostatic field lines begin on positive charges and end on negative charges; they do not form closed loops.",
+"difficulty": "hard",
+"tags": ["field-lines", "concept"]
+},
+{
+"questionText": "If the magnitude of one point charge is doubled and the distance between two charges is also doubled, the electrostatic force between them becomes:",
+"options": [
+{ "id": "A", "text": "Twice the original force" },
+{ "id": "B", "text": "Half the original force" },
+{ "id": "C", "text": "One-fourth the original force" },
+{ "id": "D", "text": "Same as the original force" }
+],
+"correctOption": "B",
+"explanation": "Since F ∝ q/r², the new force is (2)/(2²) = 1/2 of the original force.",
+"difficulty": "hard",
+"tags": ["coulombs-law", "application"]
+},
+{
+"questionText": "An electric dipole is placed in a uniform electric field. If the dipole axis is perpendicular to the field, the torque on the dipole is:",
+"options": [
+{ "id": "A", "text": "Zero" },
+{ "id": "B", "text": "Maximum" },
+{ "id": "C", "text": "Minimum but non-zero" },
+{ "id": "D", "text": "Infinite" }
+],
+"correctOption": "B",
+"explanation": "Torque on a dipole is τ = pE sinθ. It is maximum when θ = 90°.",
+"difficulty": "hard",
+"tags": ["electric-dipole", "torque"]
+}
+]
+}

@@ -1,0 +1,277 @@
+{
+"exam": {
+"name": "Class 12",
+"slug": ""
+},
+"subject": {
+"name": "Physics",
+"slug": ""
+},
+"chapter": {
+"name": "Moving Charges and Magnetism",
+"slug": "",
+"orderIndex": 4
+},
+"questions": [
+{
+"questionText": "The magnetic force acting on a charge q moving with velocity v in a magnetic field B is given by:",
+"options": [
+{ "id": "A", "text": "F = q (v · B)" },
+{ "id": "B", "text": "F = q (v × B)" },
+{ "id": "C", "text": "F = q (B × v)" },
+{ "id": "D", "text": "F = (v × B) / q" }
+],
+"correctOption": "B",
+"explanation": "The magnetic Lorentz force on a moving charge is defined as the cross product of velocity and magnetic field, given by F = q(v × B).",
+"difficulty": "easy",
+"tags": ["magnetic-force", "lorentz-force"]
+},
+{
+"questionText": "The SI unit of magnetic field strength B is:",
+"options": [
+{ "id": "A", "text": "Weber" },
+{ "id": "B", "text": "Tesla" },
+{ "id": "C", "text": "Gauss" },
+{ "id": "D", "text": "Henry" }
+],
+"correctOption": "B",
+"explanation": "The SI unit of magnetic field strength B is Tesla (T), where 1 T = 1 N s C⁻¹ m⁻¹.",
+"difficulty": "easy",
+"tags": ["magnetic-field", "si-unit"]
+},
+{
+"questionText": "A charged particle moves parallel to a uniform magnetic field. The path followed by the particle is:",
+"options": [
+{ "id": "A", "text": "Circle" },
+{ "id": "B", "text": "Helix" },
+{ "id": "C", "text": "Straight line" },
+{ "id": "D", "text": "Parabola" }
+],
+"correctOption": "C",
+"explanation": "When velocity is parallel to the magnetic field, θ = 0°, so the magnetic force F = qvB sin(0°) = 0. The particle continues in a straight line.",
+"difficulty": "easy",
+"tags": ["motion-in-magnetic-field", "trajectory"]
+},
+{
+"questionText": "According to the Biot-Savart law, the magnetic field dB due to a current element I dl at a distance r varies as:",
+"options": [
+{ "id": "A", "text": "Directly proportional to r" },
+{ "id": "B", "text": "Inversely proportional to r" },
+{ "id": "C", "text": "Inversely proportional to r²" },
+{ "id": "D", "text": "Directly proportional to r²" }
+],
+"correctOption": "C",
+"explanation": "Biot-Savart law states that dB = (μ₀/4π) (I dl sin θ / r²), showing an inverse-square dependence on distance r.",
+"difficulty": "easy",
+"tags": ["biot-savart-law", "magnetic-field"]
+},
+{
+"questionText": "The magnetic field inside an ideal, infinitely long current-carrying solenoid is:",
+"options": [
+{ "id": "A", "text": "Zero" },
+{ "id": "B", "text": "Uniform along its axis" },
+{ "id": "C", "text": "Radial" },
+{ "id": "D", "text": "Inversely proportional to distance from axis" }
+],
+"correctOption": "B",
+"explanation": "Inside an ideal long solenoid, the magnetic field is uniform, parallel to the axis, and given by B = μ₀ n I.",
+"difficulty": "easy",
+"tags": ["solenoid", "magnetic-field"]
+},
+{
+"questionText": "Two parallel conductors carrying currents in the same direction will:",
+"options": [
+{ "id": "A", "text": "Repel each other" },
+{ "id": "B", "text": "Attract each other" },
+{ "id": "C", "text": "Exert no force on each other" },
+{ "id": "D", "text": "Rotate perpendicular to each other" }
+],
+"correctOption": "B",
+"explanation": "Parallel currents carrying charges in the same direction produce magnetic fields that result in an attractive force between the wires.",
+"difficulty": "easy",
+"tags": ["parallel-currents", "magnetic-force"]
+},
+{
+"questionText": "The magnetic dipole moment m of a planar loop carrying current I and enclosing area A is:",
+"options": [
+{ "id": "A", "text": "m = I / A" },
+{ "id": "B", "text": "m = I A" },
+{ "id": "C", "text": "m = I A²" },
+{ "id": "D", "text": "m = I² A" }
+],
+"correctOption": "B",
+"explanation": "The magnetic dipole moment of a current loop is defined as the product of current and loop area, vectorially m = I A.",
+"difficulty": "easy",
+"tags": ["magnetic-dipole-moment", "formula"]
+},
+{
+"questionText": "To convert a moving coil galvanometer into an ammeter, one must connect:",
+"options": [
+{ "id": "A", "text": "A high resistance in series" },
+{ "id": "B", "text": "A low resistance in parallel" },
+{ "id": "C", "text": "A high resistance in parallel" },
+{ "id": "D", "text": "A low resistance in series" }
+],
+"correctOption": "B",
+"explanation": "A galvanometer is converted into an ammeter by connecting a low resistance called shunt in parallel with its coil.",
+"difficulty": "easy",
+"tags": ["galvanometer", "ammeter"]
+},
+{
+"questionText": "An electron enters a uniform magnetic field of 0.2 T with a velocity of 3 × 10⁶ m s⁻¹ perpendicular to the field. The magnetic force on the electron is:",
+"options": [
+{ "id": "A", "text": "4.8 × 10⁻¹⁴ N" },
+{ "id": "B", "text": "9.6 × 10⁻¹⁴ N" },
+{ "id": "C", "text": "1.6 × 10⁻¹³ N" },
+{ "id": "D", "text": "3.2 × 10⁻¹³ N" }
+],
+"correctOption": "B",
+"explanation": "F = q v B sin 90° = (1.6 × 10⁻¹⁹ C) × (3 × 10⁶ m s⁻¹) × (0.2 T) = 9.6 × 10⁻¹⁴ N.",
+"difficulty": "medium",
+"tags": ["magnetic-force", "numerical"]
+},
+{
+"questionText": "A proton moves in a circular path of radius 0.2 m in a magnetic field of 0.5 T perpendicular to its motion. The kinetic energy of the proton is closest to:",
+"options": [
+{ "id": "A", "text": "0.48 MeV" },
+{ "id": "B", "text": "0.96 MeV" },
+{ "id": "C", "text": "1.92 MeV" },
+{ "id": "D", "text": "3.84 MeV" }
+],
+"correctOption": "A",
+"explanation": "Radius r = q v B / m gives v = q B r / m. K = (1/2) m v² = q² B² r² / (2 m) = (1.6×10⁻¹⁹)² × 0.5² × 0.2² / (2 × 1.67×10⁻²⁷) ≈ 7.66×10⁻¹⁴ J ≈ 0.48 MeV.",
+"difficulty": "medium",
+"tags": ["circular-motion", "kinetic-energy"]
+},
+{
+"questionText": "The magnetic field at the center of a circular current loop of radius R carrying current I is B. The magnetic field on the axis at a distance R from the center is:",
+"options": [
+{ "id": "A", "text": "B / 2" },
+{ "id": "B", "text": "B / 2√2" },
+{ "id": "C", "text": "B / 4" },
+{ "id": "D", "text": "B / 8" }
+],
+"correctOption": "B",
+"explanation": "B_center = μ₀ I / 2R. On axis at x = R, B_axis = μ₀ I R² / [2(R² + R²)³ᐟ²] = μ₀ I / (4√2 R) = B_center / 2√2.",
+"difficulty": "medium",
+"tags": ["circular-loop", "magnetic-field"]
+},
+{
+"questionText": "A long straight wire carries a current of 35 A. The magnitude of the magnetic field at a point 20 cm from the wire is:",
+"options": [
+{ "id": "A", "text": "1.75 × 10⁻⁵ T" },
+{ "id": "B", "text": "3.5 × 10⁻⁵ T" },
+{ "id": "C", "text": "7.0 × 10⁻⁵ T" },
+{ "id": "D", "text": "1.4 × 10⁻⁴ T" }
+],
+"correctOption": "B",
+"explanation": "B = (μ₀ I) / (2π r) = (4π × 10⁻⁷ × 35) / (2π × 0.20) = 3.5 × 10⁻⁵ T.",
+"difficulty": "medium",
+"tags": ["straight-wire", "amperes-law"]
+},
+{
+"questionText": "A solenoid of length 0.5 m has 500 turns and carries a current of 2 A. The magnetic field near the center inside the solenoid is:",
+"options": [
+{ "id": "A", "text": "1.26 × 10⁻³ T" },
+{ "id": "B", "text": "2.51 × 10⁻³ T" },
+{ "id": "C", "text": "5.02 × 10⁻³ T" },
+{ "id": "D", "text": "1.00 × 10⁻² T" }
+],
+"correctOption": "B",
+"explanation": "Turn density n = N / L = 500 / 0.5 = 1000 m⁻¹. B = μ₀ n I = (4π × 10⁻⁷) × 1000 × 2 ≈ 2.51 × 10⁻³ T.",
+"difficulty": "medium",
+"tags": ["solenoid", "numerical"]
+},
+{
+"questionText": "Two parallel long wires separated by 5 cm in air carry currents of 10 A and 20 A in opposite directions. The force per unit length between them is:",
+"options": [
+{ "id": "A", "text": "4 × 10⁻⁴ N m⁻¹, attractive" },
+{ "id": "B", "text": "8 × 10⁻⁴ N m⁻¹, attractive" },
+{ "id": "C", "text": "8 × 10⁻⁴ N m⁻¹, repulsive" },
+{ "id": "D", "text": "1.6 × 10⁻³ N m⁻¹, repulsive" }
+],
+"correctOption": "C",
+"explanation": "F/L = (μ₀ I₁ I₂) / (2π d) = (4π × 10⁻⁷ × 10 × 20) / (2π × 0.05) = 8 × 10⁻⁴ N m⁻¹. Opposite currents repel.",
+"difficulty": "medium",
+"tags": ["parallel-currents", "force-per-unit-length"]
+},
+{
+"questionText": "A square loop of side 10 cm carrying a current of 2 A is placed in a uniform magnetic field of 0.5 T making an angle of 30° with the normal to the loop. The torque experienced by the loop is:",
+"options": [
+{ "id": "A", "text": "1.0 × 10⁻³ N m" },
+{ "id": "B", "text": "2.5 × 10⁻³ N m" },
+{ "id": "C", "text": "4.33 × 10⁻³ N m" },
+{ "id": "D", "text": "5.0 × 10⁻³ N m" }
+],
+"correctOption": "B",
+"explanation": "Magnetic moment m = I A = 2 × (0.1)² = 0.02 A m². Torque τ = m B sin θ = 0.02 × 0.5 × sin 30° = 0.005 = 2.5 × 10⁻³ N m.",
+"difficulty": "medium",
+"tags": ["torque-on-loop", "magnetic-dipole"]
+},
+{
+"questionText": "A galvanometer has a resistance of 50 Ω and gives full scale deflection for a current of 2 mA. The shunt resistance required to convert it into an ammeter of range 0 to 5 A is:",
+"options": [
+{ "id": "A", "text": "0.02 Ω" },
+{ "id": "B", "text": "0.05 Ω" },
+{ "id": "C", "text": "0.20 Ω" },
+{ "id": "D", "text": "0.50 Ω" }
+],
+"correctOption": "A",
+"explanation": "S = (Ig G) / (I - Ig) = (2 × 10⁻³ × 50) / (5 - 0.002) = 0.1 / 4.998 ≈ 0.02 Ω.",
+"difficulty": "medium",
+"tags": ["galvanometer", "ammeter-conversion"]
+},
+{
+"questionText": "A charged particle carrying charge q enters a region with uniform electric field E = E ĵ and uniform magnetic field B = B k̂. The particle passes undeflected through the region. The velocity vector of the particle must be:",
+"options": [
+{ "id": "A", "text": "(E / B) î" },
+{ "id": "B", "text": "-(E / B) î" },
+{ "id": "C", "text": "(E / B) k̂" },
+{ "id": "D", "text": "-(E / B) ĵ" }
+],
+"correctOption": "A",
+"explanation": "For zero net force, qE + q(v × B) = 0, so E = -(v × B). Given E = E ĵ and B = B k̂, setting v = v î gives v × B = v B (î × k̂) = -v B ĵ. Thus qE ĵ - q v B ĵ = 0, which yields v = E/B in the +î direction.",
+"difficulty": "hard",
+"tags": ["velocity-selector", "crossed-fields"]
+},
+{
+"questionText": "A wire carrying current I is bent into the shape of a regular hexagon of side length a. The magnitude of the magnetic field at the center of the hexagon is:",
+"options": [
+{ "id": "A", "text": "(√3 μ₀ I) / (π a)" },
+{ "id": "B", "text": "(μ₀ I) / (√3 π a)" },
+{ "id": "C", "text": "(2 μ₀ I) / (π a)" },
+{ "id": "D", "text": "(√3 μ₀ I) / (2 π a)" }
+],
+"correctOption": "A",
+"explanation": "Distance from center to each side is d = a cos 30° = a √3 / 2. Field from one side is B1 = (μ₀ I / 4π d) (sin 30° + sin 30°) = μ₀ I / (2π a √3). Total B = 6 B1 = 6 μ₀ I / (2π a √3) = (√3 μ₀ I) / (π a).",
+"difficulty": "hard",
+"tags": ["biot-savart-law", "polygon-center"]
+},
+{
+"questionText": "A non-conducting circular ring of radius R has a total charge Q uniformly distributed over its circumference. If the ring rotates about its central axis with constant angular speed ω, the magnetic field at its center is:",
+"options": [
+{ "id": "A", "text": "(μ₀ Q ω) / (4π R)" },
+{ "id": "B", "text": "(μ₀ Q ω) / (2π R)" },
+{ "id": "C", "text": "(μ₀ Q ω) / (4 R)" },
+{ "id": "D", "text": "(μ₀ Q ω) / (2 R)" }
+],
+"correctOption": "A",
+"explanation": "Equivalent current generated by rotating ring is I = Q / T = Q ω / (2π). The magnetic field at the center of a circular current loop is B = μ₀ I / (2 R) = μ₀ (Q ω / 2π) / (2 R) = (μ₀ Q ω) / (4π R).",
+"difficulty": "hard",
+"tags": ["rotating-charge", "magnetic-field"]
+},
+{
+"questionText": "A galvanometer coil of resistance 100 Ω gives full scale deflection for 1 mA. To convert it into a voltmeter reading up to 10 V, the series resistance required is R1. To convert it into an ammeter reading up to 1 A, the shunt resistance required is R2. The ratio R1 / R2 is closest to:",
+"options": [
+{ "id": "A", "text": "1.0 × 10⁵" },
+{ "id": "B", "text": "9.9 × 10⁴" },
+{ "id": "C", "text": "9.9 × 10⁵" },
+{ "id": "D", "text": "1.0 × 10⁶" }
+],
+"correctOption": "C",
+"explanation": "R1 = (V / Ig) - G = (10 / 10⁻³) - 100 = 9900 Ω. R2 = (Ig G) / (I - Ig) = (10⁻³ × 100) / (1 - 0.001) = 0.1 / 0.999 = 0.1001 Ω. Ratio R1 / R2 = 9900 / 0.1001 ≈ 9.89 × 10⁴ ≈ 9.9 × 10⁴.",
+"difficulty": "hard",
+"tags": ["galvanometer-conversion", "voltmeter-ammeter"]
+}
+]
+}

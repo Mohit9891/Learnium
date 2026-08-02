@@ -1,0 +1,277 @@
+{
+"exam": {
+"name": "Class 12",
+"slug": ""
+},
+"subject": {
+"name": "Physics",
+"slug": ""
+},
+"chapter": {
+"name": "Current Electricity",
+"slug": "",
+"orderIndex": 3
+},
+"questions": [
+{
+"questionText": "The SI unit of electric current density is:",
+"options": [
+{ "id": "A", "text": "A m" },
+{ "id": "B", "text": "A m⁻¹" },
+{ "id": "C", "text": "A m⁻²" },
+{ "id": "D", "text": "A m⁻³" }
+],
+"correctOption": "C",
+"explanation": "Current density is defined as current per unit cross-sectional area, J = I/A. Therefore, its SI unit is ampere per square meter or A m⁻².",
+"difficulty": "easy",
+"tags": ["current-density", "si-unit"]
+},
+{
+"questionText": "According to Ohm's law, the electric current flowing through a conductor is directly proportional to the applied potential difference, provided that:",
+"options": [
+{ "id": "A", "text": "Temperature remains constant" },
+{ "id": "B", "text": "Current density remains constant" },
+{ "id": "C", "text": "Drift velocity remains zero" },
+{ "id": "D", "text": "Resistance varies linearly" }
+],
+"correctOption": "A",
+"explanation": "Ohm's law holds true under the condition that physical conditions such as temperature and mechanical strain remain unchanged.",
+"difficulty": "easy",
+"tags": ["ohms-law", "definition"]
+},
+{
+"questionText": "The mobility of free electrons in a conductor is defined as the magnitude of drift velocity per unit:",
+"options": [
+{ "id": "A", "text": "Electric current" },
+{ "id": "B", "text": "Electric field" },
+{ "id": "C", "text": "Potential difference" },
+{ "id": "D", "text": "Relaxation time" }
+],
+"correctOption": "B",
+"explanation": "Mobility μ is defined as the magnitude of drift velocity per unit electric field, μ = vd/E.",
+"difficulty": "easy",
+"tags": ["mobility", "drift-velocity"]
+},
+{
+"questionText": "The temperature coefficient of resistance is negative for which of the following materials?",
+"options": [
+{ "id": "A", "text": "Copper" },
+{ "id": "B", "text": "Aluminum" },
+{ "id": "C", "text": "Nichrome" },
+{ "id": "D", "text": "Silicon" }
+],
+"correctOption": "D",
+"explanation": "Semiconductors like silicon have a negative temperature coefficient of resistance because charge carrier density increases significantly with temperature.",
+"difficulty": "easy",
+"tags": ["temperature-dependence", "semiconductors"]
+},
+{
+"questionText": "Kirchhoff's first rule, also known as the junction rule, is based on the conservation of:",
+"options": [
+{ "id": "A", "text": "Energy" },
+{ "id": "B", "text": "Momentum" },
+{ "id": "C", "text": "Electric charge" },
+{ "id": "D", "text": "Electric potential" }
+],
+"correctOption": "C",
+"explanation": "The junction rule states that the total current entering a junction equals the total current leaving it, which directly reflects charge conservation.",
+"difficulty": "easy",
+"tags": ["kirchhoffs-laws", "charge-conservation"]
+},
+{
+"questionText": "Kirchhoff's second rule, or the loop rule, is a statement of the conservation of:",
+"options": [
+{ "id": "A", "text": "Charge" },
+{ "id": "B", "text": "Energy" },
+{ "id": "C", "text": "Mass" },
+{ "id": "D", "text": "Linear momentum" }
+],
+"correctOption": "B",
+"explanation": "The loop rule states that the algebraic sum of potential differences around any closed loop is zero, which is based on energy conservation.",
+"difficulty": "easy",
+"tags": ["kirchhoffs-laws", "energy-conservation"]
+},
+{
+"questionText": "A cell of electromotive force E and internal resistance r is connected across an external resistance R. The terminal potential difference V across the cell during discharging is:",
+"options": [
+{ "id": "A", "text": "V = E + Ir" },
+{ "id": "B", "text": "V = E - Ir" },
+{ "id": "C", "text": "V = Ir - E" },
+{ "id": "D", "text": "V = E / Ir" }
+],
+"correctOption": "B",
+"explanation": "During discharging, current flows out from the positive terminal of the cell, making terminal voltage V = E - Ir.",
+"difficulty": "easy",
+"tags": ["emf", "terminal-voltage"]
+},
+{
+"questionText": "In a balanced Wheatstone bridge consisting of four resistance arms P, Q, R, and S, the balance condition is given by:",
+"options": [
+{ "id": "A", "text": "P × Q = R × S" },
+{ "id": "B", "text": "P / Q = R / S" },
+{ "id": "C", "text": "P / R = S / Q" },
+{ "id": "D", "text": "P + Q = R + S" }
+],
+"correctOption": "B",
+"explanation": "When no current flows through the galvanometer in a Wheatstone bridge, the ratio of adjacent resistances satisfies P/Q = R/S.",
+"difficulty": "easy",
+"tags": ["wheatstone-bridge", "formula"]
+},
+{
+"questionText": "A potential difference of 12 V is applied across a conductor of resistance 4 Ω. The amount of charge flowing through it in 5 seconds is:",
+"options": [
+{ "id": "A", "text": "3 C" },
+{ "id": "B", "text": "12 C" },
+{ "id": "C", "text": "15 C" },
+{ "id": "D", "text": "60 C" }
+],
+"correctOption": "C",
+"explanation": "Current I = V/R = 12/4 = 3 A. The total charge Q = I × t = 3 × 5 = 15 C.",
+"difficulty": "medium",
+"tags": ["ohms-law", "numerical"]
+},
+{
+"questionText": "A wire of resistance R is stretched uniformly such that its length is doubled while keeping its density and volume constant. Its new resistance will be:",
+"options": [
+{ "id": "A", "text": "R / 2" },
+{ "id": "B", "text": "2 R" },
+{ "id": "C", "text": "4 R" },
+{ "id": "D", "text": "8 R" }
+],
+"correctOption": "C",
+"explanation": "When length becomes 2L, cross-sectional area becomes A/2 to maintain constant volume. Since R = ρL/A, the new resistance becomes 4 times the original value.",
+"difficulty": "medium",
+"tags": ["resistance", "stretching-wire"]
+},
+{
+"questionText": "The drift velocity of free electrons in a metallic conductor is vd when an electric field E is applied. If the electric field is tripled, the new drift velocity becomes:",
+"options": [
+{ "id": "A", "text": "vd / 3" },
+{ "id": "B", "text": "vd" },
+{ "id": "C", "text": "3 vd" },
+{ "id": "D", "text": "9 vd" }
+],
+"correctOption": "C",
+"explanation": "Drift velocity is directly proportional to electric field, vd = eEτ/m. Tripling E triples the drift velocity.",
+"difficulty": "medium",
+"tags": ["drift-velocity", "electric-field"]
+},
+{
+"questionText": "Three resistors each of resistance 6 Ω are connected in parallel. The equivalent resistance of this combination is:",
+"options": [
+{ "id": "A", "text": "2 Ω" },
+{ "id": "B", "text": "3 Ω" },
+{ "id": "C", "text": "6 Ω" },
+{ "id": "D", "text": "18 Ω" }
+],
+"correctOption": "A",
+"explanation": "For identical resistors connected in parallel, equivalent resistance is Req = R/n = 6/3 = 2 Ω.",
+"difficulty": "medium",
+"tags": ["resistors", "parallel-combination"]
+},
+{
+"questionText": "Two cells of emfs 2 V and 4 V with internal resistances 1 Ω and 2 Ω respectively are connected in parallel aiding each other. The equivalent emf of the combination is:",
+"options": [
+{ "id": "A", "text": "2.0 V" },
+{ "id": "B", "text": "2.67 V" },
+{ "id": "C", "text": "3.0 V" },
+{ "id": "D", "text": "6.0 V" }
+],
+"correctOption": "B",
+"explanation": "The equivalent emf is Eeq = (E1/r1 + E2/r2) / (1/r1 + 1/r2) = (2/1 + 4/2) / (1/1 + 1/2) = 4 / 1.5 = 2.67 V.",
+"difficulty": "medium",
+"tags": ["cells-in-parallel", "combination-of-cells"]
+},
+{
+"questionText": "An electric bulb rated 100 W at 220 V is operated at a reduced voltage of 110 V. The power consumed by the bulb at this voltage is:",
+"options": [
+{ "id": "A", "text": "25 W" },
+{ "id": "B", "text": "50 W" },
+{ "id": "C", "text": "75 W" },
+{ "id": "D", "text": "100 W" }
+],
+"correctOption": "A",
+"explanation": "Bulb resistance R = V²/P = 220²/100 = 484 Ω. Power consumed at 110 V is P' = V'²/R = 110²/484 = 25 W.",
+"difficulty": "medium",
+"tags": ["electric-power", "numerical"]
+},
+{
+"questionText": "The vector form of Ohm's law relates current density J, conductivity σ, and electric field E as:",
+"options": [
+{ "id": "A", "text": "J = σ E" },
+{ "id": "B", "text": "E = σ J" },
+{ "id": "C", "text": "J = E / σ²" },
+{ "id": "D", "text": "J = σ / E" }
+],
+"correctOption": "A",
+"explanation": "The microscopic or vector form of Ohm's law states that current density is proportional to electric field, expressed as J = σE.",
+"difficulty": "medium",
+"tags": ["ohms-law", "microscopic-form"]
+},
+{
+"questionText": "A heating element using nichrome connected to a 230 V supply draws an initial current of 3.2 A which settles after a few seconds to a steady value of 2.8 A. If room temperature is 27.0 °C and α = 1.7 × 10⁻⁴ °C⁻¹, the steady temperature is closest to:",
+"options": [
+{ "id": "A", "text": "840 °C" },
+{ "id": "B", "text": "867 °C" },
+{ "id": "C", "text": "894 °C" },
+{ "id": "D", "text": "920 °C" }
+],
+"correctOption": "C",
+"explanation": "R1 = 230/3.2 = 71.875 Ω and R2 = 230/2.8 = 82.143 Ω. Using R2 = R1[1 + α(T2 - T1)], we get T2 - 27 = (82.143/71.875 - 1)/(1.7 × 10⁻⁴) = 867 °C, giving T2 ≈ 894 °C.",
+"difficulty": "medium",
+"tags": ["temperature-coefficient", "resistance-calculation"]
+},
+{
+"questionText": "A copper wire of radius 0.5 mm carries a steady current of 1.6 A. If the free electron density in copper is 8.5 × 10²⁸ m⁻³, the magnitude of drift velocity of electrons is closest to:",
+"options": [
+{ "id": "A", "text": "1.5 × 10⁻⁴ m s⁻¹" },
+{ "id": "B", "text": "3.0 × 10⁻⁴ m s⁻¹" },
+{ "id": "C", "text": "6.0 × 10⁻⁴ m s⁻¹" },
+{ "id": "D", "text": "1.2 × 10⁻³ m s⁻¹" }
+],
+"correctOption": "A",
+"explanation": "Area A = π r² = π (0.5 × 10⁻³)² = 7.85 × 10⁻⁷ m². Using vd = I/(n e A) = 1.6 / (8.5 × 10²⁸ × 1.6 × 10⁻¹⁹ × 7.85 × 10⁻⁷), vd ≈ 1.5 × 10⁻⁴ m s⁻¹.",
+"difficulty": "hard",
+"tags": ["drift-velocity", "numerical"]
+},
+{
+"questionText": "Two batteries of emf 6 V and 12 V with internal resistances 1 Ω and 2 Ω are connected in parallel across an external load resistor of 4 Ω such that their positive terminals are connected together. The current passing through the load resistor is:",
+"options": [
+{ "id": "A", "text": "1.0 A" },
+{ "id": "B", "text": "1.71 A" },
+{ "id": "C", "text": "2.25 A" },
+{ "id": "D", "text": "3.0 A" }
+],
+"correctOption": "B",
+"explanation": "Eeq = (6/1 + 12/2)/(1/1 + 1/2) = 12 / 1.5 = 8 V. Internal req = (1 × 2)/(1 + 2) = 0.67 Ω. Current through load I = Eeq / (R + req) = 8 / (4 + 0.67) = 1.71 A.",
+"difficulty": "hard",
+"tags": ["combination-of-cells", "circuits"]
+},
+{
+"questionText": "In a meter bridge experiment, a balance point is obtained at 40 cm from end A when a known resistance of 12 Ω is placed in the right gap. If the wire is non-uniform such that its resistance per unit length increases linearly from end A to end B, the unknown resistance in the left gap will be:",
+"options": [
+{ "id": "A", "text": "Less than 8 Ω" },
+{ "id": "B", "text": "Equal to 8 Ω" },
+{ "id": "C", "text": "Greater than 8 Ω" },
+{ "id": "D", "text": "Equal to 12 Ω" }
+],
+"correctOption": "A",
+"explanation": "Since resistance per unit length increases toward end B, the right 60 cm segment has higher resistance than uniform 60 cm wire. Thus Rleft / Rright < 40/60 = 2/3, making X < (2/3) × 12 = 8 Ω.",
+"difficulty": "hard",
+"tags": ["meter-bridge", "conceptual-reasoning"]
+},
+{
+"questionText": "A potential gradient of 0.02 V cm⁻¹ exists along a potentiometer wire. A cell of unknown emf is balanced against a length of 600 cm. If a shunting resistance of 5 Ω is connected across the cell, the balance length shifts to 400 cm. The internal resistance of the cell is:",
+"options": [
+{ "id": "A", "text": "1.5 Ω" },
+{ "id": "B", "text": "2.5 Ω" },
+{ "id": "C", "text": "3.5 Ω" },
+{ "id": "D", "text": "5.0 Ω" }
+],
+"correctOption": "B",
+"explanation": "Internal resistance is calculated using r = R (l1 / l2 - 1) = 5 × (600 / 400 - 1) = 5 × (1.5 - 1) = 2.5 Ω.",
+"difficulty": "hard",
+"tags": ["potentiometer", "internal-resistance"]
+}
+]
+}

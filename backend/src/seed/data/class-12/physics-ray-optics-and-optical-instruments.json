@@ -1,0 +1,287 @@
+{
+"exam": {
+"name": "Class 12",
+"slug": ""
+},
+"subject": {
+"name": "Physics",
+"slug": ""
+},
+"chapter": {
+"name": "Ray Optics and Optical Instruments",
+"slug": "",
+"orderIndex": 9
+},
+"questions": [
+{
+"questionText": "The focal length of a plane mirror is:",
+"options": [
+{ "id": "A", "text": "Zero" },
+{ "id": "B", "text": "Finite positive" },
+{ "id": "C", "text": "Finite negative" },
+{ "id": "D", "text": "Infinite" }
+],
+"correctOption": "D",
+"explanation": "A plane mirror has a flat surface with an infinite radius of curvature (R = ∞). Since f = R/2, its focal length is infinite.",
+"difficulty": "easy",
+"tags": ["reflection", "plane-mirror"]
+},
+{
+"questionText": "The unit of power of a lens is:",
+"options": [
+{ "id": "A", "text": "Joule" },
+{ "id": "B", "text": "Dioptre" },
+{ "id": "C", "text": "Watt" },
+{ "id": "D", "text": "Lumen" }
+],
+"correctOption": "B",
+"explanation": "Power of a lens is given by P = 1/f (with focal length f in meters). Its SI unit is dioptre (D), where 1 D = 1 m⁻¹.",
+"difficulty": "easy",
+"tags": ["lens-power", "si-unit"]
+},
+{
+"questionText": "When light travels from an optically denser medium to a rarer medium, the angle of incidence for which the angle of refraction is 90° is called the:",
+"options": [
+{ "id": "A", "text": "Angle of deviation" },
+{ "id": "B", "text": "Critical angle" },
+{ "id": "C", "text": "Brewster angle" },
+{ "id": "D", "text": "Angle of emergence" }
+],
+"correctOption": "B",
+"explanation": "The critical angle is defined as the angle of incidence in the denser medium for which the angle of refraction in the rarer medium becomes 90°.",
+"difficulty": "easy",
+"tags": ["total-internal-reflection", "critical-angle"]
+},
+{
+"questionText": "An optical fiber operates on the principle of:",
+"options": [
+{ "id": "A", "text": "Double refraction" },
+{ "id": "B", "text": "Scattering of light" },
+{ "id": "C", "text": "Total internal reflection" },
+{ "id": "D", "text": "Interference of light" }
+],
+"correctOption": "C",
+"explanation": "Optical fibers rely on continuous total internal reflection of light rays along the core-cladding boundary to transmit signals with minimal loss.",
+"difficulty": "easy",
+"tags": ["optical-fiber", "total-internal-reflection"]
+},
+{
+"questionText": "Rayleigh scattering of light states that the intensity of scattered light I varies with wavelength λ as:",
+"options": [
+{ "id": "A", "text": "I ∝ λ²" },
+{ "id": "B", "text": "I ∝ 1 / λ²" },
+{ "id": "C", "text": "I ∝ 1 / λ⁴" },
+{ "id": "D", "text": "I ∝ λ⁴" }
+],
+"correctOption": "C",
+"explanation": "According to Rayleigh's scattering law, the intensity of light scattered by particles much smaller than wavelength is inversely proportional to the fourth power of wavelength (I ∝ 1/λ⁴).",
+"difficulty": "easy",
+"tags": ["rayleigh-scattering", "phenomena"]
+},
+{
+"questionText": "The magnifying power of a simple microscope (magnifying glass) for normal relaxed eye view (far point image) is given by:",
+"options": [
+{ "id": "A", "text": "m = 1 + D/f" },
+{ "id": "B", "text": "m = D/f" },
+{ "id": "C", "text": "m = f/D" },
+{ "id": "D", "text": "m = 1 - D/f" }
+],
+"correctOption": "B",
+"explanation": "When the final image is formed at infinity (relaxed eye adjustment), the magnifying power of a simple microscope is m = D/f.",
+"difficulty": "easy",
+"tags": ["simple-microscope", "magnifying-power"]
+},
+{
+"questionText": "A concave mirror produces a real, inverted, and same-sized image of an object. The position of the object is:",
+"options": [
+{ "id": "A", "text": "At the focus F" },
+{ "id": "B", "text": "Between F and C" },
+{ "id": "C", "text": "At the center of curvature C" },
+{ "id": "D", "text": "Beyond C" }
+],
+"correctOption": "C",
+"explanation": "When an object is placed at the center of curvature (C) of a concave mirror, a real, inverted image of equal size is formed at C itself.",
+"difficulty": "easy",
+"tags": ["concave-mirror", "image-formation"]
+},
+{
+"questionText": "A convex lens of focal length 20 cm is kept in contact with a concave lens of focal length 30 cm. The focal length of the combination is:",
+"options": [
+{ "id": "A", "text": "+10 cm" },
+{ "id": "B", "text": "-60 cm" },
+{ "id": "C", "text": "+60 cm" },
+{ "id": "D", "text": "-10 cm" }
+],
+"correctOption": "C",
+"explanation": "Using 1/F = 1/f₁ + 1/f₂, where f₁ = +20 cm and f₂ = -30 cm: 1/F = 1/20 - 1/30 = (3 - 2)/60 = 1/60 cm⁻¹. Thus F = +60 cm.",
+"difficulty": "easy",
+"tags": ["combination-of-lenses", "focal-length"]
+},
+{
+"questionText": "A ray of light passes through an equilateral glass prism of refractive index √3. If the angle of incidence equals the angle of emergence and each is equal to 60°, the angle of minimum deviation is:",
+"options": [
+{ "id": "A", "text": "30°" },
+{ "id": "B", "text": "45°" },
+{ "id": "C", "text": "60°" },
+{ "id": "D", "text": "90°" }
+],
+"correctOption": "C",
+"explanation": "For an equilateral prism A = 60°. Since i = e = 60° at minimum deviation, A + D_m = i + e ⇒ 60° + D_m = 60° + 60° ⇒ D_m = 60°.",
+"difficulty": "medium",
+"tags": ["prism", "minimum-deviation"]
+},
+{
+"questionText": "An object is placed 15 cm in front of a concave mirror of radius of curvature 20 cm. The position and nature of the image are:",
+"options": [
+{ "id": "A", "text": "30 cm in front of mirror, real" },
+{ "id": "B", "text": "30 cm behind mirror, virtual" },
+{ "id": "C", "text": "10 cm in front of mirror, real" },
+{ "id": "D", "text": "60 cm in front of mirror, real" }
+],
+"correctOption": "A",
+"explanation": "Here u = -15 cm, f = R/2 = -10 cm. Using 1/v + 1/u = 1/f ⇒ 1/v - 1/15 = -1/10 ⇒ 1/v = 1/15 - 1/10 = -1/30 ⇒ v = -30 cm (real image in front).",
+"difficulty": "medium",
+"tags": ["mirror-formula", "numerical"]
+},
+{
+"questionText": "A double convex lens made of glass (μ = 1.5) has radii of curvature 20 cm and 30 cm. Its focal length in air is:",
+"options": [
+{ "id": "A", "text": "12 cm" },
+{ "id": "B", "text": "24 cm" },
+{ "id": "C", "text": "36 cm" },
+{ "id": "D", "text": "48 cm" }
+],
+"correctOption": "B",
+"explanation": "Lens Maker's Formula: 1/f = (μ - 1)(1/R₁ - 1/R₂). Here R₁ = +20 cm, R₂ = -30 cm, μ = 1.5. Thus 1/f = (1.5 - 1)(1/20 + 1/30) = 0.5 × (5/60) = 1/24 ⇒ f = 24 cm.",
+"difficulty": "medium",
+"tags": ["lens-maker-formula", "focal-length"]
+},
+{
+"questionText": "An astronomical telescope has an objective lens of focal length 140 cm and an eyepiece of focal length 5 cm. Its magnifying power for normal adjustment is:",
+"options": [
+{ "id": "A", "text": "28" },
+{ "id": "B", "text": "35" },
+{ "id": "C", "text": "145" },
+{ "id": "D", "text": "700" }
+],
+"correctOption": "A",
+"explanation": "For normal adjustment (final image at infinity), the magnifying power of an astronomical telescope is m = f_o / f_e = 140 / 5 = 28.",
+"difficulty": "medium",
+"tags": ["telescope", "magnifying-power"]
+},
+{
+"questionText": "A point object is placed on the principal axis of a convex spherical refracting surface of radius R separating air from a glass medium of refractive index μ. If the object distance u = 2R, the image is formed at a distance v equal to:",
+"options": [
+{ "id": "A", "text": "(2μ R) / (μ - 1)" },
+{ "id": "B", "text": "(2μ R) / (μ - 2)" },
+{ "id": "C", "text": "(μ R) / (2μ - 1)" },
+{ "id": "D", "text": "(2μ R) / (2 - μ)" }
+],
+"correctOption": "B",
+"explanation": "Refraction at a single spherical surface: μ₂/v - μ₁/u = (μ₂ - μ₁)/R. Here μ₁ = 1, μ₂ = μ, u = -2R. So μ/v - 1/(-2R) = (μ - 1)/R ⇒ μ/v = (μ - 1)/R - 1/(2R) = (2μ - 3)/(2R). Solving for v yields v = (2μ R) / (2μ - 3)... Let's recheck: μ/v = (μ - 1)/R - 1/(2R) = (2μ - 2 - 1)/(2R) = (2μ - 3)/(2R) ⇒ v = 2μ R / (2μ - 3). Wait, using μ₂/v - μ₁/u = (μ₂ - μ₁)/R: μ/v + 1/2R = (μ - 1)/R ⇒ μ/v = (2μ - 3)/2R. For option match with (2μ R)/(μ - 2): if formula is μ₂/v - μ₁/u = (μ₂ - μ₁)/R with u = -2R: μ/v = (μ - 1)/R - 1/2R = (2μ - 3)/2R. Correct formula check: μ/v = (μ - 1)/R - 1/2R = (2μ - 3)/2R, giving v = 2μR/(2μ - 3). If we set option B as (2μ R) / (2μ - 3), let's ensure choice accuracy.",
+"correctOption": "B",
+"explanation": "Using single spherical surface refraction formula μ₂/v - μ₁/u = (μ₂ - μ₁)/R with μ₁ = 1, μ₂ = μ, u = -2R, R = +R: μ/v - 1/(-2R) = (μ - 1)/R ⇒ μ/v = (μ - 1)/R - 1/(2R) = (2μ - 3)/(2R) ⇒ v = (2μ R) / (2μ - 3).",
+"options": [
+{ "id": "A", "text": "(2μ R) / (μ - 1)" },
+{ "id": "B", "text": "(2μ R) / (2μ - 3)" },
+{ "id": "C", "text": "(μ R) / (2μ - 1)" },
+{ "id": "D", "text": "(2μ R) / (3 - 2μ)" }
+],
+"difficulty": "medium",
+"tags": ["spherical-refraction", "formula"]
+},
+{
+"questionText": "A compound microscope has an objective of focal length 1 cm and an eyepiece of focal length 2.5 cm. An object is placed 1.2 cm from the objective. If the final image is formed at the least distance of distinct vision (D = 25 cm), the distance between the objective and the eyepiece is:",
+"options": [
+{ "id": "A", "text": "6.0 cm" },
+{ "id": "B", "text": "8.27 cm" },
+{ "id": "C", "text": "8.27 mm" },
+{ "id": "D", "text": "11.27 cm" }
+],
+"correctOption": "B",
+"explanation": "For objective: 1/v_o - 1/(-1.2) = 1/1 ⇒ 1/v_o = 1 - 1/1.2 = 0.2/1.2 = 1/6 ⇒ v_o = 6 cm. For eyepiece: final image at v_e = -25 cm, f_e = 2.5 cm ⇒ 1/(-25) - 1/u_e = 1/2.5 ⇒ 1/u_e = -1/25 - 1/2.5 = -11/25 ⇒ |u_e| = 25/11 ≈ 2.27 cm. Tube length L = v_o + |u_e| = 6 + 2.27 = 8.27 cm.",
+"difficulty": "medium",
+"tags": ["compound-microscope", "tube-length"]
+},
+{
+"questionText": "A convex lens of focal length 20 cm made of glass (refractive index 1.5) is immersed completely in water (refractive index 4/3). Its new focal length in water will be:",
+"options": [
+{ "id": "A", "text": "20 cm" },
+{ "id": "B", "text": "40 cm" },
+{ "id": "C", "text": "80 cm" },
+{ "id": "D", "text": "160 cm" }
+],
+"correctOption": "C",
+"explanation": "f_water / f_air = [(ᵃμ_g - 1) / (ʷμ_g - 1)]. Here ᵃμ_g = 1.5 = 3/2, ʷμ_g = (3/2) / (4/3) = 9/8. Ratio = (0.5) / (9/8 - 1) = 0.5 / (1/8) = 4. So f_water = 4 × f_air = 4 × 20 = 80 cm.",
+"difficulty": "medium",
+"tags": ["lens-maker-formula", "lens-in-medium"]
+},
+{
+"questionText": "A ray of light traveling in glass (μ = 1.5) strikes a glass-air interface. The critical angle for total internal reflection at this interface is:",
+"options": [
+{ "id": "A", "text": "sin⁻¹(0.50)" },
+{ "id": "B", "text": "sin⁻¹(0.67)" },
+{ "id": "C", "text": "sin⁻¹(0.75)" },
+{ "id": "D", "text": "sin⁻¹(0.80)" }
+],
+"correctOption": "B",
+"explanation": "Critical angle C is given by sin C = 1 / μ = 1 / 1.5 = 2/3 ≈ 0.67. Therefore, C = sin⁻¹(0.67).",
+"difficulty": "medium",
+"tags": ["critical-angle", "refractive-index"]
+},
+{
+"questionText": "A symmetric biconvex lens of focal length f is cut into two equal halves along a plane perpendicular to its principal axis. The focal length of each individual half (planoconvex lens) is:",
+"options": [
+{ "id": "A", "text": "f / 2" },
+{ "id": "B", "text": "f" },
+{ "id": "C", "text": "2f" },
+{ "id": "D", "text": "4f" }
+],
+"correctOption": "C",
+"explanation": "Cutting a lens vertically doubles the focal length of each half because power is halved (P' = P/2 ⇒ f' = 2f).",
+"difficulty": "hard",
+"tags": ["lens-cutting", "focal-length"]
+},
+{
+"questionText": "A ray of light is incident normally on one face of a right-angled isosceles prism of refractive index μ = 1.5. The ray strikes the hypotenuse face inside the prism. Will the ray undergo total internal reflection?",
+"options": [
+{ "id": "A", "text": "Yes, because angle of incidence (45°) is greater than critical angle (≈ 41.8°)" },
+{ "id": "B", "text": "No, because angle of incidence (45°) is less than critical angle (≈ 41.8°)" },
+{ "id": "C", "text": "No, because light strikes normally at the hypotenuse" },
+{ "id": "D", "text": "Yes, only if the surrounding medium is water" }
+],
+"correctOption": "A",
+"explanation": "The critical angle for μ = 1.5 is C = sin⁻¹(1/1.5) ≈ 41.8°. Light incident normally on the first face reaches the hypotenuse at an angle of incidence i = 45°. Since 45° > 41.8°, total internal reflection occurs.",
+"difficulty": "hard",
+"tags": ["prism", "total-internal-reflection"]
+},
+{
+"questionText": "A compound microscope has an objective of magnification 5 and an overall magnifying power of 30 when the final image is formed at the least distance of distinct vision (25 cm). The focal length of the eyepiece is:",
+"options": [
+{ "id": "A", "text": "2.5 cm" },
+{ "id": "B", "text": "5.0 cm" },
+{ "id": "C", "text": "6.25 cm" },
+{ "id": "D", "text": "10.0 cm" }
+],
+"correctOption": "C",
+"explanation": "Overall magnification m = m_o × m_e ⇒ 30 = 5 × m_e ⇒ m_e = 6. For eyepiece with image at D = 25 cm, m_e = 1 + D / f_e ⇒ 6 = 1 + 25 / f_e ⇒ 5 = 25 / f_e ⇒ f_e = 5 cm... Wait: 6 - 1 = 5, 25 / 5 = 5 cm. Let's recalculate: m_e = 6, 6 = 1 + 25 / f_e ⇒ 25 / f_e = 5 ⇒ f_e = 5.0 cm. Option B is 5.0 cm.",
+"correctOption": "B",
+"explanation": "Total magnifying power m = m_o × m_e ⇒ 30 = 5 × m_e ⇒ m_e = 6. For image formed at near point D = 25 cm, m_e = 1 + D/f_e ⇒ 6 = 1 + 25/f_e ⇒ 5 = 25/f_e ⇒ f_e = 5 cm.",
+"difficulty": "hard",
+"tags": ["compound-microscope", "magnification-calculation"]
+},
+{
+"questionText": "A thin prism of angle A = 6° produces a minimum deviation of 3°. The refractive index of the material of the prism is:",
+"options": [
+{ "id": "A", "text": "1.33" },
+{ "id": "B", "text": "1.50" },
+{ "id": "C", "text": "1.66" },
+{ "id": "D", "text": "1.75" }
+],
+"correctOption": "B",
+"explanation": "For a thin prism, minimum deviation D_m = (μ - 1) A. Substituting values: 3° = (μ - 1) × 6° ⇒ μ - 1 = 0.5 ⇒ μ = 1.5.",
+"difficulty": "hard",
+"tags": ["thin-prism", "refractive-index"]
+}
+]
+}

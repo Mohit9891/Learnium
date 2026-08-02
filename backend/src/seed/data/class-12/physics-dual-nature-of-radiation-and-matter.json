@@ -1,0 +1,277 @@
+{
+  "exam": {
+    "name": "Class 12",
+    "slug": ""
+  },
+  "subject": {
+    "name": "Physics",
+    "slug": ""
+  },
+  "chapter": {
+    "name": "Dual Nature of Radiation and Matter",
+    "slug": "",
+    "orderIndex": 11
+  },
+  "questions": [
+    {
+      "questionText": "The minimum energy required by an electron to escape from a metal surface is called its:",
+      "options": [
+        { "id": "A", "text": "Kinetic energy" },
+        { "id": "B", "text": "Work function" },
+        { "id": "C", "text": "Threshold energy" },
+        { "id": "D", "text": "Binding energy" }
+      ],
+      "correctOption": "B",
+      "explanation": "Work function (Φ₀) is defined as the minimum amount of energy required to just emit an electron from a photosensitive surface.",
+      "difficulty": "easy",
+      "tags": ["photoelectric-effect", "work-function"]
+    },
+    {
+      "questionText": "The SI unit of Planck's constant h is:",
+      "options": [
+        { "id": "A", "text": "Joule per second" },
+        { "id": "B", "text": "Joule second" },
+        { "id": "C", "text": "Joule per meter" },
+        { "id": "D", "text": "Watt second" }
+      ],
+      "correctOption": "B",
+      "explanation": "Planck's constant h = E / ν, so its unit is Joule / (s⁻¹) = Joule second (J s).",
+      "difficulty": "easy",
+      "tags": ["plancks-constant", "si-unit"]
+    },
+    {
+      "questionText": "According to Einstein's photoelectric equation, the maximum kinetic energy of emitted photoelectrons depends on:",
+      "options": [
+        { "id": "A", "text": "Intensity of incident light only" },
+        { "id": "B", "text": "Frequency of incident light" },
+        { "id": "C", "text": "Area of metal surface" },
+        { "id": "D", "text": "Time duration of illumination" }
+      ],
+      "correctOption": "B",
+      "explanation": "The maximum kinetic energy K_max = h ν - Φ₀, which depends linearly on the frequency (ν) of incident light and the target material.",
+      "difficulty": "easy",
+      "tags": ["einstein-equation", "kinetic-energy"]
+    },
+    {
+      "questionText": "The de Broglie wavelength λ associated with a particle of mass m moving with velocity v is given by:",
+      "options": [
+        { "id": "A", "text": "λ = h m v" },
+        { "id": "B", "text": "λ = h / (m v)" },
+        { "id": "C", "text": "λ = m v / h" },
+        { "id": "D", "text": "λ = h / (m v²)" }
+      ],
+      "correctOption": "B",
+      "explanation": "According to de Broglie's hypothesis, the matter wavelength associated with momentum p = m v is λ = h / p = h / (m v).",
+      "difficulty": "easy",
+      "tags": ["de-broglie", "formula"]
+    },
+    {
+      "questionText": "The stopping potential in a photoelectric experiment depends on:",
+      "options": [
+        { "id": "A", "text": "Frequency of incident light and nature of cathode material" },
+        { "id": "B", "text": "Intensity of incident light only" },
+        { "id": "C", "text": "Distance between light source and cathode" },
+        { "id": "D", "text": "Area of the cathode plate" }
+      ],
+      "correctOption": "A",
+      "explanation": "Stopping potential V₀ is given by e V₀ = h ν - Φ₀. It depends on the frequency of incident radiation and the work function of the metal.",
+      "difficulty": "easy",
+      "tags": ["stopping-potential", "factors"]
+    },
+    {
+      "questionText": "In photoelectric emission, the number of photoelectrons emitted per second is directly proportional to:",
+      "options": [
+        { "id": "A", "text": "Frequency of incident light" },
+        { "id": "B", "text": "Wavelength of incident light" },
+        { "id": "C", "text": "Intensity of incident light" },
+        { "id": "D", "text": "Work function of the emitter" }
+      ],
+      "correctOption": "C",
+      "explanation": "The photoelectric current (rate of electron emission) is directly proportional to the intensity of incident light, provided frequency is above threshold.",
+      "difficulty": "easy",
+      "tags": ["photoelectric-current", "intensity"]
+    },
+    {
+      "questionText": "The rest mass of a photon is:",
+      "options": [
+        { "id": "A", "text": "9.1 × 10⁻³¹ kg" },
+        { "id": "B", "text": "1.67 × 10⁻²⁷ kg" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Infinite" }
+      ],
+      "correctOption": "C",
+      "explanation": "Photons travel at the speed of light in vacuum, and their rest mass is zero.",
+      "difficulty": "easy",
+      "tags": ["photon", "properties"]
+    },
+    {
+      "questionText": "Which of the following phenomena demonstrates the particle nature of light?",
+      "options": [
+        { "id": "A", "text": "Interference" },
+        { "id": "B", "text": "Diffraction" },
+        { "id": "C", "text": "Polarization" },
+        { "id": "D", "text": "Photoelectric effect" }
+      ],
+      "correctOption": "D",
+      "explanation": "The photoelectric effect involves localized energy transfer between discrete quanta (photons) and electrons, demonstrating particle nature.",
+      "difficulty": "easy",
+      "tags": ["particle-nature", "photoelectric-effect"]
+    },
+    {
+      "questionText": "The work function of a metal is 2.14 eV. Its threshold frequency is approximately:",
+      "options": [
+        { "id": "A", "text": "5.16 × 10¹⁴ Hz" },
+        { "id": "B", "text": "3.24 × 10¹⁵ Hz" },
+        { "id": "C", "text": "6.82 × 10¹³ Hz" },
+        { "id": "D", "text": "1.25 × 10¹⁶ Hz" }
+      ],
+      "correctOption": "A",
+      "explanation": "Threshold frequency ν₀ = Φ₀ / h = (2.14 × 1.6 × 10⁻¹⁹ J) / (6.63 × 10⁻³⁴ J s) ≈ 5.16 × 10¹⁴ Hz.",
+      "difficulty": "medium",
+      "tags": ["threshold-frequency", "numerical"]
+    },
+    {
+      "questionText": "An electron is accelerated through a potential difference of V volts. Its de Broglie wavelength λ (in nm) is given by:",
+      "options": [
+        { "id": "A", "text": "λ = 12.27 / V" },
+        { "id": "B", "text": "λ = 1.227 / √V" },
+        { "id": "C", "text": "λ = 12.27 / √V" },
+        { "id": "D", "text": "λ = 0.1227 / V" }
+      ],
+      "correctOption": "B",
+      "explanation": "For an electron, λ = h / √(2 m e V) = 1.227 / √V nm (or 12.27 / √V Å).",
+      "difficulty": "medium",
+      "tags": ["de-broglie", "accelerated-electron"]
+    },
+    {
+      "questionText": "If the momentum of a particle is doubled, its de Broglie wavelength becomes:",
+      "options": [
+        { "id": "A", "text": "Double" },
+        { "id": "B", "text": "Four times" },
+        { "id": "C", "text": "Half" },
+        { "id": "D", "text": "One-fourth" }
+      ],
+      "correctOption": "C",
+      "explanation": "Since λ = h / p, wavelength is inversely proportional to momentum. Doubling p halves the wavelength.",
+      "difficulty": "medium",
+      "tags": ["de-broglie", "momentum"]
+    },
+    {
+      "questionText": "Light of frequency 1.5 times the threshold frequency is incident on a photosensitive material. If the frequency is halved and intensity is doubled, the photoelectric current becomes:",
+      "options": [
+        { "id": "A", "text": "Doubled" },
+        { "id": "B", "text": "Quadrupled" },
+        { "id": "C", "text": "Halved" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correctOption": "D",
+      "explanation": "New frequency = 0.5 × (1.5 ν₀) = 0.75 ν₀. Since the new frequency is below threshold frequency ν₀, no photoelectric emission occurs and current is zero.",
+      "difficulty": "medium",
+      "tags": ["threshold-frequency", "conceptual"]
+    },
+    {
+      "questionText": "A proton and an alpha particle are accelerated through the same potential difference. The ratio of their de Broglie wavelengths λ_p : λ_α is:",
+      "options": [
+        { "id": "A", "text": "1 : 2√2" },
+        { "id": "B", "text": "2√2 : 1" },
+        { "id": "C", "text": "2 : 1" },
+        { "id": "D", "text": "4 : 1" }
+      ],
+      "correctOption": "B",
+      "explanation": "λ = h / √(2 m q V) ⇒ λ ∝ 1 / √(m q). So λ_p / λ_α = √[(m_α q_α) / (m_p q_p)]. Since m_α = 4 m_p and q_α = 2 q_p, ratio = √(4 × 2) = √8 = 2√2 : 1.",
+      "difficulty": "medium",
+      "tags": ["de-broglie-ratio", "numerical"]
+    },
+    {
+      "questionText": "The stopping potential for photoelectrons emitted from a surface illuminated by light of wavelength 400 nm is 1.0 V. The work function of the metal is approximately:",
+      "options": [
+        { "id": "A", "text": "1.1 eV" },
+        { "id": "B", "text": "2.1 eV" },
+        { "id": "C", "text": "3.1 eV" },
+        { "id": "D", "text": "4.1 eV" }
+      ],
+      "correctOption": "B",
+      "explanation": "Photon energy E = 1240 / 400 = 3.1 eV. Using e V₀ = E - Φ₀ ⇒ 1.0 eV = 3.1 eV - Φ₀ ⇒ Φ₀ = 2.1 eV.",
+      "difficulty": "medium",
+      "tags": ["stopping-potential", "numerical"]
+    },
+    {
+      "questionText": "Which of the following graphs correctly represents the variation of photoelectric current (I) with collector plate potential (V) for two different intensities I₁ and I₂ (where I₂ > I₁) of same frequency?",
+      "options": [
+        { "id": "A", "text": "Same stopping potential, higher saturation current for I₂" },
+        { "id": "B", "text": "Higher stopping potential for I₂, same saturation current" },
+        { "id": "C", "text": "Lower stopping potential for I₂, lower saturation current" },
+        { "id": "D", "text": "Different stopping potentials and same saturation current" }
+      ],
+      "correctOption": "A",
+      "explanation": "For same frequency, stopping potential remains identical. Higher intensity I₂ yields a higher saturation current due to greater photon flux.",
+      "difficulty": "medium",
+      "tags": ["photoelectric-graphs", "intensity"]
+    },
+    {
+      "questionText": "An electron, an alpha particle, and a proton have the same kinetic energy. Which one has the shortest de Broglie wavelength?",
+      "options": [
+        { "id": "A", "text": "Electron" },
+        { "id": "B", "text": "Proton" },
+        { "id": "C", "text": "Alpha particle" },
+        { "id": "D", "text": "All have the same wavelength" }
+      ],
+      "correctOption": "C",
+      "explanation": "λ = h / √(2 m K). For constant kinetic energy K, λ ∝ 1 / √m. The alpha particle has the largest mass, hence the shortest wavelength.",
+      "difficulty": "medium",
+      "tags": ["de-broglie", "kinetic-energy"]
+    },
+    {
+      "questionText": "When monochromatic light of wavelength λ falls on a photosensitive metallic surface, the stopping potential is 3 V₀. When the same surface is illuminated with light of wavelength 2λ, the stopping potential is V₀. The threshold wavelength for this metallic surface is:",
+      "options": [
+        { "id": "A", "text": "3 λ" },
+        { "id": "B", "text": "4 λ" },
+        { "id": "C", "text": "5 λ" },
+        { "id": "D", "text": "6 λ" }
+      ],
+      "correctOption": "B",
+      "explanation": "3 e V₀ = h c / λ - h c / λ₀ and e V₀ = h c / (2λ) - h c / λ₀. Multiply second equation by 3: 3 e V₀ = 3 h c / (2λ) - 3 h c / λ₀. Equating gives h c / λ - h c / λ₀ = 3 h c / (2λ) - 3 h c / λ₀ ⇒ 2 h c / λ₀ = h c / (2λ) ⇒ λ₀ = 4 λ.",
+      "difficulty": "hard",
+      "tags": ["einstein-equation", "threshold-wavelength"]
+    },
+    {
+      "questionText": "A 100 W sodium lamp radiates energy uniformly in all directions. The lamp is located at the center of a large sphere that absorbs all sodium light incident on it. Wavelength of sodium light is 589 nm. The number of photons delivered per second to the sphere is approximately:",
+      "options": [
+        { "id": "A", "text": "3.0 × 10²⁰" },
+        { "id": "B", "text": "5.0 × 10²⁰" },
+        { "id": "C", "text": "3.0 × 10¹⁹" },
+        { "id": "D", "text": "1.5 × 10¹⁹" }
+      ],
+      "correctOption": "A",
+      "explanation": "Energy of one photon E = h c / λ = (6.63 × 10⁻³⁴ × 3 × 10⁸) / (589 × 10⁻⁹) ≈ 3.377 × 10⁻¹⁹ J. Number of photons n = P / E = 100 / (3.377 × 10⁻¹⁹) ≈ 2.96 × 10²⁰ ≈ 3.0 × 10²⁰.",
+      "difficulty": "hard",
+      "tags": ["photon-count", "power-calculation"]
+    },
+    {
+      "questionText": "The de Broglie wavelength of a thermal neutron at temperature T (in Kelvin) is proportional to:",
+      "options": [
+        { "id": "A", "text": "T" },
+        { "id": "B", "text": "T²" },
+        { "id": "C", "text": "1 / √T" },
+        { "id": "D", "text": "1 / T" }
+      ],
+      "correctOption": "C",
+      "explanation": "Thermal kinetic energy K = (3/2) k_B T. Since λ = h / √(2 m K) = h / √(3 m k_B T), λ is inversely proportional to √T.",
+      "difficulty": "hard",
+      "tags": ["thermal-neutron", "de-broglie"]
+    },
+    {
+      "questionText": "In a photoelectric experiment, a plot of stopping potential V₀ versus frequency ν of incident light gives a straight line. The slope of this line is equal to:",
+      "options": [
+        { "id": "A", "text": "h" },
+        { "id": "B", "text": "h / e" },
+        { "id": "C", "text": "e / h" },
+        { "id": "D", "text": "Φ₀ / e" }
+      ],
+      "correctOption": "B",
+      "explanation": "Rewriting Einstein's equation: V₀ = (h / e) ν - (Φ₀ / e). Plotting V₀ against ν yields a straight line with slope equal to h / e.",
+      "difficulty": "hard",
+      "tags": ["photoelectric-graphs", "slope-analysis"]
+    }
+  ]
+}

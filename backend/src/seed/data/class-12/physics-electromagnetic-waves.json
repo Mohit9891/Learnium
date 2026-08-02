@@ -1,0 +1,277 @@
+{
+  "exam": {
+    "name": "Class 12",
+    "slug": ""
+  },
+  "subject": {
+    "name": "Physics",
+    "slug": ""
+  },
+  "chapter": {
+    "name": "Electromagnetic Waves",
+    "slug": "",
+    "orderIndex": 8
+  },
+  "questions": [
+    {
+      "questionText": "The source of electromagnetic waves is:",
+      "options": [
+        { "id": "A", "text": "A charge moving with constant velocity" },
+        { "id": "B", "text": "A stationary charge" },
+        { "id": "C", "text": "An accelerated or oscillating charge" },
+        { "id": "D", "text": "A charge placed in a uniform magnetic field" }
+      ],
+      "correctOption": "C",
+      "explanation": "Accelerated or oscillating electric charges produce time-varying electric and magnetic fields that propagate together as electromagnetic waves.",
+      "difficulty": "easy",
+      "tags": ["em-waves-source", "basics"]
+    },
+    {
+      "questionText": "In an electromagnetic wave propagating in free space, the angle between the oscillating electric field vector E and magnetic field vector B is:",
+      "options": [
+        { "id": "A", "text": "0°" },
+        { "id": "B", "text": "45°" },
+        { "id": "C", "text": "90°" },
+        { "id": "D", "text": "180°" }
+      ],
+      "correctOption": "C",
+      "explanation": "Electromagnetic waves are transverse in nature, meaning the electric field vector E and magnetic field vector B are mutually perpendicular (90°) to each other and to the direction of propagation.",
+      "difficulty": "easy",
+      "tags": ["transverse-nature", "field-vectors"]
+    },
+    {
+      "questionText": "The speed c of electromagnetic waves in free space is given by:",
+      "options": [
+        { "id": "A", "text": "c = μ₀ ε₀" },
+        { "id": "B", "text": "c = 1 / √(μ₀ ε₀)" },
+        { "id": "C", "text": "c = √(μ₀ / ε₀)" },
+        { "id": "D", "text": "c = √(ε₀ / μ₀)" }
+      ],
+      "correctOption": "B",
+      "explanation": "Maxwell derived that the velocity of electromagnetic waves in vacuum is given by c = 1 / √(μ₀ ε₀).",
+      "difficulty": "easy",
+      "tags": ["wave-speed", "free-space"]
+    },
+    {
+      "questionText": "Which electromagnetic wave region has the shortest wavelength?",
+      "options": [
+        { "id": "A", "text": "Ultraviolet rays" },
+        { "id": "B", "text": "Infrared rays" },
+        { "id": "C", "text": "Gamma rays" },
+        { "id": "D", "text": "Microwaves" }
+      ],
+      "correctOption": "C",
+      "explanation": "Gamma rays lie at the highest frequency and shortest wavelength end of the electromagnetic spectrum (wavelengths less than ~10⁻¹² m).",
+      "difficulty": "easy",
+      "tags": ["em-spectrum", "wavelength"]
+    },
+    {
+      "questionText": "Displacement current arises due to a:",
+      "options": [
+        { "id": "A", "text": "Flow of conduction electrons" },
+        { "id": "B", "text": "Time-varying electric field" },
+        { "id": "C", "text": "Constant magnetic field" },
+        { "id": "D", "text": "Steady direct current" }
+      ],
+      "correctOption": "B",
+      "explanation": "Maxwell introduced displacement current I_d = ε₀ (dΦ_E / dt), which is produced by a time-varying electric field / electric flux.",
+      "difficulty": "easy",
+      "tags": ["displacement-current", "maxwell-equations"]
+    },
+    {
+      "questionText": "Electromagnetic waves used in RADAR communication systems are:",
+      "options": [
+        { "id": "A", "text": "Infrared rays" },
+        { "id": "B", "text": "Ultraviolet rays" },
+        { "id": "C", "text": "Microwaves" },
+        { "id": "D", "text": "X-rays" }
+      ],
+      "correctOption": "C",
+      "explanation": "Microwaves have suitable short wavelengths (mm to cm range) which make them ideal for focused transmission in RADAR navigation and detection systems.",
+      "difficulty": "easy",
+      "tags": ["microwaves", "applications"]
+    },
+    {
+      "questionText": "The ratio of amplitudes of electric field E₀ and magnetic field B₀ in an electromagnetic wave in vacuum is equal to:",
+      "options": [
+        { "id": "A", "text": "Speed of light c" },
+        { "id": "B", "text": "1 / c" },
+        { "id": "C", "text": "c²" },
+        { "id": "D", "text": "1 / c²" }
+      ],
+      "correctOption": "A",
+      "explanation": "For an electromagnetic wave in vacuum, the amplitudes of electric and magnetic fields are related as E₀ / B₀ = c.",
+      "difficulty": "easy",
+      "tags": ["amplitude-ratio", "field-amplitudes"]
+    },
+    {
+      "questionText": "Infrared waves are also known as heat waves because:",
+      "options": [
+        { "id": "A", "text": "They produce visible fluorescence" },
+        { "id": "B", "text": "They readily excite vibrations in water and organic molecules, raising thermal energy" },
+        { "id": "C", "text": "They have the highest energy among all EM waves" },
+        { "id": "D", "text": "They ionize atmospheric air molecules" }
+      ],
+      "correctOption": "B",
+      "explanation": "Infrared waves are absorbed by water molecules and bonds in most materials, increasing their random thermal motion and heating the substance.",
+      "difficulty": "easy",
+      "tags": ["infrared", "heat-waves"]
+    },
+    {
+      "questionText": "During charging of a parallel plate capacitor, the magnitude of displacement current between the plates is:",
+      "options": [
+        { "id": "A", "text": "Zero" },
+        { "id": "B", "text": "Equal to the conduction current in the connecting wires" },
+        { "id": "C", "text": "Greater than the conduction current" },
+        { "id": "D", "text": "Half of the conduction current" }
+      ],
+      "correctOption": "B",
+      "explanation": "By Maxwell's continuity principle, the displacement current passing through the gap between capacitor plates is equal in magnitude to the conduction current in the outer circuit wires (I_c = I_d).",
+      "difficulty": "medium",
+      "tags": ["displacement-current", "capacitor-charging"]
+    },
+    {
+      "questionText": "An electromagnetic wave has an electric field amplitude of 60 V m⁻¹. The amplitude of its magnetic field component is:",
+      "options": [
+        { "id": "A", "text": "2.0 × 10⁻⁷ T" },
+        { "id": "B", "text": "1.8 × 10¹⁰ T" },
+        { "id": "C", "text": "5.0 × 10⁻⁸ T" },
+        { "id": "D", "text": "2.0 × 10⁻⁶ T" }
+      ],
+      "correctOption": "A",
+      "explanation": "Using B₀ = E₀ / c = 60 / (3 × 10⁸) = 2.0 × 10⁻⁷ T.",
+      "difficulty": "medium",
+      "tags": ["field-amplitudes", "numerical"]
+    },
+    {
+      "questionText": "The average energy density u_avg of an electromagnetic wave in vacuum with peak electric field E₀ is given by:",
+      "options": [
+        { "id": "A", "text": "u_avg = ε₀ E₀²" },
+        { "id": "B", "text": "u_avg = 1/2 ε₀ E₀²" },
+        { "id": "C", "text": "u_avg = 1/4 ε₀ E₀²" },
+        { "id": "D", "text": "u_avg = 2 ε₀ E₀²" }
+      ],
+      "correctOption": "C",
+      "explanation": "Total average energy density u_avg = 1/2 ε₀ E_rms² = 1/2 ε₀ (E₀ / √2)² = 1/4 ε₀ E₀².",
+      "difficulty": "medium",
+      "tags": ["energy-density", "formula"]
+    },
+    {
+      "questionText": "A plane electromagnetic wave propagates along the positive z-axis in free space. If the electric field vector oscillates along the positive x-axis, the magnetic field vector oscillates along the:",
+      "options": [
+        { "id": "A", "text": "Positive y-axis" },
+        { "id": "B", "text": "Negative y-axis" },
+        { "id": "C", "text": "Positive x-axis" },
+        { "id": "D", "text": "Negative z-axis" }
+      ],
+      "correctOption": "A",
+      "explanation": "The direction of wave propagation is given by E × B. Since wave travels along +z (k̂) and E is along +x (î), B must be along +y (ĵ) because î × ĵ = k̂.",
+      "difficulty": "medium",
+      "tags": ["poynting-vector", "wave-propagation"]
+    },
+    {
+      "questionText": "The wavelength of an electromagnetic wave operating at a frequency of 30 MHz in vacuum is:",
+      "options": [
+        { "id": "A", "text": "1 m" },
+        { "id": "B", "text": "10 m" },
+        { "id": "C", "text": "100 m" },
+        { "id": "D", "text": "1000 m" }
+      ],
+      "correctOption": "B",
+      "explanation": "λ = c / f = (3 × 10⁸ m s⁻¹) / (30 × 10⁶ s⁻¹) = 10 m.",
+      "difficulty": "medium",
+      "tags": ["frequency-wavelength", "numerical"]
+    },
+    {
+      "questionText": "Electromagnetic radiation of frequency ν is incident on a totally absorbing surface. The momentum transferred to the surface per second by an incident beam of total energy U per second is:",
+      "options": [
+        { "id": "A", "text": "U c" },
+        { "id": "B", "text": "U / c" },
+        { "id": "C", "text": "U / c²" },
+        { "id": "D", "text": "U h ν / c" }
+      ],
+      "correctOption": "B",
+      "explanation": "For complete absorption, momentum transferred p = U / c, where U is the total energy delivered and c is the speed of light.",
+      "difficulty": "medium",
+      "tags": ["radiation-momentum", "radiation-pressure"]
+    },
+    {
+      "questionText": "Which Maxwell's equation proves the non-existence of isolated magnetic monopoles?",
+      "options": [
+        { "id": "A", "text": "∮ E · dA = Q / ε₀" },
+        { "id": "B", "text": "∮ B · dA = 0" },
+        { "id": "C", "text": "∮ E · dl = -dΦ_B / dt" },
+        { "id": "D", "text": "∮ B · dl = μ₀ I_c + μ₀ ε₀ dΦ_E / dt" }
+      ],
+      "correctOption": "B",
+      "explanation": "Gauss's law for magnetism, ∮ B · dA = 0, implies that total magnetic flux entering a closed surface equals total flux leaving it, which means isolated magnetic monopoles do not exist.",
+      "difficulty": "medium",
+      "tags": ["gauss-law-magnetism", "maxwell-equations"]
+    },
+    {
+      "questionText": "A parallel plate capacitor with circular plates of radius 0.1 m is being charged. If the electric field between the plates changes at a rate of 10¹² V m⁻¹ s⁻¹, the displacement current is approximately:",
+      "options": [
+        { "id": "A", "text": "0.14 A" },
+        { "id": "B", "text": "0.28 A" },
+        { "id": "C", "text": "0.56 A" },
+        { "id": "D", "text": "1.12 A" }
+      ],
+      "correctOption": "B",
+      "explanation": "Plate area A = π r² = π (0.1)² = 0.01 π m². Displacement current I_d = ε₀ A (dE/dt) = (8.854 × 10⁻¹² F m⁻¹) × (0.01 π) × 10¹² = 8.854 × 0.0314 ≈ 0.278 A ≈ 0.28 A.",
+      "difficulty": "medium",
+      "tags": ["displacement-current", "numerical"]
+    },
+    {
+      "questionText": "The intensity I of a plane electromagnetic wave with electric field amplitude E₀ in a medium of refractive index n is given by:",
+      "options": [
+        { "id": "A", "text": "I = 1/2 n ε₀ c E₀²" },
+        { "id": "B", "text": "I = 1/2 ε₀ c E₀² / n" },
+        { "id": "C", "text": "I = n ε₀ c E₀²" },
+        { "id": "D", "text": "I = 1/4 n ε₀ c E₀²" }
+      ],
+      "correctOption": "A",
+      "explanation": "Wave intensity I = u_avg × v = (1/2 ε E₀²) × (c / n). Since ε = n² ε₀, I = 1/2 (n² ε₀) E₀² (c / n) = 1/2 n ε₀ c E₀².",
+      "difficulty": "hard",
+      "tags": ["wave-intensity", "refractive-index"]
+    },
+    {
+      "questionText": "A point source of electromagnetic radiation radiates uniformly with an average power of 800 W. The amplitude of the electric field at a distance of 3.5 m from the source is approximately:",
+      "options": [
+        { "id": "A", "text": "31.2 V m⁻¹" },
+        { "id": "B", "text": "62.6 V m⁻¹" },
+        { "id": "C", "text": "125.2 V m⁻¹" },
+        { "id": "D", "text": "250.4 V m⁻¹" }
+      ],
+      "correctOption": "B",
+      "explanation": "Intensity I = P / (4π r²) = 800 / (4π × 3.5²) = 800 / (153.9) ≈ 5.197 W m⁻². Also I = 1/2 ε₀ c E₀² ⇒ E₀ = √[2 I / (ε₀ c)] = √[(2 × 5.197) / (8.854 × 10⁻¹² × 3 × 10⁸)] = √[10.394 / 2.656 × 10⁻³] = √[3913.4] ≈ 62.56 V m⁻¹ ≈ 62.6 V m⁻¹.",
+      "difficulty": "hard",
+      "tags": ["point-source", "intensity-calculation"]
+    },
+    {
+      "questionText": "Radiation pressure exerted by an electromagnetic wave of intensity I on a perfectly reflecting surface for normal incidence is:",
+      "options": [
+        { "id": "A", "text": "P = I / c" },
+        { "id": "B", "text": "P = 2 I / c" },
+        { "id": "C", "text": "P = I / (2 c)" },
+        { "id": "D", "text": "P = 4 I / c" }
+      ],
+      "correctOption": "B",
+      "explanation": "For a completely reflecting surface, momentum transferred per second is twice that for complete absorption: Δp = 2 U / c. Hence radiation pressure P = 2 I / c.",
+      "difficulty": "hard",
+      "tags": ["radiation-pressure", "reflection"]
+    },
+    {
+      "questionText": "The magnetic field component of a plane electromagnetic wave in free space is given by B_y = (2 × 10⁻⁷ T) sin(0.5 × 10³ x + 1.5 × 10¹¹ t), where x is in meters and t in seconds. The expression for the corresponding electric field component E_z is:",
+      "options": [
+        { "id": "A", "text": "E_z = 60 sin(0.5 × 10³ x + 1.5 × 10¹¹ t) V m⁻¹" },
+        { "id": "B", "text": "-60 sin(0.5 × 10³ x + 1.5 × 10¹¹ t) V m⁻¹" },
+        { "id": "C", "text": "E_z = 60 cos(0.5 × 10³ x + 1.5 × 10¹¹ t) V m⁻¹" },
+        { "id": "D", "text": "E_z = -60 cos(0.5 × 10³ x + 1.5 × 10¹¹ t) V m⁻¹" }
+      ],
+      "correctOption": "A",
+      "explanation": "E₀ = c B₀ = (3 × 10⁸) × (2 × 10⁻⁷) = 60 V m⁻¹. The wave propagates along -x direction (due to + sign between kx and ωt). Since B is along +y and propagation is along -x, E × B must give -î, so E is along +z. Thus, E_z = 60 sin(0.5 × 10³ x + 1.5 × 10¹¹ t) V m⁻¹.",
+      "difficulty": "hard",
+      "tags": ["wave-equation", "vector-direction"]
+    }
+  ]
+}

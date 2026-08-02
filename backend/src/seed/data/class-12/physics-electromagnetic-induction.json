@@ -1,0 +1,277 @@
+{
+"exam": {
+"name": "Class 12",
+"slug": ""
+},
+"subject": {
+"name": "Physics",
+"slug": ""
+},
+"chapter": {
+"name": "Electromagnetic Induction",
+"slug": "",
+"orderIndex": 6
+},
+"questions": [
+{
+"questionText": "The law which states that the induced electromotive force (emf) is directly proportional to the rate of change of magnetic flux is:",
+"options": [
+{ "id": "A", "text": "Lenz's Law" },
+{ "id": "B", "text": "Faraday's Law of Electromagnetic Induction" },
+{ "id": "C", "text": "Ampere's Law" },
+{ "id": "D", "text": "Gauss's Law" }
+],
+"correctOption": "B",
+"explanation": "Faraday's law states that the magnitude of induced emf in a circuit is equal to the rate of change of magnetic flux through the circuit.",
+"difficulty": "easy",
+"tags": ["faradays-law", "emf"]
+},
+{
+"questionText": "The negative sign in the expression for Faraday's law of electromagnetic induction, e = -dΦ/dt, is a statement of:",
+"options": [
+{ "id": "A", "text": "Conservation of momentum" },
+{ "id": "B", "text": "Conservation of charge" },
+{ "id": "C", "text": "Lenz's Law (Conservation of energy)" },
+{ "id": "D", "text": "Coulomb's Law" }
+],
+"correctOption": "C",
+"explanation": "Lenz's law provides the direction of induced current such that it opposes the change in magnetic flux that produces it, representing conservation of energy.",
+"difficulty": "easy",
+"tags": ["lenzs-law", "conservation-of-energy"]
+},
+{
+"questionText": "The SI unit of magnetic flux Φ is:",
+"options": [
+{ "id": "A", "text": "Tesla" },
+{ "id": "B", "text": "Weber" },
+{ "id": "C", "text": "Henry" },
+{ "id": "D", "text": "Gauss" }
+],
+"correctOption": "B",
+"explanation": "The SI unit of magnetic flux is Weber (Wb), where 1 Wb = 1 T·m².",
+"difficulty": "easy",
+"tags": ["magnetic-flux", "si-unit"]
+},
+{
+"questionText": "The self-inductance L of a coil depends on which of the following factors?",
+"options": [
+{ "id": "A", "text": "Current flowing through the coil" },
+{ "id": "B", "text": "Voltage applied to the coil" },
+{ "id": "C", "text": "Geometry of the coil and core permeability" },
+{ "id": "D", "text": "Resistance of the coil wire" }
+],
+"correctOption": "C",
+"explanation": "Self-inductance L is a purely geometric and material property depending on the number of turns, cross-sectional area, length, and core permeability (L = μ₀ μ_r N² A / l).",
+"difficulty": "easy",
+"tags": ["self-inductance", "factors"]
+},
+{
+"questionText": "Eddy currents are produced in a conductor when it is placed in a:",
+"options": [
+{ "id": "A", "text": "Constant magnetic field" },
+{ "id": "B", "text": "Changing magnetic field" },
+{ "id": "C", "text": "Uniform electric field" },
+{ "id": "D", "text": "Constant electric field" }
+],
+"correctOption": "B",
+"explanation": "Eddy currents are circulating loops of electrical current induced within bulk conductors by a changing magnetic field.",
+"difficulty": "easy",
+"tags": ["eddy-currents", "phenomena"]
+},
+{
+"questionText": "The SI unit of mutual inductance is:",
+"options": [
+{ "id": "A", "text": "Weber" },
+{ "id": "B", "text": "Tesla" },
+{ "id": "C", "text": "Henry" },
+{ "id": "D", "text": "Ohm" }
+],
+"correctOption": "C",
+"explanation": "The SI unit for both self-inductance and mutual inductance is the Henry (H).",
+"difficulty": "easy",
+"tags": ["mutual-inductance", "si-unit"]
+},
+{
+"questionText": "The motional emf induced across a straight conducting rod of length L moving with velocity v perpendicular to a uniform magnetic field B is:",
+"options": [
+{ "id": "A", "text": "e = B L v" },
+{ "id": "B", "text": "e = B L² v" },
+{ "id": "C", "text": "e = B v / L" },
+{ "id": "D", "text": "e = B L / v" }
+],
+"correctOption": "A",
+"explanation": "Motional emf induced across a conductor moving perpendicularly to a magnetic field is given by e = B L v.",
+"difficulty": "easy",
+"tags": ["motional-emf", "formula"]
+},
+{
+"questionText": "Energy stored in an inductor of self-inductance L carrying a steady current I is:",
+"options": [
+{ "id": "A", "text": "U = L I" },
+{ "id": "B", "text": "U = 1/2 L I²" },
+{ "id": "C", "text": "U = 1/2 L² I" },
+{ "id": "D", "text": "U = L I²" }
+],
+"correctOption": "B",
+"explanation": "The magnetic energy stored in an inductor carrying current I is given by U = 1/2 L I².",
+"difficulty": "easy",
+"tags": ["energy-stored", "inductor"]
+},
+{
+"questionText": "A square loop of side 0.1 m is placed perpendicular to a magnetic field that increases at a uniform rate of 20 T s⁻¹. The magnitude of induced emf in the loop is:",
+"options": [
+{ "id": "A", "text": "0.1 V" },
+{ "id": "B", "text": "0.2 V" },
+{ "id": "C", "text": "2.0 V" },
+{ "id": "D", "text": "20 V" }
+],
+"correctOption": "B",
+"explanation": "Area A = (0.1)² = 0.01 m². Induced emf e = A × (dB/dt) = 0.01 × 20 = 0.2 V.",
+"difficulty": "medium",
+"tags": ["faradays-law", "numerical"]
+},
+{
+"questionText": "A conducting rod of length 1 m is rotated about one end with an angular speed of 100 rad s⁻¹ in a plane perpendicular to a uniform magnetic field of 0.2 T. The emf induced between the ends of the rod is:",
+"options": [
+{ "id": "A", "text": "5 V" },
+{ "id": "B", "text": "10 V" },
+{ "id": "C", "text": "20 V" },
+{ "id": "D", "text": "50 V" }
+],
+"correctOption": "B",
+"explanation": "Rotational motional emf e = 1/2 B ω L² = 0.5 × 0.2 × 100 × (1)² = 10 V.",
+"difficulty": "medium",
+"tags": ["rotational-emf", "numerical"]
+},
+{
+"questionText": "If the current in a primary coil changes from 5 A to 0 A in 0.1 s, an emf of 20 V is induced in the secondary coil. The mutual inductance of the two coils is:",
+"options": [
+{ "id": "A", "text": "0.1 H" },
+{ "id": "B", "text": "0.4 H" },
+{ "id": "C", "text": "1.0 H" },
+{ "id": "D", "text": "4.0 H" }
+],
+"correctOption": "B",
+"explanation": "Induced emf e = M (ΔI / Δt) ⇒ 20 = M × (5 / 0.1) ⇒ 20 = 50 M ⇒ M = 0.4 H.",
+"difficulty": "medium",
+"tags": ["mutual-inductance", "numerical"]
+},
+{
+"questionText": "An ideal air-cored solenoid of length 0.4 m and cross-sectional area 10 cm² has 800 turns. Its self-inductance is approximately:",
+"options": [
+{ "id": "A", "text": "1.01 mH" },
+{ "id": "B", "text": "2.01 mH" },
+{ "id": "C", "text": "4.02 mH" },
+{ "id": "D", "text": "8.04 mH" }
+],
+"correctOption": "B",
+"explanation": "L = (μ₀ N² A) / l = (4π × 10⁻⁷ × 800² × 10⁻³) / 0.4 ≈ (4π × 10⁻⁷ × 6.4 × 10⁵ × 10⁻³) / 0.4 ≈ 2.01 × 10⁻³ H = 2.01 mH.",
+"difficulty": "medium",
+"tags": ["solenoid-inductance", "numerical"]
+},
+{
+"questionText": "A magnetic flux through a stationary loop of resistance 10 Ω varies with time t as Φ = (6t² - 5t + 1) Wb. The magnitude of induced current at t = 0.25 s is:",
+"options": [
+{ "id": "A", "text": "0.1 A" },
+{ "id": "B", "text": "0.2 A" },
+{ "id": "C", "text": "0.4 A" },
+{ "id": "D", "text": "0.5 A" }
+],
+"correctOption": "B",
+"explanation": "e = |dΦ/dt| = |12t - 5|. At t = 0.25 s, e = |12(0.25) - 5| = |3 - 5| = 2 V. Induced current I = e / R = 2 / 10 = 0.2 A.",
+"difficulty": "medium",
+"tags": ["faradays-law", "induced-current"]
+},
+{
+"questionText": "Two coaxial circular coils of radii r₁ and r₂ (r₁ << r₂) are placed in the same plane with their centers coinciding. The mutual inductance M of the system is proportional to:",
+"options": [
+{ "id": "A", "text": "r₁ / r₂" },
+{ "id": "B", "text": "r₁² / r₂" },
+{ "id": "C", "text": "r₂² / r₁" },
+{ "id": "D", "text": "(r₁ r₂)²" }
+],
+"correctOption": "B",
+"explanation": "Field at center due to outer coil B₂ = μ₀ I₂ / (2 r₂). Flux through inner coil Φ₁ = B₂ (π r₁²) = (μ₀ π r₁² I₂) / (2 r₂). Thus M = Φ₁ / I₂ = μ₀ π r₁² / (2 r₂), which is proportional to r₁² / r₂.",
+"difficulty": "medium",
+"tags": ["mutual-inductance", "coaxial-coils"]
+},
+{
+"questionText": "A coil of resistance 20 Ω and inductance 0.5 H is connected across a 100 V DC supply. The maximum energy stored in the magnetic field of the coil is:",
+"options": [
+{ "id": "A", "text": "3.125 J" },
+{ "id": "B", "text": "6.25 J" },
+{ "id": "C", "text": "12.5 J" },
+{ "id": "D", "text": "25.0 J" }
+],
+"correctOption": "B",
+"explanation": "Steady-state DC current I = V / R = 100 / 20 = 5 A. Stored energy U = 1/2 L I² = 0.5 × 0.5 × 5² = 6.25 J.",
+"difficulty": "medium",
+"tags": ["energy-stored", "dc-circuit"]
+},
+{
+"questionText": "A wheel with 10 metallic spokes, each 0.5 m long, is rotated at 120 rev min⁻¹ in a plane perpendicular to the horizontal component of Earth's magnetic field B_H = 0.4 Gauss. The induced emf between the axle and the rim is:",
+"options": [
+{ "id": "A", "text": "3.14 × 10⁻⁵ V" },
+{ "id": "B", "text": "6.28 × 10⁻⁵ V" },
+{ "id": "C", "text": "3.14 × 10⁻⁴ V" },
+{ "id": "D", "text": "6.28 × 10⁻⁴ V" }
+],
+"correctOption": "A",
+"explanation": "Frequency f = 120 / 60 = 2 rev s⁻¹. Angular velocity ω = 2π f = 4π rad s⁻¹. B_H = 0.4 × 10⁻⁴ T. e = 1/2 B ω L² = 0.5 × (0.4 × 10⁻⁴) × (4π) × (0.5)² = 3.14 × 10⁻⁵ V. (Note: standard spokes in parallel do not change total induced emf across rim-axle).",
+"difficulty": "medium",
+"tags": ["rotational-emf", "earths-field"]
+},
+{
+"questionText": "A long solenoid of cross-sectional area A and n turns per unit length has a short coil of N turns tightly wound around its center. The mutual inductance between the solenoid and the coil is:",
+"options": [
+{ "id": "A", "text": "μ₀ n N A" },
+{ "id": "B", "text": "μ₀ n² N A" },
+{ "id": "C", "text": "(μ₀ N A) / n" },
+{ "id": "D", "text": "μ₀ n N² A" }
+],
+"correctOption": "A",
+"explanation": "Magnetic field of solenoid carrying current I is B = μ₀ n I. Flux through secondary coil of N turns is Φ = N (B A) = μ₀ n N A I. Therefore, M = Φ / I = μ₀ n N A.",
+"difficulty": "hard",
+"tags": ["mutual-inductance", "solenoid-coil"]
+},
+{
+"questionText": "A copper ring is held horizontally and a bar magnet is dropped along the axis of the ring with its North pole pointing downward. The acceleration of the falling magnet is:",
+"options": [
+{ "id": "A", "text": "Equal to g" },
+{ "id": "B", "text": "Greater than g" },
+{ "id": "C", "text": "Less than g" },
+{ "id": "D", "text": "Zero" }
+],
+"correctOption": "C",
+"explanation": "As the magnet falls toward the ring, the changing magnetic flux induces a current in the ring which creates a magnetic field opposing the approaching N-pole (Lenz's Law). The upward repulsive force reduces acceleration below g.",
+"difficulty": "hard",
+"tags": ["lenzs-law", "conceptual"]
+},
+{
+"questionText": "A rectangular loop of dimensions a and b with resistance R is pulled out of a uniform magnetic field B with a constant speed v perpendicular to the field edge. The mechanical power required to pull the loop is:",
+"options": [
+{ "id": "A", "text": "(B² b² v²) / R" },
+{ "id": "B", "text": "(B² a² v²) / R" },
+{ "id": "C", "text": "(B a b v) / R" },
+{ "id": "D", "text": "(B² a b v²) / R" }
+],
+"correctOption": "A",
+"explanation": "Assuming length b is perpendicular to velocity v and crosses the boundary: induced emf e = B b v. Current I = e / R = B b v / R. Magnetic force F = I b B = (B² b² v) / R. Mechanical power P = F v = (B² b² v²) / R.",
+"difficulty": "hard",
+"tags": ["motional-emf", "power-dissipation"]
+},
+{
+"questionText": "A rectangular coil of N turns, area A, and total resistance R rotates with constant angular velocity ω in a uniform magnetic field B. The total charge that flows through the coil during a rotation from θ = 0° to θ = 180° is:",
+"options": [
+{ "id": "A", "text": "Zero" },
+{ "id": "B", "text": "(N B A) / R" },
+{ "id": "C", "text": "(2 N B A) / R" },
+{ "id": "D", "text": "(2 N B A ω) / R" }
+],
+"correctOption": "C",
+"explanation": "Total induced charge q = ΔΦ / R = [Φ_initial - Φ_final] / R = [N B A - (-N B A)] / R = 2 N B A / R. Notice that total charge is independent of angular speed ω.",
+"difficulty": "hard",
+"tags": ["induced-charge", "rotational-loop"]
+}
+]
+}

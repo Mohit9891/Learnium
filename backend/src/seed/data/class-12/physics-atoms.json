@@ -1,0 +1,277 @@
+{
+  "exam": {
+    "name": "Class 12",
+    "slug": ""
+  },
+  "subject": {
+    "name": "Physics",
+    "slug": ""
+  },
+  "chapter": {
+    "name": "Atoms",
+    "slug": "",
+    "orderIndex": 12
+  },
+  "questions": [
+    {
+      "questionText": "In Alpha-particle scattering experiment, the distance of closest approach is directly proportional to:",
+      "options": [
+        { "id": "A", "text": "Kinetic energy of alpha particle" },
+        { "id": "B", "text": "Square of kinetic energy" },
+        { "id": "C", "text": "Inverse of kinetic energy" },
+        { "id": "D", "text": "Square root of kinetic energy" }
+      ],
+      "correctOption": "C",
+      "explanation": "At the distance of closest approach d, initial kinetic energy converts to electrostatic potential energy: K = (1 / 4πε₀) * (2Ze² / d). Therefore, d ∝ 1/K.",
+      "difficulty": "easy",
+      "tags": ["alpha-scattering", "distance-of-closest-approach"]
+    },
+    {
+      "questionText": "According to Bohr's postulate, the angular momentum of an electron in a stationary orbit is an integral multiple of:",
+      "options": [
+        { "id": "A", "text": "h / π" },
+        { "id": "B", "text": "h / (2π)" },
+        { "id": "C", "text": "2π / h" },
+        { "id": "D", "text": "h / (4π)" }
+      ],
+      "correctOption": "B",
+      "explanation": "Bohr's quantization condition states that orbital angular momentum L = mvr = n(h / 2π), where n = 1, 2, 3...",
+      "difficulty": "easy",
+      "tags": ["bohr-model", "quantization"]
+    },
+    {
+      "questionText": "The radius r_n of the n-th Bohr orbit of a hydrogen-like atom varies with principal quantum number n as:",
+      "options": [
+        { "id": "A", "text": "r_n ∝ n" },
+        { "id": "B", "text": "r_n ∝ n²" },
+        { "id": "C", "text": "r_n ∝ 1 / n" },
+        { "id": "D", "text": "r_n ∝ 1 / n²" }
+      ],
+      "correctOption": "B",
+      "explanation": "The radius of the n-th Bohr orbit is given by r_n = (n² h² ε₀) / (π m Z e²), showing that r_n is directly proportional to n².",
+      "difficulty": "easy",
+      "tags": ["bohr-radius", "formula"]
+    },
+    {
+      "questionText": "The total energy E_n of an electron in the n-th orbit of a hydrogen atom is related to its kinetic energy K_n by:",
+      "options": [
+        { "id": "A", "text": "E_n = K_n" },
+        { "id": "B", "text": "E_n = -K_n" },
+        { "id": "C", "text": "E_n = 2 K_n" },
+        { "id": "D", "text": "E_n = -2 K_n" }
+      ],
+      "correctOption": "B",
+      "explanation": "In Bohr's model, potential energy U_n = -2 K_n. Total energy E_n = K_n + U_n = K_n - 2 K_n = -K_n.",
+      "difficulty": "easy",
+      "tags": ["electron-energy", "bohr-model"]
+    },
+    {
+      "questionText": "Which spectral series of the hydrogen atom lies in the visible region of the electromagnetic spectrum?",
+      "options": [
+        { "id": "A", "text": "Lyman series" },
+        { "id": "B", "text": "Balmer series" },
+        { "id": "C", "text": "Paschen series" },
+        { "id": "D", "text": "Brackett series" }
+      ],
+      "correctOption": "B",
+      "explanation": "The Balmer series corresponds to transitions ending at n = 2 and falls in the visible range of the electromagnetic spectrum.",
+      "difficulty": "easy",
+      "tags": ["spectral-series", "balmer-series"]
+    },
+    {
+      "questionText": "The ground state energy of a hydrogen atom is -13.6 eV. The ionization potential of hydrogen is:",
+      "options": [
+        { "id": "A", "text": "-13.6 V" },
+        { "id": "B", "text": "13.6 V" },
+        { "id": "C", "text": "3.4 V" },
+        { "id": "D", "text": "0 V" }
+      ],
+      "correctOption": "B",
+      "explanation": "Ionization energy is 13.6 eV (energy needed to free the ground state electron to infinity), corresponding to an ionization potential of 13.6 V.",
+      "difficulty": "easy",
+      "tags": ["ionization-potential", "ground-state"]
+    },
+    {
+      "questionText": "In de Broglie's explanation of Bohr's second postulate, an electron's stationary orbit contains a whole number of:",
+      "options": [
+        { "id": "A", "text": "Photons" },
+        { "id": "B", "text": "de Broglie wavelengths" },
+        { "id": "C", "text": "Positrons" },
+        { "id": "D", "text": "Nodes only" }
+      ],
+      "correctOption": "B",
+      "explanation": "De Broglie explained quantized orbits by establishing that the circumference of a stable orbit must equal an integral number of electron de Broglie wavelengths: 2πr = nλ.",
+      "difficulty": "easy",
+      "tags": ["de-broglie", "bohr-quantization"]
+    },
+    {
+      "questionText": "The value of Rydberg constant R is approximately equal to:",
+      "options": [
+        { "id": "A", "text": "1.097 × 10⁷ m⁻¹" },
+        { "id": "B", "text": "6.63 × 10⁻³⁴ J s" },
+        { "id": "C", "text": "8.854 × 10⁻¹² F m⁻¹" },
+        { "id": "D", "text": "9.1 × 10⁻³¹ kg" }
+      ],
+      "correctOption": "A",
+      "explanation": "The Rydberg constant R = 1.097 × 10⁷ m⁻¹ (or 1.097 × 10⁷ m⁻¹).",
+      "difficulty": "easy",
+      "tags": ["rydberg-constant", "value"]
+    },
+    {
+      "questionText": "The ratio of minimum to maximum wavelength in the Lyman series of hydrogen atom is:",
+      "options": [
+        { "id": "A", "text": "1 : 4" },
+        { "id": "B", "text": "3 : 4" },
+        { "id": "C", "text": "1 : 2" },
+        { "id": "D", "text": "4 : 9" }
+      ],
+      "correctOption": "B",
+      "explanation": "For Lyman: 1/λ = R(1/1² - 1/n²). λ_min occurs when n → ∞ (1/λ_min = R). λ_max occurs when n = 2 (1/λ_max = 3R/4). Thus, λ_min / λ_max = 3/4.",
+      "difficulty": "medium",
+      "tags": ["lyman-series", "wavelength-ratio"]
+    },
+    {
+      "questionText": "The speed of an electron in the ground state of a hydrogen atom is v₀. Its speed in the 3rd orbit (n = 3) will be:",
+      "options": [
+        { "id": "A", "text": "v₀ / 3" },
+        { "id": "B", "text": "v₀ / 9" },
+        { "id": "C", "text": "3 v₀" },
+        { "id": "D", "text": "9 v₀" }
+      ],
+      "correctOption": "A",
+      "explanation": "In Bohr's model, electron orbital velocity v_n = e² / (2 ε₀ h n) ∝ 1/n. For n = 3, v_3 = v₀ / 3.",
+      "difficulty": "medium",
+      "tags": ["orbital-velocity", "bohr-model"]
+    },
+    {
+      "questionText": "An electron in a hydrogen atom jumps from the 4th excited state to the ground state. The maximum number of spectral lines possible is:",
+      "options": [
+        { "id": "A", "text": "6" },
+        { "id": "B", "text": "10" },
+        { "id": "C", "text": "15" },
+        { "id": "D", "text": "4" }
+      ],
+      "correctOption": "B",
+      "explanation": "4th excited state corresponds to n = 5. Number of possible spectral lines N = n(n - 1) / 2 = 5(4) / 2 = 10.",
+      "difficulty": "medium",
+      "tags": ["spectral-lines", "transitions"]
+    },
+    {
+      "questionText": "The radius of the inner-most orbit of a hydrogen atom is 5.3 × 10⁻¹¹ m. The radius of its n = 2 orbit is:",
+      "options": [
+        { "id": "A", "text": "1.06 × 10⁻¹⁰ m" },
+        { "id": "B", "text": "2.12 × 10⁻¹⁰ m" },
+        { "id": "C", "text": "4.77 × 10⁻¹⁰ m" },
+        { "id": "D", "text": "8.48 × 10⁻¹⁰ m" }
+      ],
+      "correctOption": "B",
+      "explanation": "r_n = n² r₁ = 2² × 5.3 × 10⁻¹¹ m = 4 × 5.3 × 10⁻¹¹ m = 2.12 × 10⁻¹⁰ m.",
+      "difficulty": "medium",
+      "tags": ["bohr-radius", "numerical"]
+    },
+    {
+      "questionText": "The binding energy of a singly ionized Helium ion (He⁺) in its ground state is:",
+      "options": [
+        { "id": "A", "text": "13.6 eV" },
+        { "id": "B", "text": "27.2 eV" },
+        { "id": "C", "text": "54.4 eV" },
+        { "id": "D", "text": "108.8 eV" }
+      ],
+      "correctOption": "C",
+      "explanation": "E_ground = -13.6 Z² / n² eV. For He⁺, Z = 2 and n = 1, so E = -13.6 × 2² = -54.4 eV. Binding energy is +54.4 eV.",
+      "difficulty": "medium",
+      "tags": ["hydrogen-like-atoms", "binding-energy"]
+    },
+    {
+      "questionText": "In an alpha-particle scattering experiment, if the impact parameter b = 0, the scattering angle θ will be:",
+      "options": [
+        { "id": "A", "text": "0°" },
+        { "id": "B", "text": "45°" },
+        { "id": "C", "text": "90°" },
+        { "id": "D", "text": "180°" }
+      ],
+      "correctOption": "D",
+      "explanation": "Impact parameter b = [Ze² cot(θ/2)] / [4πε₀ K]. When b = 0, cot(θ/2) = 0 ⇒ θ/2 = 90° ⇒ θ = 180° (head-on collision, head-back rebound).",
+      "difficulty": "medium",
+      "tags": ["impact-parameter", "alpha-scattering"]
+    },
+    {
+      "questionText": "If the kinetic energy of an electron in a hydrogen atom is K, its potential energy U is:",
+      "options": [
+        { "id": "A", "text": "-K" },
+        { "id": "B", "text": "-2 K" },
+        { "id": "C", "text": "2 K" },
+        { "id": "D", "text": "-K / 2" }
+      ],
+      "correctOption": "B",
+      "explanation": "In an inverse-square force central field, potential energy U = -2 K.",
+      "difficulty": "medium",
+      "tags": ["potential-energy", "kinetic-energy"]
+    },
+    {
+      "questionText": "The shortest wavelength in the Paschen series of hydrogen spectrum corresponds to the transition from n₂ = ∞ to n₁ equal to:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "4" }
+      ],
+      "correctOption": "C",
+      "explanation": "Paschen series lines result from electron transitions jumping to lower state n₁ = 3.",
+      "difficulty": "medium",
+      "tags": ["paschen-series", "spectral-lines"]
+    },
+    {
+      "questionText": "The ratio of kinetic energy to total energy of an electron in a hydrogen atom is:",
+      "options": [
+        { "id": "A", "text": "1 : 1" },
+        { "id": "B", "text": "1 : -1" },
+        { "id": "C", "text": "2 : -1" },
+        { "id": "D", "text": "1 : -2" }
+      ],
+      "correctOption": "B",
+      "explanation": "Since E = -K, the ratio K / E = K / (-K) = -1, which means the ratio of magnitude is 1 : -1.",
+      "difficulty": "hard",
+      "tags": ["energy-ratio", "bohr-model"]
+    },
+    {
+      "questionText": "The angular momentum of an electron in a hydrogen atom is proportional to:",
+      "options": [
+        { "id": "A", "text": "r" },
+        { "id": "B", "text": "r²" },
+        { "id": "C", "text": "√r" },
+        { "id": "D", "text": "1 / √r" }
+      ],
+      "correctOption": "C",
+      "explanation": "Quantized angular momentum L = n(h / 2π) ∝ n. Since radius r ∝ n², n ∝ √r. Therefore, angular momentum L ∝ √r.",
+      "difficulty": "hard",
+      "tags": ["angular-momentum", "orbit-radius"]
+    },
+    {
+      "questionText": "An electron makes a transition from n = 3 to n = 2 in a hydrogen atom. The frequency of the emitted photon is closest to:",
+      "options": [
+        { "id": "A", "text": "4.57 × 10¹⁴ Hz" },
+        { "id": "B", "text": "6.15 × 10¹⁴ Hz" },
+        { "id": "C", "text": "2.46 × 10¹⁵ Hz" },
+        { "id": "D", "text": "3.28 × 10¹5 Hz" }
+      ],
+      "correctOption": "A",
+      "explanation": "Energy difference ΔE = 13.6 × (1/2² - 1/3²) = 13.6 × (1/4 - 1/9) = 13.6 × (5/36) ≈ 1.888 eV = 3.02 × 10⁻¹⁹ J. Frequency ν = ΔE / h = (3.02 × 10⁻¹⁹ J) / (6.63 × 10⁻³⁴ J s) ≈ 4.56 × 10¹⁴ Hz.",
+      "difficulty": "hard",
+      "tags": ["bohr-transition", "frequency-calculation"]
+    },
+    {
+      "questionText": "In Bohr's model of the hydrogen atom, the ratio of time period of revolution of an electron in n = 1 orbit to that in n = 2 orbit is:",
+      "options": [
+        { "id": "A", "text": "1 : 2" },
+        { "id": "B", "text": "1 : 4" },
+        { "id": "C", "text": "1 : 8" },
+        { "id": "D", "text": "1 : 16" }
+      ],
+      "correctOption": "C",
+      "explanation": "Time period T = 2πr / v. Since r ∝ n² and v ∝ 1/n, T ∝ n² / (1/n) = n³. Thus, T₁ / T₂ = (1/2)³ = 1/8.",
+      "difficulty": "hard",
+      "tags": ["time-period", "bohr-model"]
+    }
+  ]
+}

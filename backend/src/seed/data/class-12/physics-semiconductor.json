@@ -1,0 +1,277 @@
+{
+  "exam": {
+    "name": "Class 12",
+    "slug": ""
+  },
+  "subject": {
+    "name": "Physics",
+    "slug": ""
+  },
+  "chapter": {
+    "name": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+    "slug": "",
+    "orderIndex": 14
+  },
+  "questions": [
+    {
+      "questionText": "In an intrinsic semiconductor at absolute zero temperature (0 K), the conduction band is:",
+      "options": [
+        { "id": "A", "text": "Completely filled with electrons" },
+        { "id": "B", "text": "Partially filled" },
+        { "id": "C", "text": "Completely empty" },
+        { "id": "D", "text": "Filled with holes" }
+      ],
+      "correctOption": "C",
+      "explanation": "At 0 K, electrons lack thermal energy to jump across the energy band gap, leaving the valence band completely filled and the conduction band completely empty. Thus, it acts as a perfect insulator.",
+      "difficulty": "easy",
+      "tags": ["intrinsic-semiconductor", "energy-bands"]
+    },
+    {
+      "questionText": "An n-type semiconductor is obtained by doping pure Silicon or Germanium with:",
+      "options": [
+        { "id": "A", "text": "Trivalent impurity" },
+        { "id": "B", "text": "Pentavalent impurity" },
+        { "id": "C", "text": "Monovalent impurity" },
+        { "id": "D", "text": "Tetravalent impurity" }
+      ],
+      "correctOption": "B",
+      "explanation": "Doping tetravalent Si or Ge with pentavalent impurities (such as Phosphorus, Arsenic, or Antimony) provides extra free electrons, creating an n-type semiconductor.",
+      "difficulty": "easy",
+      "tags": ["n-type", "doping"]
+    },
+    {
+      "questionText": "The charge carriers responsible for electrical conduction in a p-type semiconductor are majority:",
+      "options": [
+        { "id": "A", "text": "Electrons" },
+        { "id": "B", "text": "Holes" },
+        { "id": "C", "text": "Positive ions" },
+        { "id": "D", "text": "Negative ions" }
+      ],
+      "correctOption": "B",
+      "explanation": "In p-type semiconductors created by trivalent impurities (like Boron or Indium), holes are the majority charge carriers, while electrons are minority carriers.",
+      "difficulty": "easy",
+      "tags": ["p-type", "majority-carriers"]
+    },
+    {
+      "questionText": "In a forward-biased p-n junction diode, the width of the depletion layer:",
+      "options": [
+        { "id": "A", "text": "Increases" },
+        { "id": "B", "text": "Decreases" },
+        { "id": "C", "text": "Remains unchanged" },
+        { "id": "D", "text": "First increases then decreases" }
+      ],
+      "correctOption": "B",
+      "explanation": "Forward bias opposes the built-in potential barrier across the junction, which reduces the potential barrier height and narrows the depletion layer width.",
+      "difficulty": "easy",
+      "tags": ["pn-junction", "forward-bias", "depletion-layer"]
+    },
+    {
+      "questionText": "The forbidden energy gap (E_g) for Silicon at room temperature is approximately:",
+      "options": [
+        { "id": "A", "text": "0.7 eV" },
+        { "id": "B", "text": "1.1 eV" },
+        { "id": "C", "text": "3.0 eV" },
+        { "id": "D", "text": "0.0 eV" }
+      ],
+      "correctOption": "B",
+      "explanation": "At room temperature (300 K), the band gap energy E_g is approximately 1.1 eV for Silicon and 0.7 eV for Germanium.",
+      "difficulty": "easy",
+      "tags": ["band-gap", "silicon"]
+    },
+    {
+      "questionText": "Which semiconductor device is specifically operated under reverse bias to convert light energy into electrical current?",
+      "options": [
+        { "id": "A", "text": "Light Emitting Diode (LED)" },
+        { "id": "B", "text": "Photodiode" },
+        { "id": "C", "text": "Solar cell" },
+        { "id": "D", "text": "Zener diode" }
+      ],
+      "correctOption": "B",
+      "explanation": "Photodiodes are intentionally reverse-biased so that optically generated electron-hole pairs in the depletion region significantly alter the reverse saturation current.",
+      "difficulty": "easy",
+      "tags": ["photodiode", "reverse-bias"]
+    },
+    {
+      "questionText": "A Light Emitting Diode (LED) operates under:",
+      "options": [
+        { "id": "A", "text": "Reverse bias" },
+        { "id": "B", "text": "Forward bias" },
+        { "id": "C", "text": "Unbiased condition" },
+        { "id": "D", "text": "Breakdown region only" }
+      ],
+      "correctOption": "B",
+      "explanation": "An LED emits light when injected minority carriers recombine with majority carriers across the forward-biased p-n junction, releasing energy as photons.",
+      "difficulty": "easy",
+      "tags": ["led", "forward-bias"]
+    },
+    {
+      "questionText": "The primary function of a full-wave rectifier circuit is to convert:",
+      "options": [
+        { "id": "A", "text": "DC voltage to AC voltage" },
+        { "id": "B", "text": "AC voltage to pulsating DC voltage" },
+        { "id": "C", "text": "High AC voltage to low AC voltage" },
+        { "id": "D", "text": "Constant DC to variable DC" }
+      ],
+      "correctOption": "B",
+      "explanation": "Rectifiers use p-n junction diodes to allow current flow in only one direction, converting alternating current (AC) into pulsating direct current (DC).",
+      "difficulty": "easy",
+      "tags": ["rectifier", "ac-to-dc"]
+    },
+    {
+      "questionText": "If the AC input frequency to a full-wave rectifier is 50 Hz, the fundamental ripple frequency of its output is:",
+      "options": [
+        { "id": "A", "text": "25 Hz" },
+        { "id": "B", "text": "50 Hz" },
+        { "id": "C", "text": "100 Hz" },
+        { "id": "D", "text": "200 Hz" }
+      ],
+      "correctOption": "C",
+      "explanation": "In a full-wave rectifier, both positive and negative half-cycles of the AC input are converted into output pulses. Hence, output frequency f_out = 2 × f_in = 2 × 50 = 100 Hz.",
+      "difficulty": "medium",
+      "tags": ["full-wave-rectifier", "ripple-frequency"]
+    },
+    {
+      "questionText": "At temperature T K, an intrinsic semiconductor has intrinsic carrier concentration n_i. If it is doped with donor impurity density N_D (N_D >> n_i), the hole concentration p is given by:",
+      "options": [
+        { "id": "A", "text": "p = n_i / N_D" },
+        { "id": "B", "text": "p = n_i² / N_D" },
+        { "id": "C", "text": "p = N_D / n_i" },
+        { "id": "D", "text": "p = n_i · N_D" }
+      ],
+      "correctOption": "B",
+      "explanation": "According to the Mass Action Law, n · p = n_i². For an n-type semiconductor where electron concentration n ≈ N_D, the hole concentration becomes p = n_i² / N_D.",
+      "difficulty": "medium",
+      "tags": ["mass-action-law", "carrier-concentration"]
+    },
+    {
+      "questionText": "The electrical conductivity σ of an intrinsic semiconductor having electron mobility μ_e, hole mobility μ_h, and intrinsic concentration n_i is expressed as:",
+      "options": [
+        { "id": "A", "text": "σ = e n_i (μ_e - μ_h)" },
+        { "id": "B", "text": "σ = e n_i (μ_e + μ_h)" },
+        { "id": "C", "text": "σ = e n_i² (μ_e + μ_h)" },
+        { "id": "D", "text": "σ = (μ_e + μ_h) / (e n_i)" }
+      ],
+      "correctOption": "B",
+      "explanation": "Both electrons and holes contribute additively to total current flow. Conductivity is given by σ = e (n μ_e + p μ_h). For intrinsic materials where n = p = n_i, σ = e n_i (μ_e + μ_h).",
+      "difficulty": "medium",
+      "tags": ["conductivity", "mobility"]
+    },
+    {
+      "questionText": "In a reverse-biased p-n junction, the small current that flows prior to breakdown is predominantly due to the drift of:",
+      "options": [
+        { "id": "A", "text": "Majority carriers across the potential barrier" },
+        { "id": "B", "text": "Minority carriers across the depletion layer" },
+        { "id": "C", "text": "Electrons in the p-region only" },
+        { "id": "D", "text": "Holes in the n-region only" }
+      ],
+      "correctOption": "B",
+      "explanation": "Reverse bias assists the movement of thermally generated minority carriers (electrons in p-side, holes in n-side), leading to a small reverse saturation drift current.",
+      "difficulty": "medium",
+      "tags": ["reverse-saturation-current", "drift"]
+    },
+    {
+      "questionText": "A carbon resistor and a Silicon semiconductor crystal are both heated from 20°C to 80°C. Their electrical resistances respectively:",
+      "options": [
+        { "id": "A", "text": "Increase, Increase" },
+        { "id": "B", "text": "Decrease, Decrease" },
+        { "id": "C", "text": "Increase, Decrease" },
+        { "id": "D", "text": "Decrease, Increase" }
+      ],
+      "correctOption": "C",
+      "explanation": "Carbon (like metals/conductors in this temperature context) has a positive temperature coefficient of resistance, so its resistance increases. Silicon is a semiconductor with a negative temperature coefficient, so thermal carrier generation causes its resistance to decrease.",
+      "difficulty": "medium",
+      "tags": ["temperature-coefficient", "resistance-variation"]
+    },
+    {
+      "questionText": "The built-in potential barrier V_0 across an unbiased p-n junction depends on:",
+      "options": [
+        { "id": "A", "text": "Doping concentration of the semiconductor only" },
+        { "id": "B", "text": "Temperature only" },
+        { "id": "C", "text": "Nature of semiconductor material only" },
+        { "id": "D", "text": "Material of semiconductor, doping levels, and temperature" }
+      ],
+      "correctOption": "D",
+      "explanation": "Barrier potential V_0 = (k T / e) ln(N_A N_D / n_i²). It depends on the band gap of the base material, acceptor/donor doping levels, and operating temperature.",
+      "difficulty": "medium",
+      "tags": ["barrier-potential", "pn-junction"]
+    },
+    {
+      "questionText": "A Germanium specimen is doped with Aluminium to a concentration of 10²¹ atoms m⁻³. If the intrinsic concentration n_i is 2.5 × 10¹⁹ m⁻³, the electron concentration in the sample is:",
+      "options": [
+        { "id": "A", "text": "6.25 × 10¹⁷ m⁻³" },
+        { "id": "B", "text": "6.25 × 10¹⁸ m⁻³" },
+        { "id": "C", "text": "2.5 × 10¹⁷ m⁻³" },
+        { "id": "D", "text": "1.0 × 10¹" }
+      ],
+      "correctOption": "A",
+      "explanation": "Aluminium is a trivalent acceptor impurity, so hole concentration p ≈ N_A = 10²¹ m⁻³. Using mass action law n = n_i² / p = (2.5 × 10¹⁹)² / 10²¹ = (6.25 × 10³⁸) / 10²¹ = 6.25 × 10¹⁷ m⁻³.",
+      "difficulty": "medium",
+      "tags": ["mass-action-law", "numerical"]
+    },
+    {
+      "questionText": "Which of the following energy band diagrams represents an n-type semiconductor at room temperature?",
+      "options": [
+        { "id": "A", "text": "Donor energy level lies just below the conduction band" },
+        { "id": "B", "text": "Acceptor energy level lies just above the valence band" },
+        { "id": "C", "text": "Donor energy level lies in the middle of the band gap" },
+        { "id": "D", "text": "Acceptor energy level lies inside the valence band" }
+      ],
+      "correctOption": "A",
+      "explanation": "In an n-type semiconductor, the discrete donor level E_D lies a few hundredths of an electron-volt (~0.045 eV in Si) just below the bottom of the conduction band E_C.",
+      "difficulty": "medium",
+      "tags": ["energy-band-diagram", "donor-level"]
+    },
+    {
+      "questionText": "In a p-n junction diode, the diffusion current and drift current balance each other when:",
+      "options": [
+        { "id": "A", "text": "The diode is heavily forward-biased" },
+        { "id": "B", "text": "The diode is reverse-biased near breakdown" },
+        { "id": "C", "text": "The p-n junction is unbiased in thermal equilibrium" },
+        { "id": "D", "text": "Light of frequency ν > E_g / h illuminates the junction" }
+      ],
+      "correctOption": "C",
+      "explanation": "Under open-circuit thermal equilibrium, the electric field created in the depletion zone causes a drift current equal and opposite to the carrier diffusion current, resulting in zero net current.",
+      "difficulty": "hard",
+      "tags": ["diffusion-drift-balance", "equilibrium"]
+    },
+    {
+      "questionText": "A p-n junction has a barrier potential of 0.7 V and a depletion layer width of 0.5 μm. The average electric field in the depletion region in the absence of external bias is:",
+      "options": [
+        { "id": "A", "text": "1.4 × 10⁵ V m⁻¹" },
+        { "id": "B", "text": "1.4 × 10⁶ V m⁻¹" },
+        { "id": "C", "text": "3.5 × 10⁵ V m⁻¹" },
+        { "id": "D", "text": "7.0 × 10⁶ V m⁻¹" }
+      ],
+      "correctOption": "B",
+      "explanation": "Average electric field E = V_0 / d = 0.7 V / (0.5 × 10⁻⁶ m) = 1.4 × 10⁶ V m⁻¹.",
+      "difficulty": "hard",
+      "tags": ["electric-field", "depletion-region", "numerical"]
+    },
+    {
+      "questionText": "Compound semiconductors used for fabricating Light Emitting Diodes (LEDs) must have:",
+      "options": [
+        { "id": "A", "text": "An indirect band gap with E_g < 0.5 eV" },
+        { "id": "B", "text": "A direct band gap with E_g matching visible/IR photon energies" },
+        { "id": "C", "text": "Zero band gap energy like metals" },
+        { "id": "D", "text": "An indirect band gap with high thermal conductivity" }
+      ],
+      "correctOption": "B",
+      "explanation": "Direct band gap semiconductors (e.g., GaAs, GaAsP) allow direct electron-hole recombination without phonon momentum loss, efficiently converting energy into light of wavelength λ ≈ h c / E_g.",
+      "difficulty": "hard",
+      "tags": ["direct-bandgap", "led-materials"]
+    },
+    {
+      "questionText": "Consider a solar cell made of a semiconductor with band gap E_g. To generate photocurrent effectively upon illumination, the incident light wavelength λ must satisfy:",
+      "options": [
+        { "id": "A", "text": "λ ≤ h c / E_g" },
+        { "id": "B", "text": "λ ≥ h c / E_g" },
+        { "id": "C", "text": "λ = 2 h c / E_g" },
+        { "id": "D", "text": "λ is independent of E_g" }
+      ],
+      "correctOption": "A",
+      "explanation": "The incident photon energy E = h c / λ must be greater than or equal to the band gap energy E_g to elevate valence electrons to the conduction band. Therefore, h c / λ ≥ E_g ⇒ λ ≤ h c / E_g.",
+      "difficulty": "hard",
+      "tags": ["solar-cell", "photon-wavelength"]
+    }
+  ]
+}

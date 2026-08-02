@@ -1,0 +1,277 @@
+{
+  "exam": {
+    "name": "Class 12",
+    "slug": ""
+  },
+  "subject": {
+    "name": "Physics",
+    "slug": ""
+  },
+  "chapter": {
+    "name": "Wave Optics",
+    "slug": "",
+    "orderIndex": 10
+  },
+  "questions": [
+    {
+      "questionText": "According to Huygens' principle, every point on a primary wavefront acts as a source of:",
+      "options": [
+        { "id": "A", "text": "Secondary wavelets that spread out in all directions with the speed of light" },
+        { "id": "B", "text": "Electrons ejected from the surface" },
+        { "id": "C", "text": "Plane waves moving only backward" },
+        { "id": "D", "text": "Refracted rays with lower frequency" }
+      ],
+      "correctOption": "A",
+      "explanation": "Huygens' principle states that each point of a wavefront is a source of secondary disturbance, sending out spherical wavelets at the speed of wave propagation in the medium.",
+      "difficulty": "easy",
+      "tags": ["huygens-principle", "wavefront"]
+    },
+    {
+      "questionText": "The shape of the wavefront originating from a distant point light source is:",
+      "options": [
+        { "id": "A", "text": "Spherical" },
+        { "id": "B", "text": "Cylindrical" },
+        { "id": "C", "text": "Plane" },
+        { "id": "D", "text": "Elliptical" }
+      ],
+      "correctOption": "C",
+      "explanation": "At very large distances from a source, small portions of spherical or cylindrical wavefronts approximate plane wavefronts.",
+      "difficulty": "easy",
+      "tags": ["wavefront-types", "plane-wavefront"]
+    },
+    {
+      "questionText": "To observe a sustained interference pattern, two light sources must be:",
+      "options": [
+        { "id": "A", "text": "Coherent" },
+        { "id": "B", "text": "Incoherent" },
+        { "id": "C", "text": "Of vastly different frequencies" },
+        { "id": "D", "text": "Perpendicularly polarized" }
+      ],
+      "correctOption": "A",
+      "explanation": "Coherent sources maintain a constant phase difference over time, which is essential for obtaining a stable, stationary interference pattern.",
+      "difficulty": "easy",
+      "tags": ["coherent-sources", "interference"]
+    },
+    {
+      "questionText": "In Young's double slit experiment, the fringe width β is given by:",
+      "options": [
+        { "id": "A", "text": "β = λ d / D" },
+        { "id": "B", "text": "β = λ D / d" },
+        { "id": "C", "text": "β = D d / λ" },
+        { "id": "D", "text": "β = λ² D / d" }
+      ],
+      "correctOption": "B",
+      "explanation": "Fringe width β = λ D / d, where λ is wavelength, D is distance from slits to screen, and d is separation between the two slits.",
+      "difficulty": "easy",
+      "tags": ["ydse", "fringe-width"]
+    },
+    {
+      "questionText": "The phenomenon of diffraction of light is best observed when the width of the obstacle or aperture is:",
+      "options": [
+        { "id": "A", "text": "Much larger than the wavelength of light" },
+        { "id": "B", "text": "Comparable to the wavelength of light" },
+        { "id": "C", "text": "Independent of the wavelength of light" },
+        { "id": "D", "text": "Equal to several meters" }
+      ],
+      "correctOption": "B",
+      "explanation": "Pronounced diffraction occurs when the size of the obstacle or slit is of the same order of magnitude as the wavelength of the light wave.",
+      "difficulty": "easy",
+      "tags": ["diffraction", "aperture-size"]
+    },
+    {
+      "questionText": "When light travels from a rarer to a denser medium, which of the following characteristics remains unchanged?",
+      "options": [
+        { "id": "A", "text": "Speed" },
+        { "id": "B", "text": "Wavelength" },
+        { "id": "C", "text": "Frequency" },
+        { "id": "D", "text": "Amplitude" }
+      ],
+      "correctOption": "C",
+      "explanation": "Frequency is an intrinsic property determined solely by the source of radiation and remains constant regardless of the medium.",
+      "difficulty": "easy",
+      "tags": ["refraction", "frequency"]
+    },
+    {
+      "questionText": "In a single slit diffraction experiment, the central maximum is twice as wide as any secondary maximum because it spans between:",
+      "options": [
+        { "id": "A", "text": "The first minimum on either side of the center" },
+        { "id": "B", "text": "The second maximum on either side" },
+        { "id": "C", "text": "The central axis and first maximum" },
+        { "id": "D", "text": "The slit edges" }
+      ],
+      "correctOption": "A",
+      "explanation": "The first minima occur at angular positions θ = ± λ / a. The width of the central maximum is 2λ / a, which is double the width (λ / a) of secondary maxima.",
+      "difficulty": "easy",
+      "tags": ["single-slit-diffraction", "central-maximum"]
+    },
+    {
+      "questionText": "The phase difference Δϕ corresponding to a path difference Δx between two interfering waves is:",
+      "options": [
+        { "id": "A", "text": "Δϕ = (2π / λ) Δx" },
+        { "id": "B", "text": "Δϕ = (λ / 2π) Δx" },
+        { "id": "C", "text": "Δϕ = 2π λ Δx" },
+        { "id": "D", "text": "Δϕ = (π / λ) Δx" }
+      ],
+      "correctOption": "A",
+      "explanation": "Phase difference Δϕ and path difference Δx are related by the relation Δϕ = (2π / λ) Δx.",
+      "difficulty": "easy",
+      "tags": ["phase-difference", "path-difference"]
+    },
+    {
+      "questionText": "In Young's double slit experiment, if the separation between the slits is halved and distance to the screen is doubled, the fringe width becomes:",
+      "options": [
+        { "id": "A", "text": "Unchanged" },
+        { "id": "B", "text": "Doubled" },
+        { "id": "C", "text": "Four times" },
+        { "id": "D", "text": "One-fourth" }
+      ],
+      "correctOption": "C",
+      "explanation": "New fringe width β' = λ (2D) / (d / 2) = 4 (λ D / d) = 4 β.",
+      "difficulty": "medium",
+      "tags": ["ydse", "fringe-width-change"]
+    },
+    {
+      "questionText": "Two coherent monochromatic light beams of intensities I and 4I superimpose. The maximum and minimum possible intensities in the resulting interference pattern are:",
+      "options": [
+        { "id": "A", "text": "5I and I" },
+        { "id": "B", "text": "9I and I" },
+        { "id": "C", "text": "9I and 3I" },
+        { "id": "D", "text": "4I and 0" }
+      ],
+      "correctOption": "B",
+      "explanation": "I_max = (√I₁ + √I₂)² = (√I + √4I)² = (√I + 2√I)² = 9I. I_min = (√I₂ - √I₁)² = (2√I - √I)² = I.",
+      "difficulty": "medium",
+      "tags": ["interference-intensity", "numerical"]
+    },
+    {
+      "questionText": "If Young's double slit apparatus is immersed in water of refractive index μ, the fringe width β_w compared to air fringe width β_a becomes:",
+      "options": [
+        { "id": "A", "text": "β_w = μ β_a" },
+        { "id": "B", "text": "β_w = β_a / μ" },
+        { "id": "C", "text": "β_w = β_a / μ²" },
+        { "id": "D", "text": "β_w = μ² β_a" }
+      ],
+      "correctOption": "B",
+      "explanation": "In water, wavelength reduces to λ' = λ / μ. Since fringe width β ∝ λ, β_w = β_a / μ.",
+      "difficulty": "medium",
+      "tags": ["ydse", "refractive-index-effect"]
+    },
+    {
+      "questionText": "In a single-slit diffraction pattern, the angular position of the first diffraction minimum is given by:",
+      "options": [
+        { "id": "A", "text": "sin θ = λ / a" },
+        { "id": "B", "text": "sin θ = 3λ / (2a)" },
+        { "id": "C", "text": "sin θ = λ / (2a)" },
+        { "id": "D", "text": "sin θ = 2λ / a" }
+      ],
+      "correctOption": "A",
+      "explanation": "Condition for minima in single slit diffraction is a sin θ = n λ. For the first minimum (n = 1), sin θ = λ / a.",
+      "difficulty": "medium",
+      "tags": ["diffraction-minima", "single-slit"]
+    },
+    {
+      "questionText": "Light of wavelength 600 nm is incident normally on a slit of width 0.2 mm. The angular spread of the central bright maximum is:",
+      "options": [
+        { "id": "A", "text": "3 × 10⁻³ rad" },
+        { "id": "B", "text": "6 × 10⁻³ rad" },
+        { "id": "C", "text": "1.2 × 10⁻² rad" },
+        { "id": "D", "text": "1.5 × 10⁻³ rad" }
+      ],
+      "correctOption": "B",
+      "explanation": "Angular width of central maximum 2θ = 2λ / a = 2 × (600 × 10⁻⁹ m) / (0.2 × 10⁻³ m) = 6 × 10⁻³ rad.",
+      "difficulty": "medium",
+      "tags": ["angular-width", "numerical"]
+    },
+    {
+      "questionText": "In Young's double slit experiment, the ratio of maximum to minimum intensity in the interference pattern is 25 : 9. The ratio of amplitudes of the two interfering waves is:",
+      "options": [
+        { "id": "A", "text": "5 : 3" },
+        { "id": "B", "text": "4 : 1" },
+        { "id": "C", "text": "16 : 1" },
+        { "id": "D", "text": "25 : 9" }
+      ],
+      "correctOption": "B",
+      "explanation": "I_max / I_min = (a₁ + a₂)² / (a₁ - a₂)² = 25 / 9 ⇒ (a₁ + a₂) / (a₁ - a₂) = 5 / 3. Solving gives 3a₁ + 3a₂ = 5a₁ - 5a₂ ⇒ 2a₁ = 8a₂ ⇒ a₁ / a₂ = 4 / 1.",
+      "difficulty": "medium",
+      "tags": ["amplitude-ratio", "intensity-ratio"]
+    },
+    {
+      "questionText": "The Fresnel distance z_F for an aperture of width 'a' illuminated by light of wavelength λ is given by:",
+      "options": [
+        { "id": "A", "text": "z_F = a / λ" },
+        { "id": "B", "text": "z_F = a² / λ" },
+        { "id": "C", "text": "z_F = λ / a²" },
+        { "id": "D", "text": "z_F = a λ²" }
+      ],
+      "correctOption": "B",
+      "explanation": "Fresnel distance z_F = a² / λ defines the distance beyond which ray optics ceases to be a good approximation and diffraction spreading becomes dominant.",
+      "difficulty": "medium",
+      "tags": ["fresnel-distance", "ray-optics-validity"]
+    },
+    {
+      "questionText": "White light falls on a double slit in Young's experiment. The central fringe observed on the screen will be:",
+      "options": [
+        { "id": "A", "text": "Red" },
+        { "id": "B", "text": "Dark" },
+        { "id": "C", "text": "White" },
+        { "id": "D", "text": "Blue" }
+      ],
+      "correctOption": "C",
+      "explanation": "At the central point, path difference is zero for all spectral components of white light. Hence all wavelengths constructively interfere together, yielding a white central fringe.",
+      "difficulty": "medium",
+      "tags": ["white-light", "ydse"]
+    },
+    {
+      "questionText": "In Young's double slit experiment with slit separation d = 0.5 mm and screen distance D = 1 m, light of wavelength 500 nm is used. The distance of the 3rd dark fringe from the central maximum is:",
+      "options": [
+        { "id": "A", "text": "1.5 mm" },
+        { "id": "B", "text": "2.5 mm" },
+        { "id": "C", "text": "3.0 mm" },
+        { "id": "D", "text": "2.0 mm" }
+      ],
+      "correctOption": "B",
+      "explanation": "Distance for nth dark fringe x_n = (2n - 1) λ D / (2d). For n = 3: x₃ = 5 λ D / (2d) = 5 × (500 × 10⁻⁹) × 1 / (2 × 0.5 × 10⁻³) = 2.5 × 10⁻³ m = 2.5 mm.",
+      "difficulty": "hard",
+      "tags": ["dark-fringe-position", "numerical"]
+    },
+    {
+      "questionText": "A thin transparent mica sheet of thickness t and refractive index μ is placed in the path of one of the interfering beams in YDSE. The shift in the entire fringe pattern is:",
+      "options": [
+        { "id": "A", "text": "Shift = (D / d) (μ - 1) t" },
+        { "id": "B", "text": "Shift = (d / D) (μ - 1) t" },
+        { "id": "C", "text": "Shift = (D / d) μ t" },
+        { "id": "D", "text": "Shift = (D / d) (μ + 1) t" }
+      ],
+      "correctOption": "A",
+      "explanation": "Introducing a sheet introduces an additional optical path difference of (μ - 1) t. The shift Δx of the entire fringe system on the screen is Δx = (D / d) (μ - 1) t.",
+      "difficulty": "hard",
+      "tags": ["fringe-shift", "thin-film-ydse"]
+    },
+    {
+      "questionText": "For an aperture size of 4 mm and wavelength of 500 nm, ray optics is a good approximation up to a distance of:",
+      "options": [
+        { "id": "A", "text": "16 m" },
+        { "id": "B", "text": "32 m" },
+        { "id": "C", "text": "64 m" },
+        { "id": "D", "text": "8 m" }
+      ],
+      "correctOption": "B",
+      "explanation": "Fresnel distance z_F = a² / λ = (4 × 10⁻³)² / (500 × 10⁻⁹) = (16 × 10⁻⁶) / (5 × 10⁻⁷) = 32 m.",
+      "difficulty": "hard",
+      "tags": ["fresnel-distance", "numerical"]
+    },
+    {
+      "questionText": "In a double slit experiment, the intensity of light at a point on screen where path difference is λ is K. The intensity at a point where path difference is λ/3 is:",
+      "options": [
+        { "id": "A", "text": "K / 4" },
+        { "id": "B", "text": "K / 2" },
+        { "id": "C", "text": "K" },
+        { "id": "D", "text": "3K / 4" }
+      ],
+      "correctOption": "A",
+      "explanation": "I = I_max cos²(Δϕ / 2). For Δx = λ, Δϕ = 2π, so K = I_max cos²(π) = I_max. For Δx = λ/3, Δϕ = 2π / 3. Then I = K cos²(π / 3) = K (1/2)² = K / 4.",
+      "difficulty": "hard",
+      "tags": ["intensity-distribution", "numerical"]
+    }
+  ]
+}

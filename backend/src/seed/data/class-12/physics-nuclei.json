@@ -1,0 +1,277 @@
+{
+  "exam": {
+    "name": "Class 12",
+    "slug": ""
+  },
+  "subject": {
+    "name": "Physics",
+    "slug": ""
+  },
+  "chapter": {
+    "name": "Nuclei",
+    "slug": "",
+    "orderIndex": 13
+  },
+  "questions": [
+    {
+      "questionText": "The radius R of a nucleus with mass number A is proportional to:",
+      "options": [
+        { "id": "A", "text": "A" },
+        { "id": "B", "text": "A^(1/3)" },
+        { "id": "C", "text": "A^(2/3)" },
+        { "id": "D", "text": "A³" }
+      ],
+      "correctOption": "B",
+      "explanation": "Nuclear radius is given by R = R₀ A^(1/3), where R₀ ≈ 1.2 fm, showing that radius depends on the cube root of mass number.",
+      "difficulty": "easy",
+      "tags": ["nuclear-radius", "mass-number"]
+    },
+    {
+      "questionText": "Which of the following fundamental forces is the strongest in nature?",
+      "options": [
+        { "id": "A", "text": "Gravitational force" },
+        { "id": "B", "text": "Electromagnetic force" },
+        { "id": "C", "text": "Strong nuclear force" },
+        { "id": "D", "text": "Weak nuclear force" }
+      ],
+      "correctOption": "C",
+      "explanation": "The strong nuclear force is the strongest of all fundamental forces, approximately 100 times stronger than the electromagnetic force over subatomic distances.",
+      "difficulty": "easy",
+      "tags": ["nuclear-force", "properties"]
+    },
+    {
+      "questionText": "The energy equivalent to 1 atomic mass unit (1 u) is approximately equal to:",
+      "options": [
+        { "id": "A", "text": "931.5 MeV" },
+        { "id": "B", "text": "13.6 eV" },
+        { "id": "C", "text": "0.51 MeV" },
+        { "id": "D", "text": "9.31 keV" }
+      ],
+      "correctOption": "A",
+      "explanation": "Using Einstein's relation E = m c², 1 u = 1.6605 × 10⁻²⁷ kg corresponds to 931.5 MeV of energy.",
+      "difficulty": "easy",
+      "tags": ["mass-energy-equivalence", "atomic-mass-unit"]
+    },
+    {
+      "questionText": "Nuclei having the same mass number A but different atomic numbers Z are called:",
+      "options": [
+        { "id": "A", "text": "Isotopes" },
+        { "id": "B", "text": "Isobars" },
+        { "id": "C", "text": "Isotones" },
+        { "id": "D", "text": "Isomers" }
+      ],
+      "correctOption": "B",
+      "explanation": "Isobars are nuclides with identical mass numbers (A) but different atomic numbers (Z), such as ³H and ³He.",
+      "difficulty": "easy",
+      "tags": ["isobars", "nuclides"]
+    },
+    {
+      "questionText": "Nuclear density is independent of:",
+      "options": [
+        { "id": "A", "text": "Mass number A" },
+        { "id": "B", "text": "Speed of light" },
+        { "id": "C", "text": "Planck's constant" },
+        { "id": "D", "text": "Permittivity of free space" }
+      ],
+      "correctOption": "A",
+      "explanation": "Since mass is proportional to A and volume is proportional to A, nuclear density is constant (~2.3 × 10¹⁷ kg m⁻³) regardless of mass number A.",
+      "difficulty": "easy",
+      "tags": ["nuclear-density", "mass-number"]
+    },
+    {
+      "questionText": "The primary energy source of the Sun and stars is:",
+      "options": [
+        { "id": "A", "text": "Nuclear fission" },
+        { "id": "B", "text": "Nuclear fusion" },
+        { "id": "C", "text": "Chemical combustion" },
+        { "id": "D", "text": "Gravitational collapse alone" }
+      ],
+      "correctOption": "B",
+      "explanation": "The proton-proton chain nuclear fusion reaction, combining hydrogen into helium, powers the Sun and main-sequence stars.",
+      "difficulty": "easy",
+      "tags": ["nuclear-fusion", "stellar-energy"]
+    },
+    {
+      "questionText": "Mass defect Δm of a nucleus composed of Z protons and N neutrons with nuclear mass M is:",
+      "options": [
+        { "id": "A", "text": "Δm = M - (Z m_p + N m_n)" },
+        { "id": "B", "text": "Δm = (Z m_p + N m_n) - M" },
+        { "id": "C", "text": "Δm = Z m_p - N m_n" },
+        { "id": "D", "text": "Δm = M / (Z + N)" }
+      ],
+      "correctOption": "B",
+      "explanation": "Mass defect is the difference between total mass of individual constituent nucleons and the actual mass of the bound nucleus: Δm = Z m_p + N m_n - M.",
+      "difficulty": "easy",
+      "tags": ["mass-defect", "formula"]
+    },
+    {
+      "questionText": "Which particle is emitted during controlled nuclear fission of Uranium-235 that propagates the chain reaction?",
+      "options": [
+        { "id": "A", "text": "Proton" },
+        { "id": "B", "text": "Positron" },
+        { "id": "C", "text": "Neutron" },
+        { "id": "D", "text": "Alpha particle" }
+      ],
+      "correctOption": "C",
+      "explanation": "Each U-235 fission event induced by a neutron releases 2 to 3 fast neutrons, which sustain the chain reaction.",
+      "difficulty": "easy",
+      "tags": ["nuclear-fission", "chain-reaction"]
+    },
+    {
+      "questionText": "If the ratio of mass numbers of two nuclei is 1 : 8, the ratio of their nuclear radii is:",
+      "options": [
+        { "id": "A", "text": "1 : 2" },
+        { "id": "B", "text": "1 : 4" },
+        { "id": "C", "text": "1 : 8" },
+        { "id": "D", "text": "1 : 64" }
+      ],
+      "correctOption": "A",
+      "explanation": "R₁ / R₂ = (A₁ / A₂)^(1/3) = (1 / 8)^(1/3) = 1 / 2.",
+      "difficulty": "medium",
+      "tags": ["nuclear-radius", "numerical"]
+    },
+    {
+      "questionText": "The average binding energy per nucleon is maximum for which of the following nuclides?",
+      "options": [
+        { "id": "A", "text": "²H" },
+        { "id": "B", "text": "⁵⁶Fe" },
+        { "id": "C", "text": "²³⁵U" },
+        { "id": "D", "text": "⁴He" }
+      ],
+      "correctOption": "B",
+      "explanation": "Iron-56 (⁵⁶Fe) lies near the peak of the binding energy curve with approximately 8.75 MeV per nucleon, making it exceptionally stable.",
+      "difficulty": "medium",
+      "tags": ["binding-energy-curve", "stability"]
+    },
+    {
+      "questionText": "The binding energy per nucleon for deuteron (²H) and helium (⁴He) are 1.1 MeV and 7.0 MeV respectively. Energy released when two deuterons fuse to form one helium nucleus is:",
+      "options": [
+        { "id": "A", "text": "23.6 MeV" },
+        { "id": "B", "text": "11.8 MeV" },
+        { "id": "C", "text": "28.0 MeV" },
+        { "id": "D", "text": "5.9 MeV" }
+      ],
+      "correctOption": "A",
+      "explanation": "Initial binding energy = 2 × (2 × 1.1) = 4.4 MeV. Final binding energy = 4 × 7.0 = 28.0 MeV. Energy released = 28.0 - 4.4 = 23.6 MeV.",
+      "difficulty": "medium",
+      "tags": ["fusion-energy", "numerical"]
+    },
+    {
+      "questionText": "Two heavy nuclei at rest undergo fusion to form a single nucleus, releasing Q value energy. Compared to initial total binding energy, final binding energy is:",
+      "options": [
+        { "id": "A", "text": "Lower by Q" },
+        { "id": "B", "text": "Higher by Q" },
+        { "id": "C", "text": "Equal" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correctOption": "B",
+      "explanation": "Exothermic nuclear reactions release Q = (BE)_final - (BE)_initial. Hence, final total binding energy exceeds initial binding energy by Q.",
+      "difficulty": "medium",
+      "tags": ["q-value", "binding-energy"]
+    },
+    {
+      "questionText": "The ratio of nuclear mass density of ³¹P to that of ¹²⁷I is:",
+      "options": [
+        { "id": "A", "text": "31 : 127" },
+        { "id": "B", "text": "127 : 31" },
+        { "id": "C", "text": "1 : 1" },
+        { "id": "D", "text": "(31 / 127)^(1/3)" }
+      ],
+      "correctOption": "C",
+      "explanation": "Nuclear density is constant for all nuclei regardless of mass number A. Thus, the ratio is 1 : 1.",
+      "difficulty": "medium",
+      "tags": ["nuclear-density", "ratio"]
+    },
+    {
+      "questionText": "Which of the following features of nuclear force accounts for the saturation property of binding energy per nucleon for mass numbers 30 < A < 170?",
+      "options": [
+        { "id": "A", "text": "Long-range nature" },
+        { "id": "B", "text": "Short-range nature" },
+        { "id": "C", "text": "Charge dependence" },
+        { "id": "D", "text": "Central nature" }
+      ],
+      "correctOption": "B",
+      "explanation": "Nuclear forces are short-ranged; a nucleon interacts only with its immediate neighbors, leading to saturation of binding energy per nucleon.",
+      "difficulty": "medium",
+      "tags": ["nuclear-force", "saturation-property"]
+    },
+    {
+      "questionText": "In a nuclear fission reactor, heavy water or graphite is used as a moderator to:",
+      "options": [
+        { "id": "A", "text": "Absorb excess neutrons" },
+        { "id": "B", "text": "Slow down fast-moving neutrons" },
+        { "id": "C", "text": "Cool the reactor core" },
+        { "id": "D", "text": "Accelerate thermal neutrons" }
+      ],
+      "correctOption": "B",
+      "explanation": "Moderators collide elastically with fast fission neutrons to slow them down to thermal energy levels (~0.025 eV), increasing U-235 fission probability.",
+      "difficulty": "medium",
+      "tags": ["nuclear-reactor", "moderator"]
+    },
+    {
+      "questionText": "A neutron breaks a heavy nucleus ²³⁵U into ¹⁴⁰Xe and ⁹⁴Sr. How many neutrons are emitted in this reaction?",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "4" }
+      ],
+      "correctOption": "B",
+      "explanation": "Initial total A = 235 + 1 = 236. Final A of fragments = 140 + 94 = 234. Number of emitted neutrons = 236 - 234 = 2.",
+      "difficulty": "medium",
+      "tags": ["nuclear-fission", "mass-conservation"]
+    },
+    {
+      "questionText": "In a nuclear fusion reaction ²H + ³H → ⁴He + n, mass of ²H = 2.0141 u, mass of ³H = 3.0160 u, mass of ⁴He = 4.0026 u, and mass of neutron n = 1.0087 u. The Q-value of the reaction is approximately:",
+      "options": [
+        { "id": "A", "text": "17.6 MeV" },
+        { "id": "B", "text": "200.0 MeV" },
+        { "id": "C", "text": "3.27 MeV" },
+        { "id": "D", "text": "14.1 MeV" }
+      ],
+      "correctOption": "A",
+      "explanation": "Mass defect Δm = (2.0141 + 3.0160) - (4.0026 + 1.0087) = 5.0301 - 5.0113 = 0.0188 u. Q-value = 0.0188 × 931.5 MeV ≈ 17.51 MeV ≈ 17.6 MeV.",
+      "difficulty": "hard",
+      "tags": ["q-value", "numerical"]
+    },
+    {
+      "questionText": "High temperatures (~10⁷ K) are required for thermo-nuclear fusion because:",
+      "options": [
+        { "id": "A", "text": "Nuclei need high kinetic energy to overcome electrostatic Coulomb repulsion" },
+        { "id": "B", "text": "Nuclear forces become active only at high temperatures" },
+        { "id": "C", "text": "Binding energy per nucleon decreases at high temperatures" },
+        { "id": "D", "text": "Neutrons are produced only at extreme temperatures" }
+      ],
+      "correctOption": "A",
+      "explanation": "Positively charged nuclei experience strong Coulomb repulsion; extremely high kinetic energies are needed to bring them within range (~1 fm) of strong nuclear attraction.",
+      "difficulty": "hard",
+      "tags": ["thermonuclear-fusion", "coulomb-barrier"]
+    },
+    {
+      "questionText": "Consider two nuclei A and B with mass numbers 200 and 100 respectively. Binding energy per nucleon for A is 7.4 MeV and for B is 8.2 MeV. If nucleus A splits into two equal nuclei of B, the energy released in the process is:",
+      "options": [
+        { "id": "A", "text": "80 MeV" },
+        { "id": "B", "text": "160 MeV" },
+        { "id": "C", "text": "240 MeV" },
+        { "id": "D", "text": "320 MeV" }
+      ],
+      "correctOption": "B",
+      "explanation": "Initial BE = 200 × 7.4 = 1480 MeV. Final BE = 2 × (100 × 8.2) = 1640 MeV. Energy released = 1640 - 1480 = 160 MeV.",
+      "difficulty": "hard",
+      "tags": ["fission-energy", "numerical"]
+    },
+    {
+      "questionText": "The potential energy of a pair of nucleons as a function of separation r shows a minimum at r = r₀. At distances r < r₀, the nuclear force is:",
+      "options": [
+        { "id": "A", "text": "Strongly attractive" },
+        { "id": "B", "text": "Strongly repulsive" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Inversely proportional to r²" }
+      ],
+      "correctOption": "B",
+      "explanation": "At separations r < r₀ ≈ 0.8 fm, the potential energy curve rises steeply with decreasing r, indicating a strongly repulsive force that prevents nucleons from collapsing into each other.",
+      "difficulty": "hard",
+      "tags": ["potential-energy-curve", "nuclear-force"]
+    }
+  ]
+}
