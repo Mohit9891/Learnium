@@ -8,11 +8,14 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:5173',
-  process.env.FRONTEND_URL, // set this after you deploy the frontend
+  process.env.FRONTEND_URL,
+  'https://learnium.in'
+  
 ];
 
 app.use(cors({
   origin: allowedOrigins,
+  credentials: true
 }));
 // app.use(cors());
 app.use(express.json());
