@@ -9,7 +9,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   process.env.FRONTEND_URL,
-  'https://learnium.in'
+  'https://www.learnium.in'
   
 ];
 
