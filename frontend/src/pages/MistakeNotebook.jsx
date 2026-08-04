@@ -10,9 +10,9 @@ const STATUS_FILTERS = [
 ];
 
 const STATUS_STYLES = {
-  unreviewed: 'bg-red-50 text-red-700',
+  unreviewed: 'bg-pink/10 text-pink',
   reviewing: 'bg-yellow-50 text-yellow-700',
-  learned: 'bg-green-50 text-green-700',
+  learned: 'bg-lime/10 text-lime-700',
 };
 
 function MistakeCard({ entry, onUpdate }) {
@@ -55,34 +55,34 @@ function MistakeCard({ entry, onUpdate }) {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-forest/5 overflow-hidden">
+    <div className="bg-white rounded-xl border border-hairline-cloud overflow-hidden">
       <button
         onClick={() => setExpanded((e) => !e)}
         className="w-full text-left px-6 py-4 flex items-center justify-between gap-4"
       >
         <div className="min-w-0">
-          <p className="text-xs text-forest/50 mb-1">{question.chapter?.name}</p>
-          <p className="font-medium text-forest truncate">{question.questionText}</p>
+          <p className="text-caption text-ink/50 mb-1">{question.chapter?.name}</p>
+          <p className="font-medium text-ink-deep truncate">{question.questionText}</p>
         </div>
         <span
-          className={`shrink-0 text-xs font-medium px-3 py-1 rounded-full ${STATUS_STYLES[entry.reviewStatus]}`}
+          className={`shrink-0 text-caption font-medium px-3 py-1 rounded-full ${STATUS_STYLES[entry.reviewStatus]}`}
         >
           {entry.reviewStatus}
         </span>
       </button>
 
       {expanded && (
-        <div className="px-6 pb-6 border-t border-forest/5 pt-4">
+        <div className="px-6 pb-6 border-t border-hairline-cloud pt-4">
           <div className="space-y-2 mb-4">
             {question.options.map((opt) => {
-              let style = 'border-forest/15 text-forest/80 hover:border-sky';
+              let style = 'border-hairline-cool text-ink/80 hover:border-violet';
               if (retryResult) {
                 if (opt.id === question.correctOption) {
-                  style = 'border-green-500 bg-green-50 text-forest font-medium';
+                  style = 'border-lime bg-lime/10 text-ink-deep font-medium';
                 } else if (opt.id === retryOption) {
-                  style = 'border-red-400 bg-red-50 text-forest';
+                  style = 'border-pink bg-pink/10 text-ink-deep';
                 } else {
-                  style = 'border-forest/10 text-forest/40';
+                  style = 'border-hairline-cloud text-ink/40';
                 }
               }
               return (
@@ -90,9 +90,9 @@ function MistakeCard({ entry, onUpdate }) {
                   key={opt.id}
                   disabled={!!retryResult}
                   onClick={() => handleRetrySelect(opt.id)}
-                  className={`w-full text-left px-4 py-2.5 rounded-lg border text-sm transition ${style}`}
+                  className={`w-full text-left px-4 py-2.5 rounded-md border font-code text-sm transition ${style}`}
                 >
-                  <span className="font-medium mr-2">{opt.id}.</span>
+                  <span className="font-code opacity-60 mr-2">{opt.id}.</span>
                   {opt.text}
                 </button>
               );
@@ -101,14 +101,14 @@ function MistakeCard({ entry, onUpdate }) {
 
           {retryResult && (
             <div
-              className={`mb-4 p-3 rounded-lg text-sm ${
-                retryResult === 'correct' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'
+              className={`mb-4 p-3 rounded-md text-sm ${
+                retryResult === 'correct' ? 'bg-lime/10 text-green-700' : 'bg-pink/10 text-pink'
               }`}
             >
               <p className="font-medium">
                 {retryResult === 'correct' ? 'Correct this time!' : 'Still incorrect'}
               </p>
-              <p className="text-forest/70 mt-1">{question.explanation}</p>
+              <p className="text-ink/70 mt-1">{question.explanation}</p>
             </div>
           )}
 
@@ -117,7 +117,7 @@ function MistakeCard({ entry, onUpdate }) {
             onChange={(e) => setNotes(e.target.value)}
             onBlur={handleSaveNotes}
             placeholder="Add a note to help you remember why you got this wrong..."
-            className="w-full text-sm px-3 py-2 rounded-lg border border-forest/15 text-forest focus:outline-none focus:ring-2 focus:ring-sky mb-4"
+            className="w-full text-sm px-3 py-2 rounded-sm border border-hairline-cool text-ink focus:outline-none focus:ring-2 focus:ring-ring-focus mb-4"
             rows={2}
           />
 
@@ -127,10 +127,10 @@ function MistakeCard({ entry, onUpdate }) {
                 key={status}
                 disabled={saving || entry.reviewStatus === status}
                 onClick={() => handleStatusChange(status)}
-                className={`text-xs font-medium px-3 py-1.5 rounded-full transition disabled:opacity-40 ${
+                className={`text-caption font-medium px-3 py-1.5 rounded-full transition disabled:opacity-40 ${
                   entry.reviewStatus === status
                     ? STATUS_STYLES[status]
-                    : 'bg-forest/5 text-forest/60 hover:bg-forest/10'
+                    : 'bg-hairline-cloud/40 text-ink/60 hover:bg-hairline-cloud'
                 }`}
               >
                 Mark {status}
@@ -166,16 +166,16 @@ export default function MistakeNotebook() {
   }
 
   return (
-    <div className="bg-cream min-h-screen px-8 py-10">
+    <div className="bg-white min-h-screen px-6 py-10">
       <div className="max-w-3xl mx-auto">
-        <Link to="/exams" className="text-sm text-forest/60 hover:text-forest">
+        <Link to="/exams" className="text-caption text-ink/60 hover:text-ink">
           ← Practice
         </Link>
 
-        <h1 className="font-display font-semibold text-forest text-3xl mt-4 mb-1">
+        <h1 className="font-display font-medium text-heading-xl text-ink-deep mt-4 mb-1">
           Mistake Notebook
         </h1>
-        <p className="text-forest/60 mb-6">
+        <p className="text-body-md text-ink/60 mb-6">
           Every wrong answer lands here automatically. Retry, add notes, and mark it learned.
         </p>
 
@@ -184,10 +184,10 @@ export default function MistakeNotebook() {
             <button
               key={f.value}
               onClick={() => setStatusFilter(f.value)}
-              className={`text-sm font-medium px-4 py-1.5 rounded-full transition ${
+              className={`text-body-md font-medium px-4 py-1.5 rounded-full transition ${
                 statusFilter === f.value
-                  ? 'bg-forest text-white'
-                  : 'bg-white text-forest/70 hover:bg-forest/5'
+                  ? 'bg-primary text-white'
+                  : 'bg-white border border-hairline-cloud text-ink/70 hover:border-violet'
               }`}
             >
               {f.label}
@@ -195,12 +195,12 @@ export default function MistakeNotebook() {
           ))}
         </div>
 
-        {loading && <p className="text-forest/60">Loading your mistakes...</p>}
+        {loading && <p className="text-ink/60">Loading your mistakes...</p>}
         {error && <p className="text-red-600">{error}</p>}
 
         {!loading && !error && mistakes.length === 0 && (
-          <div className="bg-white rounded-2xl p-8 text-center shadow-sm border border-forest/5">
-            <p className="text-forest/70">
+          <div className="bg-white rounded-xl p-8 text-center border border-hairline-cloud">
+            <p className="text-ink/70">
               {statusFilter
                 ? `No mistakes with status "${statusFilter}" yet.`
                 : "No mistakes yet — that's a good thing! Keep practicing."}

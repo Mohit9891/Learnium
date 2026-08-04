@@ -4,9 +4,9 @@ import api from '../api/axios';
 
 function StatCard({ label, value, accentClass }) {
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-sm border border-forest/5">
-      <p className={`font-display font-semibold text-4xl mb-1 ${accentClass}`}>{value}</p>
-      <p className="text-forest/60 text-sm">{label}</p>
+    <div className="bg-white rounded-xl p-6 border border-hairline-cloud">
+      <p className={`font-display font-bold text-display-lg mb-1 ${accentClass}`}>{value}</p>
+      <p className="text-body-md text-ink/60">{label}</p>
     </div>
   );
 }
@@ -25,28 +25,28 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="bg-cream min-h-screen px-8 py-10">
+    <div className="bg-white min-h-screen px-6 py-10">
       <div className="max-w-4xl mx-auto">
-        <Link to="/exams" className="text-sm text-forest/60 hover:text-forest">
+        <Link to="/exams" className="text-caption text-ink/60 hover:text-ink">
           ← Practice
         </Link>
 
-        <h1 className="font-display font-semibold text-forest text-3xl mt-4 mb-1">
+        <h1 className="font-display font-medium text-heading-xl text-ink-deep mt-4 mb-1">
           Your Progress
         </h1>
-        <p className="text-forest/60 mb-8">A quick look at how you're doing.</p>
+        <p className="text-body-md text-ink/60 mb-8">A quick look at how you're doing.</p>
 
-        {loading && <p className="text-forest/60">Loading your stats...</p>}
+        {loading && <p className="text-ink/60">Loading your stats...</p>}
         {error && <p className="text-red-600">{error}</p>}
 
         {summary && (
           <>
             <div className="grid sm:grid-cols-3 gap-4 mb-8">
-              <StatCard label="Day Streak" value={summary.streak} accentClass="text-sky" />
+              <StatCard label="Day Streak" value={summary.streak} accentClass="text-violet" />
               <StatCard
                 label="Questions Solved"
                 value={summary.questionsSolved}
-                accentClass="text-forest"
+                accentClass="text-ink-deep"
               />
               <StatCard
                 label="Accuracy"
@@ -56,13 +56,11 @@ export default function Dashboard() {
             </div>
 
             {summary.totalAttempts === 0 && (
-              <div className="bg-white rounded-2xl p-8 text-center shadow-sm border border-forest/5">
-                <p className="text-forest/70 mb-4">
-                  You haven't attempted any questions yet.
-                </p>
+              <div className="bg-white rounded-xl p-8 text-center border border-hairline-cloud">
+                <p className="text-ink/70 mb-4">You haven't attempted any questions yet.</p>
                 <Link
                   to="/exams"
-                  className="inline-block px-6 py-2.5 rounded-full bg-forest text-white font-medium hover:bg-forest-light transition"
+                  className="inline-block px-6 py-3 rounded-md bg-primary text-white font-ui text-sm font-bold uppercase tracking-[0.2px] hover:bg-ink-press transition"
                 >
                   Start Practicing
                 </Link>
@@ -70,16 +68,16 @@ export default function Dashboard() {
             )}
 
             {/* Premium teaser — deeper analytics reserved for paid tier */}
-            <div className="bg-forest rounded-2xl p-6 flex items-center justify-between">
+            <div className="bg-violet-deep rounded-xl p-6 flex items-center justify-between">
               <div>
                 <p className="font-display font-medium text-lime mb-1">
                   Deeper insights, coming to Premium
                 </p>
-                <p className="text-white/70 text-sm">
-                  Weak-topic breakdowns, AI study plans, and performance trends.
+                <p className="text-on-dark-muted text-body-md">
+                  Weak-topic breakdowns, AI Tutor sessions, and performance trends.
                 </p>
               </div>
-              <span className="text-lime text-sm font-medium whitespace-nowrap ml-4">
+              <span className="text-lime text-caption font-medium whitespace-nowrap ml-4">
                 Coming soon
               </span>
             </div>

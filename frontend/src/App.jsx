@@ -20,38 +20,15 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-          <Route
-            path="/exams"
-            element={
-              <ProtectedRoute>
-                <ExamSelect />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/exams/:examId/subjects"
-            element={
-              <ProtectedRoute>
-                <SubjectSelect />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/subjects/:subjectId/chapters"
-            element={
-              <ProtectedRoute>
-                <ChapterSelect />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/chapters/:chapterId/solve"
-            element={
-              <ProtectedRoute>
-                <Solve />
-              </ProtectedRoute>
-            }
-          />
+          {/* Public — anyone can browse and solve without signing in.
+              Attempts made while logged out aren't tracked (see backend
+              optionalAuthMiddleware), but the solving experience works. */}
+          <Route path="/exams" element={<ExamSelect />} />
+          <Route path="/exams/:examId/subjects" element={<SubjectSelect />} />
+          <Route path="/subjects/:subjectId/chapters" element={<ChapterSelect />} />
+          <Route path="/chapters/:chapterId/solve" element={<Solve />} />
+
+          {/* Protected — these need a persistent identity to mean anything */}
           <Route
             path="/dashboard"
             element={

@@ -17,22 +17,22 @@ export default function ChapterSelect() {
   }, [subjectId]);
 
   return (
-    <div className="bg-cream min-h-screen px-8 py-10">
+    <div className="bg-white min-h-screen px-6 py-10">
       <div className="max-w-4xl mx-auto">
-        <Link to="/exams" className="text-sm text-forest/60 hover:text-forest">
+        <Link to="/exams" className="text-caption text-ink/60 hover:text-ink">
           ← Back
         </Link>
 
-        <h1 className="font-display font-semibold text-forest text-3xl mt-4 mb-1">
+        <h1 className="font-display font-medium text-heading-xl text-ink-deep mt-4 mb-1">
           Choose a chapter
         </h1>
-        <p className="text-forest/60 mb-8">Pick one to start solving questions.</p>
+        <p className="text-body-md text-ink/60 mb-8">Pick one to start solving questions.</p>
 
-        {loading && <p className="text-forest/60">Loading chapters...</p>}
+        {loading && <p className="text-ink/60">Loading chapters...</p>}
         {error && <p className="text-red-600">{error}</p>}
 
         {!loading && !error && chapters.length === 0 && (
-          <p className="text-forest/60">No chapters found for this subject yet.</p>
+          <p className="text-ink/60">No chapters found for this subject yet.</p>
         )}
 
         <div className="space-y-3">
@@ -40,15 +40,13 @@ export default function ChapterSelect() {
             <Link
               key={chapter._id}
               to={`/chapters/${chapter._id}/solve`}
-              className="flex items-center justify-between bg-white rounded-xl px-6 py-4 shadow-sm hover:shadow-md transition border border-forest/5"
+              className="flex items-center justify-between bg-white rounded-lg px-6 py-4 border border-hairline-cloud hover:border-violet transition"
             >
               <div className="flex items-center gap-4">
-                <span className="font-display font-semibold text-sky w-6">
-                  {i + 1}
-                </span>
-                <span className="font-medium text-forest">{chapter.name}</span>
+                <span className="font-code text-violet w-6">{i + 1}</span>
+                <span className="font-medium text-ink-deep">{chapter.name}</span>
               </div>
-              <span className="text-forest/40">→</span>
+              <span className="text-ink/30">→</span>
             </Link>
           ))}
         </div>
