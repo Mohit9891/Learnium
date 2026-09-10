@@ -5,7 +5,7 @@ function toDateString(date) {
 }
 
 // GET /api/dashboard/summary
-async function getDashboardSummary(req, res) {
+async function getDashboardSummary(req, res, next) {
   try {
     const userId = req.user.id;
 
@@ -50,7 +50,7 @@ async function getDashboardSummary(req, res) {
       totalAttempts,
     });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to fetch dashboard summary', error: err.message });
+    next(err);
   }
 }
 

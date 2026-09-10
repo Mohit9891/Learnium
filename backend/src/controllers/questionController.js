@@ -1,19 +1,23 @@
-const { Question, Chapter, Attempt, Bookmark, MistakeNotebookEntry } = require('../models');
+const { Question, Attempt, Bookmark, MistakeNotebookEntry } = require('../models');
 
 // GET /api/chapters/:chapterId/questions
-async function getQuestionsByChapter(req, res) {
+// Public with optionalAuth: logged-out users get the full list; user-scoped
+// filters (solved/wrong/bookmarked) require a token.
+async function getQuestionsByChapter(req, res, next) {
   try {
     const { chapterId } = req.params;
     const { difficulty, solved } = req.query;
-    const userId = req.user.id;
+    const userId = req.user && req.user.id;
 
     const filter = { chapter: chapterId };
     if (difficulty) filter.difficulty = difficulty;
 
     let questions = await Question.find(filter).lean();
 
-    // apply solved/unsolved/wrong/bookmarked filters (done in JS since they depend on other collections)
     if (solved) {
+      if (!userId) {
+        return res.status(401).json({ message: 'Sign in to use solved/bookmarked filters' });
+      }
       const attempts = await Attempt.find({ user: userId }).select('question isCorrect').lean();
       const attemptedIds = new Set(attempts.map((a) => a.question.toString()));
       const correctIds = new Set(attempts.filter((a) => a.isCorrect).map((a) => a.question.toString()));
@@ -37,12 +41,12 @@ async function getQuestionsByChapter(req, res) {
 
     res.json({ questions: safeQuestions });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to fetch questions', error: err.message });
+    next(err);
   }
 }
 
-// GET /api/questions/:id
-async function getQuestionById(req, res) {
+// GET /api/questions/:id (public — still strips answers)
+async function getQuestionById(req, res, next) {
   try {
     const question = await Question.findById(req.params.id).lean();
     if (!question) return res.status(404).json({ message: 'Question not found' });
@@ -50,25 +54,32 @@ async function getQuestionById(req, res) {
     const { correctOption, explanation, ...safeQuestion } = question;
     res.json({ question: safeQuestion });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to fetch question', error: err.message });
+    next(err);
   }
 }
 
 // POST /api/questions/:id/attempt
-async function submitAttempt(req, res) {
+// Public with optionalAuth: anonymous attempts are graded but not stored
+// (returns tracked:false so the UI can upsell sign-in).
+async function submitAttempt(req, res, next) {
   try {
     const { id: questionId } = req.params;
     const { selectedOption, timeTakenSec } = req.body;
-    const userId = req.user.id;
-
-    if (!selectedOption) {
-      return res.status(400).json({ message: 'selectedOption is required' });
-    }
+    const userId = req.user && req.user.id;
 
     const question = await Question.findById(questionId);
     if (!question) return res.status(404).json({ message: 'Question not found' });
 
     const isCorrect = selectedOption === question.correctOption;
+
+    if (!userId) {
+      return res.json({
+        isCorrect,
+        correctOption: question.correctOption,
+        explanation: question.explanation,
+        tracked: false,
+      });
+    }
 
     await Attempt.create({
       user: userId,
@@ -90,17 +101,21 @@ async function submitAttempt(req, res) {
       isCorrect,
       correctOption: question.correctOption,
       explanation: question.explanation,
+      tracked: true,
     });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to submit attempt', error: err.message });
+    next(err);
   }
 }
 
-// POST /api/questions/:id/bookmark
-async function bookmarkQuestion(req, res) {
+// POST /api/questions/:id/bookmark (auth required)
+async function bookmarkQuestion(req, res, next) {
   try {
     const { id: questionId } = req.params;
     const userId = req.user.id;
+
+    const question = await Question.findById(questionId).select('_id');
+    if (!question) return res.status(404).json({ message: 'Question not found' });
 
     await Bookmark.findOneAndUpdate(
       { user: userId, question: questionId },
@@ -110,12 +125,12 @@ async function bookmarkQuestion(req, res) {
 
     res.json({ message: 'Bookmarked' });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to bookmark', error: err.message });
+    next(err);
   }
 }
 
-// DELETE /api/questions/:id/bookmark
-async function removeBookmark(req, res) {
+// DELETE /api/questions/:id/bookmark (auth required)
+async function removeBookmark(req, res, next) {
   try {
     const { id: questionId } = req.params;
     const userId = req.user.id;
@@ -124,7 +139,7 @@ async function removeBookmark(req, res) {
 
     res.json({ message: 'Bookmark removed' });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to remove bookmark', error: err.message });
+    next(err);
   }
 }
 

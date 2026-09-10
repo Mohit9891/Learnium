@@ -13,4 +13,14 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('User', userSchema); 
+// Add method to check if user has password (local auth)
+userSchema.methods.hasPassword = function() {
+  return !!this.passwordHash;
+};
+
+// Add method to check if user has Google auth
+userSchema.methods.hasGoogle = function() {
+  return !!this.googleId;
+};
+
+module.exports = mongoose.model('User', userSchema);

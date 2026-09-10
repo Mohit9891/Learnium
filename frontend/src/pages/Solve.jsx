@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import api from '../api/axios';
+import QuestionCard from '../components/QuestionCard';
+import FilterBar from '../components/FilterBar';
+import FeedbackPanel from '../components/FeedbackPanel';
 
 export default function Solve() {
   const { chapterId } = useParams();
@@ -8,6 +11,7 @@ export default function Solve() {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [difficulty, setDifficulty] = useState('');
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -18,12 +22,20 @@ export default function Solve() {
   const startTimeRef = useRef(Date.now());
 
   useEffect(() => {
+    setLoading(true);
+    setError('');
+    const params = difficulty ? { difficulty } : {};
     api
-      .get(`/chapters/${chapterId}/questions`)
-      .then((res) => setQuestions(res.data.questions))
+      .get(`/chapters/${chapterId}/questions`, { params })
+      .then((res) => {
+        setQuestions(res.data.questions);
+        setCurrentIndex(0);
+        setSelectedOption(null);
+        setFeedback(null);
+      })
       .catch(() => setError('Could not load questions. Try refreshing.'))
       .finally(() => setLoading(false));
-  }, [chapterId]);
+  }, [chapterId, difficulty]);
 
   const currentQuestion = questions[currentIndex];
   const isLastQuestion = currentIndex === questions.length - 1;
@@ -78,7 +90,8 @@ export default function Solve() {
   if (questions.length === 0) {
     return (
       <div className="bg-white min-h-screen flex items-center justify-center px-4 text-center">
-        <div>
+        <div className="w-full max-w-xl">
+          <FilterBar difficulty={difficulty} onDifficultyChange={setDifficulty} />
           <p className="text-ink/60 mb-4">No questions in this chapter yet.</p>
           <Link to="/exams" className="text-violet font-medium">
             ← Back to exams
@@ -110,7 +123,7 @@ export default function Solve() {
   return (
     <div className="bg-white min-h-screen px-4 py-10">
       <div className="max-w-xl mx-auto">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-2">
           <Link to="/exams" className="text-caption text-ink/60 hover:text-ink">
             ← Exit
           </Link>
@@ -119,64 +132,18 @@ export default function Solve() {
           </span>
         </div>
 
-        <div className="bg-white rounded-xxl border border-hairline-cloud p-6">
-          <p className="text-micro-cap font-semibold uppercase tracking-[0.25px] text-violet mb-3">
-            {currentQuestion.difficulty}
-          </p>
-          <p className="font-display font-medium text-heading-md text-ink-deep mb-6">
-            {currentQuestion.questionText}
-          </p>
+        <FilterBar difficulty={difficulty} onDifficultyChange={setDifficulty} />
 
-          <div className="space-y-3">
-            {currentQuestion.options.map((opt) => {
-              const isSelected = selectedOption === opt.id;
-              const isCorrectAnswer = feedback && opt.id === feedback.correctOption;
-              const isWrongSelected = feedback && isSelected && !feedback.isCorrect;
+        <QuestionCard
+          question={currentQuestion}
+          selectedOption={selectedOption}
+          feedback={feedback}
+          disabled={submitting}
+          onSelect={setSelectedOption}
+        />
 
-              let optionStyle = 'border-hairline-cool text-ink/80 hover:border-violet';
-              if (feedback) {
-                if (isCorrectAnswer) {
-                  optionStyle = 'border-lime bg-lime/10 text-ink-deep font-medium';
-                } else if (isWrongSelected) {
-                  optionStyle = 'border-pink bg-pink/10 text-ink-deep';
-                } else {
-                  optionStyle = 'border-hairline-cloud text-ink/40';
-                }
-              } else if (isSelected) {
-                optionStyle = 'border-violet bg-violet/10 text-ink-deep font-medium';
-              }
-
-              return (
-                <button
-                  key={opt.id}
-                  disabled={!!feedback}
-                  onClick={() => setSelectedOption(opt.id)}
-                  className={`w-full text-left px-4 py-3 rounded-md border font-code text-[15px] transition ${optionStyle}`}
-                >
-                  <span className="font-code opacity-60 mr-2">{opt.id}.</span>
-                  {opt.text}
-                </button>
-              );
-            })}
-          </div>
-
-          {feedback && (
-            <div
-              className={`mt-5 p-4 rounded-md ${
-                feedback.isCorrect ? 'bg-lime/10' : 'bg-pink/10'
-              }`}
-            >
-              <p className={`font-medium ${feedback.isCorrect ? 'text-green-700' : 'text-pink'}`}>
-                {feedback.isCorrect ? 'Correct!' : 'Incorrect'}
-              </p>
-              <p className="text-body-md text-ink/70 mt-1">{feedback.explanation}</p>
-              {feedback.tracked === false && (
-                <p className="text-caption text-violet mt-2">
-                  <Link to="/register" className="underline">Sign in</Link> to save your progress and streaks.
-                </p>
-              )}
-            </div>
-          )}
+        <div className="bg-white rounded-xxl border border-hairline-cloud p-6 mt-4">
+          <FeedbackPanel result={feedback} />
 
           <div className="mt-6">
             {!feedback ? (

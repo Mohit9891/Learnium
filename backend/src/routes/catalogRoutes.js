@@ -1,14 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const authMiddleware = require('../middleware/authMiddleware');
+const { optionalAuth } = require('../middleware/authMiddleware');
+const { validateObjectIdParam, validateDifficultyQuery } = require('../middleware/validate');
 const {
   getExams,
   getSubjectsByExam,
   getChaptersBySubject,
 } = require('../controllers/catalogController');
 
-router.get('/exams', authMiddleware, getExams);
-router.get('/exams/:examId/subjects', authMiddleware, getSubjectsByExam);
-router.get('/subjects/:subjectId/chapters', authMiddleware, getChaptersBySubject);
+// Public catalog — browsing works logged-out; user-scoped filters handled downstream.
+router.get('/exams', optionalAuth, getExams);
+router.get('/exams/:examId/subjects', optionalAuth, validateObjectIdParam('examId'), getSubjectsByExam);
+router.get(
+  '/subjects/:subjectId/chapters',
+  optionalAuth,
+  validateObjectIdParam('subjectId'),
+  getChaptersBySubject
+);
 
 module.exports = router;

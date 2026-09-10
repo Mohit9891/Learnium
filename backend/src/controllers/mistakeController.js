@@ -1,10 +1,15 @@
 const { MistakeNotebookEntry } = require('../models');
 
 // GET /api/mistakes?status=unreviewed|reviewing|learned
-async function getMistakes(req, res) {
+async function getMistakes(req, res, next) {
   try {
     const userId = req.user.id;
     const { status } = req.query;
+
+    const validStatuses = ['unreviewed', 'reviewing', 'learned'];
+    if (status && !validStatuses.includes(status)) {
+      return res.status(400).json({ message: 'Invalid status filter' });
+    }
 
     const filter = { user: userId };
     if (status) filter.reviewStatus = status;
@@ -23,21 +28,16 @@ async function getMistakes(req, res) {
 
     res.json({ mistakes: validEntries });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to fetch mistakes', error: err.message });
+    next(err);
   }
 }
 
 // PATCH /api/mistakes/:id   body: { reviewStatus?, notes? }
-async function updateMistake(req, res) {
+async function updateMistake(req, res, next) {
   try {
     const userId = req.user.id;
     const { id } = req.params;
     const { reviewStatus, notes } = req.body;
-
-    const validStatuses = ['unreviewed', 'reviewing', 'learned'];
-    if (reviewStatus && !validStatuses.includes(reviewStatus)) {
-      return res.status(400).json({ message: 'Invalid reviewStatus' });
-    }
 
     const update = {};
     if (reviewStatus) update.reviewStatus = reviewStatus;
@@ -55,7 +55,7 @@ async function updateMistake(req, res) {
 
     res.json({ mistake: entry });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to update mistake', error: err.message });
+    next(err);
   }
 }
 

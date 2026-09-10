@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import api from '../api/axios';
 import { useAuth } from '../context/AuthContext';
+import GoogleSignInButton from '../components/GoogleSignInButton';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -11,6 +12,8 @@ export default function Login() {
 
   const { login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from || '/exams';
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -20,7 +23,7 @@ export default function Login() {
     try {
       const res = await api.post('/auth/login', { email, password });
       login(res.data.user, res.data.token);
-      navigate('/exams');
+      navigate(from, { replace: true });
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed. Try again.');
     } finally {
@@ -81,6 +84,14 @@ export default function Login() {
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
           </form>
+
+          <div className="my-4 flex items-center gap-3">
+            <span className="h-px flex-1 bg-hairline-cloud" />
+            <span className="text-caption text-ink/50">or</span>
+            <span className="h-px flex-1 bg-hairline-cloud" />
+          </div>
+
+          <GoogleSignInButton from={from} />
 
           <p className="mt-6 text-body-md text-ink/70 text-center">
             Don't have an account?{' '}

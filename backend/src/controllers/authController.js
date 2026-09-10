@@ -1,21 +1,40 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { User } = require('../models');
+const { resolveRole, isAdminEmail } = require('../utils/adminAllowlist');
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function generateToken(user) {
   return jwt.sign(
-    { id: user._id, email: user.email },
+    { id: user._id, email: user.email, role: user.role },
     process.env.JWT_SECRET,
-    { expiresIn: '7d' }
+    { expiresIn: process.env.JWT_EXPIRY || '7d' }
   );
 }
 
-async function register(req, res) {
+function toPublicUser(user) {
+  return { id: user._id, name: user.name, email: user.email, role: user.role };
+}
+
+async function register(req, res, next) {
   try {
-    const { name, email, password } = req.body;
+    let { name, email, password } = req.body || {};
+
+    name = typeof name === 'string' ? name.trim() : '';
+    email = typeof email === 'string' ? email.trim().toLowerCase() : '';
 
     if (!name || !email || !password) {
       return res.status(400).json({ message: 'Name, email, and password are required' });
+    }
+    if (name.length < 2 || name.length > 80) {
+      return res.status(400).json({ message: 'Name must be 2-80 characters' });
+    }
+    if (!EMAIL_RE.test(email)) {
+      return res.status(400).json({ message: 'Invalid email format' });
+    }
+    if (typeof password !== 'string' || password.length < 8) {
+      return res.status(400).json({ message: 'Password must be at least 8 characters' });
     }
 
     const existingUser = await User.findOne({ email });
@@ -24,25 +43,26 @@ async function register(req, res) {
     }
 
     const passwordHash = await bcrypt.hash(password, 10);
-    const user = await User.create({ name, email, passwordHash });
+    const user = await User.create({ name, email, passwordHash, role: resolveRole(email, 'student') });
 
     const token = generateToken(user);
 
-    res.status(201).json({
-      user: { id: user._id, name: user.name, email: user.email, role: user.role },
-      token,
-    });
+    res.status(201).json({ user: toPublicUser(user), token });
   } catch (err) {
-    res.status(500).json({ message: 'Registration failed', error: err.message });
+    next(err);
   }
 }
 
-async function login(req, res) {
+async function login(req, res, next) {
   try {
-    const { email, password } = req.body;
+    let { email, password } = req.body || {};
+    email = typeof email === 'string' ? email.trim().toLowerCase() : '';
 
     if (!email || !password) {
       return res.status(400).json({ message: 'Email and password are required' });
+    }
+    if (!EMAIL_RE.test(email)) {
+      return res.status(400).json({ message: 'Invalid email format' });
     }
 
     const user = await User.findOne({ email });
@@ -55,27 +75,32 @@ async function login(req, res) {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
 
+    // Auto-promote allowlisted emails on login (covers pre-existing accounts).
+    if (isAdminEmail(user.email) && user.role !== 'admin') {
+      user.role = 'admin';
+      await user.save();
+    }
+
     const token = generateToken(user);
 
-    res.json({
-      user: { id: user._id, name: user.name, email: user.email, role: user.role },
-      token,
-    });
+    res.json({ user: toPublicUser(user), token });
   } catch (err) {
-    res.status(500).json({ message: 'Login failed', error: err.message });
+    next(err);
   }
 }
 
-async function getMe(req, res) {
+async function getMe(req, res, next) {
   try {
-    const user = await User.findById(req.user.id).select('-passwordHash');
+    const userId = req.user && req.user.id;
+    if (!userId) return res.status(401).json({ message: 'Authentication required' });
+    const user = await User.findById(userId).select('-passwordHash');
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
     res.json({ user });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to fetch user', error: err.message });
+    next(err);
   }
 }
 
-module.exports = { register, login, getMe };
+module.exports = { register, login, getMe, generateToken };

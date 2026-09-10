@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import api from '../api/axios';
 import { useAuth } from '../context/AuthContext';
+import GoogleSignInButton from '../components/GoogleSignInButton';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -12,6 +13,8 @@ export default function Register() {
 
   const { login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from || '/exams';
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -21,7 +24,7 @@ export default function Register() {
     try {
       const res = await api.post('/auth/register', { name, email, password });
       login(res.data.user, res.data.token);
-      navigate('/exams');
+      navigate(from, { replace: true });
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed. Try again.');
     } finally {
@@ -95,6 +98,14 @@ export default function Register() {
               {loading ? 'Creating account...' : 'Sign Up'}
             </button>
           </form>
+
+          <div className="my-4 flex items-center gap-3">
+            <span className="h-px flex-1 bg-hairline-cloud" />
+            <span className="text-caption text-ink/50">or</span>
+            <span className="h-px flex-1 bg-hairline-cloud" />
+          </div>
+
+          <GoogleSignInButton from={from} />
 
           <p className="mt-6 text-body-md text-ink/70 text-center">
             Already have an account?{' '}

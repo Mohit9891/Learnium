@@ -10,7 +10,7 @@ function Chip({ children }) {
 }
 
 function AuthAwareNav() {
-  const { user, logout, loading } = useAuth();
+  const { user, logout, loading, isAdmin } = useAuth();
 
   if (loading) {
     return <div className="w-40 h-9" />;
@@ -28,6 +28,14 @@ function AuthAwareNav() {
         >
           Dashboard
         </Link>
+        {isAdmin && (
+          <Link
+            to="/admin"
+            className="text-on-dark-muted text-sm font-medium hover:text-white transition"
+          >
+            Admin
+          </Link>
+        )}
         <button
           onClick={logout}
           className="text-on-dark-muted text-sm font-medium hover:text-white transition cursor-pointer"

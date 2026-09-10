@@ -1,28 +1,28 @@
 const { Exam, Subject, Chapter } = require('../models');
 
-// GET /api/exams
-async function getExams(req, res) {
+// GET /api/exams (public)
+async function getExams(req, res, next) {
   try {
     const exams = await Exam.find().lean();
     res.json({ exams });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to fetch exams', error: err.message });
+    next(err);
   }
 }
 
-// GET /api/exams/:examId/subjects
-async function getSubjectsByExam(req, res) {
+// GET /api/exams/:examId/subjects (public)
+async function getSubjectsByExam(req, res, next) {
   try {
     const { examId } = req.params;
     const subjects = await Subject.find({ exam: examId }).lean();
     res.json({ subjects });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to fetch subjects', error: err.message });
+    next(err);
   }
 }
 
-// GET /api/subjects/:subjectId/chapters
-async function getChaptersBySubject(req, res) {
+// GET /api/subjects/:subjectId/chapters (public)
+async function getChaptersBySubject(req, res, next) {
   try {
     const { subjectId } = req.params;
     const chapters = await Chapter.find({ subject: subjectId })
@@ -30,7 +30,7 @@ async function getChaptersBySubject(req, res) {
       .lean();
     res.json({ chapters });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to fetch chapters', error: err.message });
+    next(err);
   }
 }
 
