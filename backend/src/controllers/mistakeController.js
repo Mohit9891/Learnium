@@ -46,7 +46,7 @@ async function updateMistake(req, res, next) {
     const entry = await MistakeNotebookEntry.findOneAndUpdate(
       { _id: id, user: userId }, // scope to the owning user — prevents editing others' entries
       update,
-      { new: true }
+      { returnDocument: 'after' }
     );
 
     if (!entry) {

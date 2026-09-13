@@ -13,7 +13,7 @@ async function upsertExam(name, slug) {
   return Exam.findOneAndUpdate(
     { slug: finalSlug },
     { name, slug: finalSlug },
-    { upsert: true, new: true }
+    { upsert: true, returnDocument: 'after' }
   );
 }
 
@@ -22,7 +22,7 @@ async function upsertSubject(examId, name, slug) {
   return Subject.findOneAndUpdate(
     { exam: examId, slug: finalSlug },
     { exam: examId, name, slug: finalSlug },
-    { upsert: true, new: true }
+    { upsert: true, returnDocument: 'after' }
   );
 }
 
@@ -31,7 +31,7 @@ async function upsertChapter(subjectId, name, slug, orderIndex = 0) {
   return Chapter.findOneAndUpdate(
     { subject: subjectId, slug: finalSlug },
     { subject: subjectId, name, slug: finalSlug, orderIndex: orderIndex ?? 0 },
-    { upsert: true, new: true }
+    { upsert: true, returnDocument: 'after' }
   );
 }
 

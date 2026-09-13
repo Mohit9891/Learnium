@@ -61,13 +61,13 @@ async function loadFile(filePath) {
   const examDoc = await Exam.findOneAndUpdate(
     { slug: examSlug },
     { name: exam.name, slug: examSlug },
-    { upsert: true, new: true }
+    { upsert: true, returnDocument: 'after' }
   );
 
   const subjectDoc = await Subject.findOneAndUpdate(
     { exam: examDoc._id, slug: subjectSlug },
     { exam: examDoc._id, name: subject.name, slug: subjectSlug },
-    { upsert: true, new: true }
+    { upsert: true, returnDocument: 'after' }
   );
 
   const chapterDoc = await Chapter.findOneAndUpdate(
@@ -78,7 +78,7 @@ async function loadFile(filePath) {
       slug: chapterSlug,
       orderIndex: chapter.orderIndex ?? 0,
     },
-    { upsert: true, new: true }
+    { upsert: true, returnDocument: 'after' }
   );
 
   // replace this chapter's questions only — doesn't touch other chapters

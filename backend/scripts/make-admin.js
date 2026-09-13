@@ -9,7 +9,7 @@ async function run() {
     process.exit(1);
   }
   await mongoose.connect(process.env.MONGO_URI);
-  const user = await User.findOneAndUpdate({ email }, { role: 'admin' }, { new: true });
+  const user = await User.findOneAndUpdate({ email }, { role: 'admin' }, { returnDocument: 'after' });
   if (!user) {
     console.error(`No user found with email ${email}`);
     await mongoose.disconnect();

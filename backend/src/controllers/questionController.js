@@ -93,7 +93,7 @@ async function submitAttempt(req, res, next) {
       await MistakeNotebookEntry.findOneAndUpdate(
         { user: userId, question: questionId },
         { reviewStatus: 'unreviewed', lastWrongAt: new Date() },
-        { upsert: true, new: true, setDefaultsOnInsert: true }
+        { upsert: true, returnDocument: 'after', setDefaultsOnInsert: true }
       );
     }
 
@@ -120,7 +120,7 @@ async function bookmarkQuestion(req, res, next) {
     await Bookmark.findOneAndUpdate(
       { user: userId, question: questionId },
       {},
-      { upsert: true, new: true, setDefaultsOnInsert: true }
+      { upsert: true, returnDocument: 'after', setDefaultsOnInsert: true }
     );
 
     res.json({ message: 'Bookmarked' });

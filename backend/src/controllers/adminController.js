@@ -43,7 +43,7 @@ async function updateUserRole(req, res, next) {
     if (req.params.id === String(req.user.id) && role !== 'admin') {
       return res.status(400).json({ message: 'You cannot demote yourself' });
     }
-    const user = await User.findByIdAndUpdate(req.params.id, { role }, { new: true }).select('-passwordHash');
+    const user = await User.findByIdAndUpdate(req.params.id, { role }, { returnDocument: 'after' }).select('-passwordHash');
     if (!user) return res.status(404).json({ message: 'User not found' });
     res.json({ user });
   } catch (err) {
@@ -207,7 +207,7 @@ async function updateChapter(req, res, next) {
     const update = {};
     if (name) update.name = name.trim();
     if (orderIndex !== undefined) update.orderIndex = orderIndex;
-    const doc = await Chapter.findByIdAndUpdate(req.params.id, update, { new: true });
+    const doc = await Chapter.findByIdAndUpdate(req.params.id, update, { returnDocument: 'after' });
     if (!doc) return res.status(404).json({ message: 'Chapter not found' });
     res.json({ chapter: doc });
   } catch (err) {
@@ -257,7 +257,7 @@ async function updateQuestion(req, res, next) {
     const errors = validateQuestionInput(merged);
     if (errors.length) return res.status(400).json({ message: 'Invalid question', errors });
     const doc = await Question.findByIdAndUpdate(req.params.id, normalizeQuestionInput(merged, existing.chapter), {
-      new: true,
+      returnDocument: 'after',
     });
     res.json({ question: doc });
   } catch (err) {
