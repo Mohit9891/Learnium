@@ -16,10 +16,15 @@ router.post('/google', verifyGoogle);
 // without exposing any secret. Useful when the Google popup says invalid_client.
 router.get('/google/status', (req, res) => {
   const clientId = process.env.GOOGLE_CLIENT_ID || '';
+  const serverUrl = (process.env.SERVER_URL || 'http://localhost:5000').replace(/\/$/, '');
   res.json({
     gisConfigured: clientId.length > 20 && clientId.endsWith('.apps.googleusercontent.com'),
     redirectConfigured: Boolean(passport.googleEnabled),
     adminAllowlistConfigured: Boolean((process.env.ADMIN_EMAILS || '').trim()),
+    // Copy this EXACT value into Google Console → Credentials → OAuth client →
+    // Authorized redirect URIs. redirect_uri_mismatch means this exact string
+    // is missing there (scheme, host, port and path must all match).
+    redirectUri: `${serverUrl}/api/auth/google/callback`,
   });
 });
 

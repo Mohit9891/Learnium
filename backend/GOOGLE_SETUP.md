@@ -12,9 +12,15 @@ Work through this checklist once and it goes away.
 3. Under **Authorized JavaScript origins**, add every origin that serves the app:
    - `http://localhost:5173` (local Vite dev)
    - `https://www.learnium.in` and any Vercel preview/prod URL you use
-4. (Only needed for the legacy redirect fallback) Under **Authorized redirect URIs**, add:
-   - `http://localhost:5000/api/auth/google/callback`
-   - `https://<your-backend>/api/auth/google/callback`
+4. (Only needed for the legacy redirect fallback) Under **Authorized redirect URIs**, add
+   the EXACT value from `GET /api/auth/google/status` → `redirectUri`:
+   - local: `http://localhost:5000/api/auth/google/callback`
+   - production: `https://<your-backend>/api/auth/google/callback`
+
+   `Error 400: redirect_uri_mismatch` means this exact string is missing there.
+   Scheme (`http` vs `https`), host, port and path must ALL match — fetch the
+   status endpoint on the server that serves the login and copy-paste the value,
+   don't retype it.
 5. Save, then copy the **Client ID** (ends with `.apps.googleusercontent.com`)
    and the **Client secret**.
 

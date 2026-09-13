@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const { User } = require('./src/models');
+const { User } = require('../src/models');
 
 async function run() {
   const email = (process.argv[2] || '').trim().toLowerCase();
