@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import api from '../api/axios';
 import { useAuth } from '../context/AuthContext';
 import GoogleSignInButton from '../components/GoogleSignInButton';
@@ -13,7 +13,14 @@ export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const [searchParams] = useSearchParams();
   const from = location.state?.from || '/exams';
+
+  useEffect(() => {
+    if (searchParams.get('error') === 'google') {
+      setError('Google sign-in failed. Try again or use email login.');
+    }
+  }, [searchParams]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -65,7 +72,12 @@ export default function Login() {
             </div>
 
             <div>
-              <label className="block text-body-md font-medium text-ink-deep mb-1">Password</label>
+              <div className="flex items-center justify-between mb-1">
+                <label className="block text-body-md font-medium text-ink-deep">Password</label>
+                <Link to="/forgot-password" className="text-caption text-violet font-medium hover:underline">
+                  Forgot password?
+                </Link>
+              </div>
               <input
                 type="password"
                 required

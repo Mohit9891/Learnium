@@ -37,6 +37,9 @@ const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 60, standardHeade
 app.use('/api/', globalLimiter);
 app.use('/api/auth/login', authLimiter);
 app.use('/api/auth/register', authLimiter);
+app.use('/api/auth/forgot-password', authLimiter);
+app.use('/api/auth/reset-password', authLimiter);
+app.use('/api/progress', require('./src/routes/progressRoutes'));
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', time: new Date().toISOString() }));
 

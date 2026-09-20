@@ -2,9 +2,12 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import RequireAdmin from './components/RequireAdmin';
+import AppShell from './components/AppShell';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 import AuthCallback from './pages/AuthCallback';
 import ExamSelect from './pages/ExamSelect';
 import SubjectSelect from './pages/SubjectSelect';
@@ -39,6 +42,8 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
 
           {/* Public — anyone can browse and solve without signing in.
@@ -49,12 +54,14 @@ function App() {
           <Route path="/subjects/:subjectId/chapters" element={<ChapterSelect />} />
           <Route path="/chapters/:chapterId/solve" element={<Solve />} />
 
-          {/* Protected — these need a persistent identity to mean anything */}
+          {/* Protected — study shell with sidebar + top bar + mobile tabs */}
           <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <Dashboard />
+                <AppShell>
+                  <Dashboard />
+                </AppShell>
               </ProtectedRoute>
             }
           />
@@ -62,7 +69,9 @@ function App() {
             path="/mistakes"
             element={
               <ProtectedRoute>
-                <MistakeNotebook />
+                <AppShell>
+                  <MistakeNotebook />
+                </AppShell>
               </ProtectedRoute>
             }
           />

@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { Check, Loader2 } from 'lucide-react';
 import api from '../api/axios';
 import QuestionCard from '../components/QuestionCard';
 import FilterBar from '../components/FilterBar';
 import FeedbackPanel from '../components/FeedbackPanel';
+import { QuestionSkeleton } from '../components/SkeletonLoader';
+
+const LOAD_STEPS = ['Chapter loaded', 'Calibrating difficulty', 'Fetching your history'];
 
 export default function Solve() {
   const { chapterId } = useParams();
@@ -18,13 +22,18 @@ export default function Solve() {
   const [feedback, setFeedback] = useState(null);
   const [submitting, setSubmitting] = useState(false);
   const [score, setScore] = useState({ correct: 0, attempted: 0 });
+  const [loadStep, setLoadStep] = useState(0);
 
   const startTimeRef = useRef(Date.now());
 
   useEffect(() => {
     setLoading(true);
     setError('');
+    setLoadStep(0);
     const params = difficulty ? { difficulty } : {};
+    const stepTimer = setInterval(() => {
+      setLoadStep((s) => (s < LOAD_STEPS.length - 1 ? s + 1 : s));
+    }, 700);
     api
       .get(`/chapters/${chapterId}/questions`, { params })
       .then((res) => {
@@ -34,7 +43,11 @@ export default function Solve() {
         setFeedback(null);
       })
       .catch(() => setError('Could not load questions. Try refreshing.'))
-      .finally(() => setLoading(false));
+      .finally(() => {
+        clearInterval(stepTimer);
+        setLoading(false);
+      });
+    return () => clearInterval(stepTimer);
   }, [chapterId, difficulty]);
 
   const currentQuestion = questions[currentIndex];
@@ -73,8 +86,27 @@ export default function Solve() {
 
   if (loading) {
     return (
-      <div className="bg-white min-h-screen flex items-center justify-center">
-        <p className="text-ink/60">Loading questions...</p>
+      <div className="bg-white min-h-screen px-4 py-10">
+        <div className="max-w-xl mx-auto">
+          <p className="font-display font-medium text-heading-sm text-ink-deep mb-4">
+            Preparing your session...
+          </p>
+          <ul className="mb-6 space-y-2">
+            {LOAD_STEPS.map((step, i) => (
+              <li key={step} className="flex items-center gap-2 text-body-md">
+                {i < loadStep ? (
+                  <Check size={16} className="text-lime-600 shrink-0" />
+                ) : i === loadStep ? (
+                  <Loader2 size={16} className="text-violet animate-spin shrink-0" />
+                ) : (
+                  <span className="w-4 h-4 rounded-full border border-hairline-cool shrink-0" />
+                )}
+                <span className={i <= loadStep ? 'text-ink-deep' : 'text-ink/40'}>{step}</span>
+              </li>
+            ))}
+          </ul>
+          <QuestionSkeleton />
+        </div>
       </div>
     );
   }

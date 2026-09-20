@@ -9,6 +9,8 @@ const userSchema = new mongoose.Schema(
     avatarUrl: { type: String },
     examFocus: { type: String },
     role: { type: String, enum: ['student', 'admin'], default: 'student' },
+    resetPasswordToken: { type: String, select: false },
+    resetPasswordExpires: { type: Date, select: false },
   },
   { timestamps: true }
 );

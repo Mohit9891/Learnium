@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const { register, login, getMe } = require('../controllers/authController');
+const { register, login, getMe, forgotPassword, resetPassword } = require('../controllers/authController');
 const { verifyGoogle } = require('../controllers/googleAuthController');
 const authMiddleware = require('../middleware/authMiddleware');
 const passport = require('../config/passport');
 
 router.post('/register', register);
 router.post('/login', login);
+router.post('/forgot-password', forgotPassword);
+router.post('/reset-password', resetPassword);
 router.get('/me', authMiddleware, getMe);
 
 // GIS (Google Identity Services) — primary flow: frontend sends Google ID token.

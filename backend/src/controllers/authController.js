@@ -1,4 +1,5 @@
 const bcrypt = require('bcryptjs');
+const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 const { resolveRole, isAdminEmail } = require('../utils/adminAllowlist');
@@ -103,4 +104,69 @@ async function getMe(req, res, next) {
   }
 }
 
-module.exports = { register, login, getMe, generateToken };
+module.exports = { register, login, getMe, generateToken, forgotPassword, resetPassword };
+
+// POST /api/auth/forgot-password { email }
+// Always 200 (no account enumeration). Creates a single-use token valid 1h.
+// No mailer is configured yet, so the reset URL is logged server-side and
+// returned only outside production for local testing.
+async function forgotPassword(req, res, next) {
+  try {
+    let { email } = req.body || {};
+    email = typeof email === 'string' ? email.trim().toLowerCase() : '';
+    if (!email || !EMAIL_RE.test(email)) {
+      return res.json({ message: 'If an account exists for this email, a reset link has been sent.' });
+    }
+
+    const user = await User.findOne({ email });
+    if (user && user.passwordHash) {
+      const raw = crypto.randomBytes(32).toString('hex');
+      user.resetPasswordToken = crypto.createHash('sha256').update(raw).digest('hex');
+      user.resetPasswordExpires = new Date(Date.now() + 60 * 60 * 1000);
+      await user.save();
+      const frontend = (process.env.FRONTEND_URL || 'http://localhost:5173').replace(/\/$/, '');
+      const resetUrl = `${frontend}/reset-password?token=${raw}`;
+      console.log(`Password reset requested for ${email}: ${resetUrl}`);
+      if (process.env.NODE_ENV !== 'production') {
+        return res.json({
+          message: 'If an account exists for this email, a reset link has been sent.',
+          resetUrl,
+        });
+      }
+    }
+    res.json({ message: 'If an account exists for this email, a reset link has been sent.' });
+  } catch (err) {
+    next(err);
+  }
+}
+
+// POST /api/auth/reset-password { token, password }
+async function resetPassword(req, res, next) {
+  try {
+    const { token, password } = req.body || {};
+    if (!token || typeof token !== 'string') {
+      return res.status(400).json({ message: 'Reset token is required' });
+    }
+    if (typeof password !== 'string' || password.length < 8) {
+      return res.status(400).json({ message: 'Password must be at least 8 characters' });
+    }
+
+    const hashed = crypto.createHash('sha256').update(token).digest('hex');
+    const user = await User.findOne({
+      resetPasswordToken: hashed,
+      resetPasswordExpires: { $gt: new Date() },
+    }).select('+resetPasswordToken +resetPasswordExpires');
+    if (!user) {
+      return res.status(400).json({ message: 'Reset link is invalid or has expired' });
+    }
+
+    user.passwordHash = await bcrypt.hash(password, 10);
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpires = undefined;
+    await user.save();
+
+    res.json({ message: 'Password has been reset. You can now sign in.' });
+  } catch (err) {
+    next(err);
+  }
+}
