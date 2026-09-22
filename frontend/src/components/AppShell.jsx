@@ -7,7 +7,7 @@ import {
   Layers,
   NotebookPen,
   CalendarCheck,
-  ListChecks,
+  Sparkles,
   Bot,
   TrendingUp,
   FileSearch,
@@ -25,7 +25,7 @@ const SECTIONS = [
     items: [
       { to: '/dashboard', label: 'Dashboard', Icon: LayoutDashboard },
       { to: '/exams', label: 'Practice', Icon: BookOpen },
-      { to: null, label: 'Mock Tests', Icon: ClipboardList, soon: true },
+      { to: '/mocks', label: 'Mock Tests', Icon: ClipboardList },
       { to: null, label: 'Flashcards', Icon: Layers, soon: true },
     ],
   },
@@ -33,16 +33,16 @@ const SECTIONS = [
     title: 'My Learning',
     items: [
       { to: '/mistakes', label: 'Mistake Notebook', Icon: NotebookPen },
-      { to: null, label: 'Revision Planner', Icon: CalendarCheck, soon: true },
-      { to: null, label: 'Study Plan', Icon: ListChecks, soon: true },
+      { to: '/revision', label: 'Revision Planner', Icon: CalendarCheck },
+      { to: '/suggestions', label: 'AI Suggestions', Icon: Sparkles },
     ],
   },
   {
     title: 'Tools',
     items: [
       { to: null, label: 'AI Tutor', Icon: Bot, soon: true },
-      { to: null, label: 'Topic Analyzer', Icon: TrendingUp, soon: true },
-      { to: null, label: 'PYQ Explorer', Icon: FileSearch, soon: true },
+      { to: '/analysis', label: 'Topic Analyzer', Icon: TrendingUp },
+      { to: '/pyq', label: 'PYQ Explorer', Icon: FileSearch },
     ],
   },
   {
@@ -110,6 +110,7 @@ function SidebarNav() {
 const TABS = [
   { to: '/exams', label: 'Practice', Icon: BookOpen },
   { to: '/dashboard', label: 'Home', Icon: LayoutDashboard },
+  { to: '/mocks', label: 'Mocks', Icon: ClipboardList },
   { to: '/mistakes', label: 'Mistakes', Icon: NotebookPen },
 ];
 

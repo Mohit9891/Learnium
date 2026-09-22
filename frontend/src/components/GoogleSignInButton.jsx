@@ -62,6 +62,10 @@ export default function GoogleSignInButton({ from = '/exams' }) {
             setError(
               'Google rejected this app’s client ID (invalid_client). Make sure VITE_GOOGLE_CLIENT_ID matches the Web client ID in Google Cloud Console → Credentials, and that you redeployed after changing it.'
             );
+          } else if (err?.type === 'origin_mismatch') {
+            setError(
+              `Google doesn't allow sign-in from this address (origin_mismatch). In Google Cloud Console → Credentials → your Web client → Authorized JavaScript origins, add exactly: ${window.location.origin}`
+            );
           } else {
             setError('Google sign-in was blocked. Close the popup and try again.');
           }

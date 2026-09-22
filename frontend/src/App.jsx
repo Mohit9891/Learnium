@@ -15,6 +15,13 @@ import ChapterSelect from './pages/ChapterSelect';
 import Solve from './pages/Solve';
 import Dashboard from './pages/Dashboard';
 import MistakeNotebook from './pages/MistakeNotebook';
+import PerformanceAnalysis from './pages/PerformanceAnalysis';
+import Suggestions from './pages/Suggestions';
+import MockTests from './pages/MockTests';
+import MockRunner from './pages/MockRunner';
+import MockResult from './pages/MockResult';
+import PYQExplorer from './pages/PYQExplorer';
+import RevisionPlanner from './pages/RevisionPlanner';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminUsers from './pages/admin/AdminUsers';
@@ -71,6 +78,72 @@ function App() {
               <ProtectedRoute>
                 <AppShell>
                   <MistakeNotebook />
+                </AppShell>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/analysis"
+            element={
+              <ProtectedRoute>
+                <AppShell>
+                  <PerformanceAnalysis />
+                </AppShell>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/suggestions"
+            element={
+              <ProtectedRoute>
+                <AppShell>
+                  <Suggestions />
+                </AppShell>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/mocks"
+            element={
+              <ProtectedRoute>
+                <AppShell>
+                  <MockTests />
+                </AppShell>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/mocks/run"
+            element={
+              <ProtectedRoute>
+                <MockRunner />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/mocks/result"
+            element={
+              <ProtectedRoute>
+                <MockResult />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/pyq"
+            element={
+              <ProtectedRoute>
+                <AppShell>
+                  <PYQExplorer />
+                </AppShell>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/revision"
+            element={
+              <ProtectedRoute>
+                <AppShell>
+                  <RevisionPlanner />
                 </AppShell>
               </ProtectedRoute>
             }

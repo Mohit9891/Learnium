@@ -1,0 +1,28 @@
+# Learnium SPA — Apache config for Hostinger (learnium.in)
+# Mirrors frontend/vercel.json: every non-file request serves index.html
+# so deep routes (/dashboard, /admin/users, /chapters/:id/solve) load on refresh.
+# Lives in public/ so Vite copies it into dist/ on every build.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. Force HTTPS (Google sign-in + JWT auth require it)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # 2. SPA fallback — real files/folders served directly, all else → index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# 3. Cache hashed Vite assets for a year (filenames change on every build — safe)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|png|jpg|jpeg|svg|woff|woff2|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Never cache the entry point — otherwise users get stale bundles
+  <FilesMatch "^index\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

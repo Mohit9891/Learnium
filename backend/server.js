@@ -49,6 +49,7 @@ app.use('/api/admin', require('./src/routes/adminRoutes'));
 app.use('/api', require('./src/routes/catalogRoutes'));
 app.use('/api/auth', require('./src/routes/authRoutes'));
 app.use('/api', require('./src/routes/questionRoutes'));
+app.use('/api/explore', require('./src/routes/exploreRoutes'));
 
 app.use('/api', notFound);
 app.use(errorHandler);
