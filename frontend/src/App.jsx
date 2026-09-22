@@ -22,6 +22,9 @@ import MockRunner from './pages/MockRunner';
 import MockResult from './pages/MockResult';
 import PYQExplorer from './pages/PYQExplorer';
 import RevisionPlanner from './pages/RevisionPlanner';
+import StudyPlan from './pages/StudyPlan';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminUsers from './pages/admin/AdminUsers';
@@ -144,6 +147,36 @@ function App() {
               <ProtectedRoute>
                 <AppShell>
                   <RevisionPlanner />
+                </AppShell>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/plan"
+            element={
+              <ProtectedRoute>
+                <AppShell>
+                  <StudyPlan />
+                </AppShell>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <AppShell>
+                  <Profile />
+                </AppShell>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <ProtectedRoute>
+                <AppShell>
+                  <Settings />
                 </AppShell>
               </ProtectedRoute>
             }

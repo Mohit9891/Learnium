@@ -7,6 +7,7 @@ import {
   Layers,
   NotebookPen,
   CalendarCheck,
+  ListChecks,
   Sparkles,
   Bot,
   TrendingUp,
@@ -35,6 +36,7 @@ const SECTIONS = [
       { to: '/mistakes', label: 'Mistake Notebook', Icon: NotebookPen },
       { to: '/revision', label: 'Revision Planner', Icon: CalendarCheck },
       { to: '/suggestions', label: 'AI Suggestions', Icon: Sparkles },
+      { to: '/plan', label: 'Study Plan', Icon: ListChecks },
     ],
   },
   {
@@ -48,8 +50,8 @@ const SECTIONS = [
   {
     title: 'Account',
     items: [
-      { to: null, label: 'Profile', Icon: User, soon: true },
-      { to: null, label: 'Settings', Icon: Settings, soon: true },
+      { to: '/profile', label: 'Profile', Icon: User },
+      { to: '/settings', label: 'Settings', Icon: Settings },
     ],
   },
 ];
@@ -195,12 +197,13 @@ export default function AppShell({ children }) {
                   {stats.accuracy}% acc
                 </span>
               )}
-              <span
-                title={user?.email || ''}
-                className="w-8 h-8 rounded-full bg-violet-deep text-white font-display font-semibold text-sm flex items-center justify-center"
+              <Link
+                to="/profile"
+                title={user?.email || 'Profile'}
+                className="w-8 h-8 rounded-full bg-violet-deep text-white font-display font-semibold text-sm flex items-center justify-center hover:brightness-110 transition"
               >
                 {(user?.name || 'S').charAt(0).toUpperCase()}
-              </span>
+              </Link>
             </div>
           </div>
         </header>
