@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../../api/axios';
+import { Pencil } from 'lucide-react';
 import { adminApi } from '../../api/admin';
 
 const EMPTY_Q = {
@@ -65,6 +66,9 @@ export default function AdminContent() {
   const [editing, setEditing] = useState(null); // question _id or 'new'
   const [form, setForm] = useState(EMPTY_Q);
   const [newName, setNewName] = useState({ exam: '', subject: '', chapter: '' });
+  const [renaming, setRenaming] = useState(null); // 'exam' | 'subject' | null
+  const [renameValue, setRenameValue] = useState('');
+  const [renamingBusy, setRenamingBusy] = useState(false);
 
   useEffect(() => {
     api.get('/exams').then((r) => {
@@ -161,6 +165,38 @@ export default function AdminContent() {
     }
   }
 
+  function startRename(kind) {
+    const current =
+      kind === 'exam'
+        ? exams.find((e) => e._id === examId)?.name || ''
+        : subjects.find((s) => s._id === subjectId)?.name || '';
+    setRenameValue(current);
+    setRenaming(kind);
+    setError('');
+    setNotice('');
+  }
+
+  async function saveRename() {
+    if (!renameValue.trim() || renamingBusy) return;
+    setRenamingBusy(true);
+    setError('');
+    try {
+      if (renaming === 'exam') {
+        const { exam } = await adminApi.updateExam(examId, { name: renameValue.trim() });
+        setExams((prev) => prev.map((e) => (e._id === exam._id ? exam : e)));
+      } else if (renaming === 'subject') {
+        const { subject } = await adminApi.updateSubject(subjectId, { name: renameValue.trim() });
+        setSubjects((prev) => prev.map((s) => (s._id === subject._id ? subject : s)));
+      }
+      setRenaming(null);
+      setNotice('Renamed.');
+    } catch (err) {
+      setError(err.response?.data?.message || 'Rename failed.');
+    } finally {
+      setRenamingBusy(false);
+    }
+  }
+
   return (
     <div>
       <h1 className="font-display font-bold text-heading-xl text-ink-deep mb-6">Content</h1>
@@ -169,24 +205,106 @@ export default function AdminContent() {
 
       <div className="grid md:grid-cols-3 gap-3 mb-6">
         <label className="block">
-          <span className="text-caption font-medium text-ink/60">Exam</span>
-          <select value={examId} onChange={(e) => setExamId(e.target.value)} className="mt-1 w-full px-3 py-2 rounded-sm border border-hairline-cool">
-            {exams.map((e) => <option key={e._id} value={e._id}>{e.name}</option>)}
-          </select>
-          <div className="flex gap-2 mt-2">
-            <input value={newName.exam} onChange={(e) => setNewName({ ...newName, exam: e.target.value })} placeholder="New exam" className="flex-1 px-3 py-1.5 rounded-sm border border-hairline-cool text-sm" />
-            <button onClick={() => createLevel('exam')} className="px-3 py-1.5 rounded-md bg-primary text-white text-xs font-bold uppercase">Add</button>
-          </div>
+          <span className="flex items-center gap-1.5 text-caption font-medium text-ink/60">
+            Exam
+            {exams.length > 0 && renaming !== 'exam' && (
+              <button
+                onClick={startRename.bind(null, 'exam')}
+                title="Rename exam"
+                className="text-ink/40 hover:text-violet transition"
+              >
+                <Pencil size={13} />
+              </button>
+            )}
+          </span>
+          {renaming === 'exam' ? (
+            <div className="flex gap-2 mt-2">
+              <input
+                value={renameValue}
+                onChange={(e) => setRenameValue(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') saveRename();
+                  if (e.key === 'Escape') setRenaming(null);
+                }}
+                autoFocus
+                className="flex-1 px-3 py-1.5 rounded-sm border border-violet text-sm focus:outline-none focus:ring-2 focus:ring-ring-focus"
+              />
+              <button
+                onClick={saveRename}
+                disabled={renamingBusy}
+                className="px-3 py-1.5 rounded-md bg-primary text-white text-xs font-bold uppercase disabled:opacity-50"
+              >
+                Save
+              </button>
+              <button
+                onClick={() => setRenaming(null)}
+                className="px-3 py-1.5 rounded-md border border-hairline-cool text-xs text-ink/60"
+              >
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <>
+              <select value={examId} onChange={(e) => setExamId(e.target.value)} className="mt-1 w-full px-3 py-2 rounded-sm border border-hairline-cool">
+                {exams.map((e) => <option key={e._id} value={e._id}>{e.name}</option>)}
+              </select>
+              <div className="flex gap-2 mt-2">
+                <input value={newName.exam} onChange={(e) => setNewName({ ...newName, exam: e.target.value })} placeholder="New exam" className="flex-1 px-3 py-1.5 rounded-sm border border-hairline-cool text-sm" />
+                <button onClick={() => createLevel('exam')} className="px-3 py-1.5 rounded-md bg-primary text-white text-xs font-bold uppercase">Add</button>
+              </div>
+            </>
+          )}
         </label>
         <label className="block">
-          <span className="text-caption font-medium text-ink/60">Subject</span>
-          <select value={subjectId} onChange={(e) => setSubjectId(e.target.value)} className="mt-1 w-full px-3 py-2 rounded-sm border border-hairline-cool">
-            {subjects.map((s) => <option key={s._id} value={s._id}>{s.name}</option>)}
-          </select>
-          <div className="flex gap-2 mt-2">
-            <input value={newName.subject} onChange={(e) => setNewName({ ...newName, subject: e.target.value })} placeholder="New subject" className="flex-1 px-3 py-1.5 rounded-sm border border-hairline-cool text-sm" />
-            <button onClick={() => createLevel('subject')} className="px-3 py-1.5 rounded-md bg-primary text-white text-xs font-bold uppercase">Add</button>
-          </div>
+          <span className="flex items-center gap-1.5 text-caption font-medium text-ink/60">
+            Subject
+            {subjects.length > 0 && renaming !== 'subject' && (
+              <button
+                onClick={startRename.bind(null, 'subject')}
+                title="Rename subject"
+                className="text-ink/40 hover:text-violet transition"
+              >
+                <Pencil size={13} />
+              </button>
+            )}
+          </span>
+          {renaming === 'subject' ? (
+            <div className="flex gap-2 mt-2">
+              <input
+                value={renameValue}
+                onChange={(e) => setRenameValue(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') saveRename();
+                  if (e.key === 'Escape') setRenaming(null);
+                }}
+                autoFocus
+                className="flex-1 px-3 py-1.5 rounded-sm border border-violet text-sm focus:outline-none focus:ring-2 focus:ring-ring-focus"
+              />
+              <button
+                onClick={saveRename}
+                disabled={renamingBusy}
+                className="px-3 py-1.5 rounded-md bg-primary text-white text-xs font-bold uppercase disabled:opacity-50"
+              >
+                Save
+              </button>
+              <button
+                onClick={() => setRenaming(null)}
+                className="px-3 py-1.5 rounded-md border border-hairline-cool text-xs text-ink/60"
+              >
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <>
+              <select value={subjectId} onChange={(e) => setSubjectId(e.target.value)} className="mt-1 w-full px-3 py-2 rounded-sm border border-hairline-cool">
+                {subjects.map((s) => <option key={s._id} value={s._id}>{s.name}</option>)}
+              </select>
+              <div className="flex gap-2 mt-2">
+                <input value={newName.subject} onChange={(e) => setNewName({ ...newName, subject: e.target.value })} placeholder="New subject" className="flex-1 px-3 py-1.5 rounded-sm border border-hairline-cool text-sm" />
+                <button onClick={() => createLevel('subject')} className="px-3 py-1.5 rounded-md bg-primary text-white text-xs font-bold uppercase">Add</button>
+              </div>
+            </>
+          )}
         </label>
         <label className="block">
           <span className="text-caption font-medium text-ink/60">Chapter</span>

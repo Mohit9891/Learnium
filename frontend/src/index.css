@@ -23,6 +23,9 @@
   --font-display: "Space Grotesk", "Rubik", sans-serif;
   --font-ui: "Rubik", sans-serif;
   --font-code: "Ubuntu Mono", monospace;
+  /* Brand wordmark only (headers/sidebar/admin) — product type stays frozen above */
+  --font-brand: "Nunito", "Rubik", sans-serif;
+  --color-brand: #1c2b60;
 
   /* ── Radius ────────────────────────────────────────────────────── */
   --radius-xs: 4px;

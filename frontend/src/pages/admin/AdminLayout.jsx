@@ -1,5 +1,6 @@
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import Logo from '../../components/Logo';
 
 const NAV = [
   { to: '/admin', label: 'Overview', end: true },
@@ -16,8 +17,11 @@ export default function AdminLayout() {
       <header className="border-b border-hairline-cloud">
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link to="/" className="font-display font-bold text-lg text-ink-deep">
-              Learnium · Admin
+            <Link to="/" title="Learnium · Admin" aria-label="Learnium home" className="flex items-center gap-2">
+              <Logo className="h-10 w-auto" rounded="rounded-md" />
+              <span className="font-brand font-extrabold text-xl text-brand lowercase tracking-tight">
+                learnium
+              </span>
             </Link>
             <nav className="flex gap-2">
               {NAV.map((item) => (

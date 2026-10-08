@@ -145,6 +145,25 @@ async function createExam(req, res, next) {
   }
 }
 
+async function updateExam(req, res, next) {
+  try {
+    const { name } = req.body || {};
+    const trimmed = typeof name === 'string' ? name.trim() : '';
+    if (!trimmed || trimmed.length < 2 || trimmed.length > 80) {
+      return res.status(400).json({ message: 'Name must be 2-80 characters' });
+    }
+    const doc = await Exam.findByIdAndUpdate(
+      req.params.id,
+      { name: trimmed },
+      { returnDocument: 'after' }
+    );
+    if (!doc) return res.status(404).json({ message: 'Exam not found' });
+    res.json({ exam: doc });
+  } catch (err) {
+    next(err);
+  }
+}
+
 async function deleteExam(req, res, next) {
   try {
     const exam = await Exam.findByIdAndDelete(req.params.id);
@@ -170,6 +189,25 @@ async function createSubject(req, res, next) {
     if (!exam) return res.status(404).json({ message: 'Exam not found' });
     const doc = await upsertSubject(examId, name.trim(), slug ? slugify(slug) : undefined);
     res.status(201).json({ subject: doc });
+  } catch (err) {
+    next(err);
+  }
+}
+
+async function updateSubject(req, res, next) {
+  try {
+    const { name } = req.body || {};
+    const trimmed = typeof name === 'string' ? name.trim() : '';
+    if (!trimmed || trimmed.length < 2 || trimmed.length > 80) {
+      return res.status(400).json({ message: 'Name must be 2-80 characters' });
+    }
+    const doc = await Subject.findByIdAndUpdate(
+      req.params.id,
+      { name: trimmed },
+      { returnDocument: 'after' }
+    );
+    if (!doc) return res.status(404).json({ message: 'Subject not found' });
+    res.json({ subject: doc });
   } catch (err) {
     next(err);
   }
@@ -408,8 +446,10 @@ module.exports = {
   overview,
   chapterStats,
   createExam,
+  updateExam,
   deleteExam,
   createSubject,
+  updateSubject,
   deleteSubject,
   createChapter,
   updateChapter,

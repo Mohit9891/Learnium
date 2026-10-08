@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import api from '../api/axios';
+import Logo from './Logo';
 
 const SECTIONS = [
   {
@@ -162,8 +163,9 @@ export default function AppShell({ children }) {
     <div className="bg-white min-h-screen lg:flex">
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex flex-col w-60 shrink-0 min-h-screen border-r border-hairline-cloud sticky top-0 h-screen">
-        <Link to="/" className="px-6 pt-5 pb-1 font-display font-bold text-lg text-ink-deep">
-          Learnium
+        <Link to="/" className="px-6 pt-5 pb-1 flex items-center gap-2">
+          <Logo className="h-7 w-auto" rounded="rounded-xs" />
+          <span className="font-brand font-extrabold text-lg text-brand lowercase tracking-tight">learnium</span>
         </Link>
         <SidebarNav />
         <div className="p-3 border-t border-hairline-cloud">
@@ -181,8 +183,9 @@ export default function AppShell({ children }) {
         {/* Top bar */}
         <header className="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-hairline-cloud">
           <div className="flex items-center justify-between gap-3 px-4 sm:px-6 py-3">
-            <Link to="/" className="lg:hidden font-display font-bold text-ink-deep">
-              Learnium
+            <Link to="/" className="lg:hidden flex items-center gap-1.5">
+              <Logo className="h-6 w-auto" rounded="rounded-xs" />
+              <span className="font-brand font-extrabold text-brand lowercase tracking-tight">learnium</span>
             </Link>
             <div className="hidden lg:block" />
             <div className="flex items-center gap-2 sm:gap-3">

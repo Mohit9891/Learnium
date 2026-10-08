@@ -26,8 +26,10 @@ router.patch('/users/:id/role', validateObjectIdParam('id'), admin.updateUserRol
 router.delete('/users/:id', validateObjectIdParam('id'), admin.deleteUser);
 
 router.post('/exams', admin.createExam);
+router.patch('/exams/:id', validateObjectIdParam('id'), admin.updateExam);
 router.delete('/exams/:id', validateObjectIdParam('id'), admin.deleteExam);
 router.post('/subjects', admin.createSubject);
+router.patch('/subjects/:id', validateObjectIdParam('id'), admin.updateSubject);
 router.delete('/subjects/:id', validateObjectIdParam('id'), admin.deleteSubject);
 router.post('/chapters', admin.createChapter);
 router.patch('/chapters/:id', validateObjectIdParam('id'), admin.updateChapter);

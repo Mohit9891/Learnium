@@ -4,6 +4,7 @@ import { Play } from 'lucide-react';
 import api from '../api/axios';
 import SearchBar from '../components/SearchBar';
 import ProgressRing from '../components/ProgressRing';
+import Logo from '../components/Logo';
 import { CardSkeleton } from '../components/SkeletonLoader';
 
 function examProgress(examId, chapters) {
@@ -45,8 +46,8 @@ export default function ExamSelect() {
   return (
     <div className="bg-white min-h-screen px-6 py-10">
       <div className="max-w-4xl mx-auto">
-        <Link to="/" className="text-caption text-ink/60 hover:text-ink">
-          ← Learnium
+        <Link to="/" className="inline-flex items-center gap-2 text-caption text-ink/60 hover:text-ink">
+          ← <Logo className="h-5 w-auto" />
         </Link>
 
         <h1 className="font-display font-medium text-heading-xl text-ink-deep mt-4 mb-1">
@@ -105,9 +106,7 @@ export default function ExamSelect() {
                 className="bg-white rounded-xl p-6 border border-hairline-cloud hover:border-violet transition"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-10 h-10 bg-violet-deep rounded-md flex items-center justify-center">
-                    <span className="font-display font-semibold text-white">{exam.name.charAt(0)}</span>
-                  </div>
+                  <Logo className="w-10 h-10" rounded="rounded-md" />
                   {pct > 0 && <ProgressRing value={pct} size={40} />}
                 </div>
                 <p className="font-display font-medium text-ink-deep text-heading-sm">{exam.name}</p>

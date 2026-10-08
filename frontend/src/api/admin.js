@@ -9,8 +9,10 @@ export const adminApi = {
   deleteUser: (id) => api.delete(`/admin/users/${id}`).then((r) => r.data),
 
   createExam: (payload) => api.post('/admin/exams', payload).then((r) => r.data),
+  updateExam: (id, payload) => api.patch(`/admin/exams/${id}`, payload).then((r) => r.data),
   deleteExam: (id) => api.delete(`/admin/exams/${id}`).then((r) => r.data),
   createSubject: (payload) => api.post('/admin/subjects', payload).then((r) => r.data),
+  updateSubject: (id, payload) => api.patch(`/admin/subjects/${id}`, payload).then((r) => r.data),
   deleteSubject: (id) => api.delete(`/admin/subjects/${id}`).then((r) => r.data),
   createChapter: (payload) => api.post('/admin/chapters', payload).then((r) => r.data),
   updateChapter: (id, payload) => api.patch(`/admin/chapters/${id}`, payload).then((r) => r.data),

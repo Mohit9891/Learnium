@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import api from '../api/axios';
 import SearchBar from '../components/SearchBar';
 import ProgressRing from '../components/ProgressRing';
+import Logo from '../components/Logo';
 import { CardSkeleton } from '../components/SkeletonLoader';
 
 function subjectProgress(subjectId, chapters) {
@@ -84,9 +85,7 @@ export default function SubjectSelect() {
                 className="bg-white rounded-xl p-6 border border-hairline-cloud hover:border-violet transition"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-10 h-10 bg-violet-mid rounded-md flex items-center justify-center">
-                    <span className="font-display font-semibold text-white">{subject.name.charAt(0)}</span>
-                  </div>
+                  <Logo className="w-10 h-10" rounded="rounded-md" />
                   {pct > 0 && <ProgressRing value={pct} size={40} />}
                 </div>
                 <p className="font-display font-medium text-ink-deep text-heading-sm">{subject.name}</p>
